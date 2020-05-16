@@ -22,7 +22,7 @@ namespace DevTest1.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message ="Prueba.";
 
             return View();
         }
