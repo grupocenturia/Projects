@@ -15,7 +15,7 @@ namespace DevTest1.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Pruebass.";
+            ViewBag.Message = "Prueba.";
 
             return View();
         }
