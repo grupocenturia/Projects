@@ -18,9 +18,8 @@ namespace DevTest1.Controllers
         {
             ViewBag.Message = "Pruebas 123";
 
-            var movie = new MovieService();
-            var model = movie.MovieService();
-            return View(model);
+      
+            return View();
         }
 
         public ActionResult Contact()
