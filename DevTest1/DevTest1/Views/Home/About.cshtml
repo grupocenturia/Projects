@@ -1,7 +1,26 @@
-﻿@{
+﻿@Model List<DevTest1.Models.Movie>
+@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<table class="Table">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Duracion</th>
+            <th>FechaEstreno</th>
+        </tr>
+    </thead>
+    <tbody>
+        @forech (var Movie in Model)
+        {
+        <tr>
+            <td>@Movie.Titulo</td>
+            <td>@Movie.Duracion</td>
+            <td>@Movie.FechaEstreno</td>
+        </tr>
+        }
+    </tbody>
+</table>

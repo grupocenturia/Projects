@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevTest1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,9 @@ namespace DevTest1.Controllers
         {
             ViewBag.Message = "Pruebas 123";
 
-            return View();
+            var movie = new MovieService();
+            var model = movie.MovieService();
+            return View(model);
         }
 
         public ActionResult Contact()
