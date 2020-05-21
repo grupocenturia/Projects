@@ -11,6 +11,14 @@ namespace DevTest1.Controllers
     {
         public ActionResult Index()
         {
+            var persona = new Persona()
+            {
+                Nombre = "Rubén",
+                Trabaja = true,
+                FechaNacimiento = new DateTime(1988,11,01)
+            };
+
+            ViewBag.Other = persona;
             return View();
         }
 
@@ -18,7 +26,7 @@ namespace DevTest1.Controllers
         {
             var movie = new MovieService();
             var model = movie.ObtenerPelicula();
-            ViewBag.Message = "Pruebas 123";
+            ViewBag.Message = "Pruebas";
 
       
             return View(model);
@@ -29,6 +37,13 @@ namespace DevTest1.Controllers
             ViewBag.Message ="Prueba.";
 
             return View();
+        }
+
+        public class Persona
+        {
+            public string Nombre { get; set; }
+            public bool Trabaja { get; set; }
+            public DateTime FechaNacimiento { get; set; }
         }
     }
 }
