@@ -16,6 +16,8 @@ namespace DevTest1.Controllers
 
         public ActionResult About()
         {
+            var movie = new MovieService();
+            var model = movie.ObtenerPelicula();
             ViewBag.Message = "Pruebas 123";
 
       
