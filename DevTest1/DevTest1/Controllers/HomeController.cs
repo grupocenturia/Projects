@@ -21,7 +21,7 @@ namespace DevTest1.Controllers
             ViewBag.Message = "Pruebas 123";
 
       
-            return View();
+            return View(model);
         }
 
         public ActionResult Contact()
