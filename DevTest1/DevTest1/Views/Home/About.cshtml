@@ -18,7 +18,14 @@
     <tbody>
         @foreach (var Movie in Model)
         {
-        <tr>
+            var ClaseFila = string.Empty;
+
+            if (Movie.EstaEnCartelera)
+            {
+                ClaseFila = "danger";
+            }
+        
+        <tr class="@ClaseFila">
             <td>@Movie.Titulo</td>
             <td>@Movie.Duracion</td>
             <td>@Movie.FechaEstreno</td>
