@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Reflection;
+using System.ComponentModel;
+using DevTest1.Models;
 
 namespace DevTest1.Controllers
 {
@@ -48,9 +51,39 @@ namespace DevTest1.Controllers
 
          public ActionResult DropDownList()
         {
-            ViewBag.Message ="Prueba.";
-
+            ViewBag.MiListadoEnum = ToListSelectListItem<ResultadoOperacion>();
             return View();
+        }
+        private List<SelectListItem> ToListSelectListItem<T>()
+        {
+            var t = typeof(T);
+            if (!t.IsEnum)
+            {
+                throw new ApplicationException("Tipo debe ser Enum");
+            }
+
+            var members = t.GetFields(BindingFlags.Public | BindingFlags.Static);
+            var result = new List<SelectListItem>();
+
+            foreach (var member in members)
+            {
+                var attributeDescription = member.GetCustomAttributes(typeof(DescriptionAttribute), false);
+                var Descripcion = member.Name;
+
+                if (attributeDescription.Any())
+                {
+                    Descripcion = ((DescriptionAttribute)attributeDescription[0]).Description;
+                }
+
+                var valor = ((int)Enum.Parse(t, member.Name));
+                result.Add(new SelectListItem()
+                {
+                    Text = Descripcion,
+                    Value = valor.ToString()
+                });
+                
+            }
+            return result;
         }
     }
 }
