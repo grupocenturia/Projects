@@ -45,5 +45,12 @@ namespace DevTest1.Controllers
             public bool Trabaja { get; set; }
             public DateTime FechaNacimiento { get; set; }
         }
+
+         public ActionResult DropDownList()
+        {
+            ViewBag.Message ="Prueba.";
+
+            return View();
+        }
     }
 }
