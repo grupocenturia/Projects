@@ -18,7 +18,7 @@ namespace DevTest1.Controllers
             {
                 Nombre = "Rubén",
                 Trabaja = true,
-                FechaNacimiento = new DateTime(1988,11,01)
+                FechaNacimiento = new DateTime(1988, 11, 01)
             };
 
             ViewBag.Other = persona;
@@ -31,13 +31,13 @@ namespace DevTest1.Controllers
             var model = movie.ObtenerPelicula();
             ViewBag.Message = "Pruebas";
 
-      
+
             return View(model);
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message ="Prueba.";
+            ViewBag.Message = "Prueba.";
 
             return View();
         }
@@ -49,7 +49,7 @@ namespace DevTest1.Controllers
             public DateTime FechaNacimiento { get; set; }
         }
 
-         public ActionResult DropDownList()
+        public ActionResult DropDownList()
         {
             ViewBag.MiListadoEnum = ToListSelectListItem<ResultadoOperacion>();
             return View();
@@ -81,9 +81,40 @@ namespace DevTest1.Controllers
                     Text = Descripcion,
                     Value = valor.ToString()
                 });
-                
+
             }
             return result;
         }
+
+        public ActionResult DropDownList2()
+        {
+            ViewBag.listado = ObtenerMiListado();
+            return View();
+        }
+
+        public List<SelectListItem> ObtenerMiListado()
+            {
+            return new List<SelectListItem>()
+                {
+                    new SelectListItem()
+                    {
+                        Text = "Si",
+                        Value = "1"
+                    },
+
+                      new SelectListItem()
+                    {
+                        Text = "No",
+                        Value = "2"
+                    },
+
+                        new SelectListItem()
+                    {
+                        Text = "Quizas",
+                        Value = "3",
+                        Disabled = true
+                    }
+                };
+            }
     }
 }

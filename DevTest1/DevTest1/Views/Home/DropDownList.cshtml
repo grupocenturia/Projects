@@ -11,10 +11,16 @@
     <title>DropDownList</title>
 </head>
 <body>
-    <br/>
+    <br />
     <label>Elija una opción:</label>
-    <div> 
+    <div>
         @Html.DropDownList("MiDrop", (List<SelectListItem>)ViewBag.MiListadoEnum)
+    </div>
+
+    <br />
+    <label>Elija una opción:</label>
+    <div>
+        @Html.DropDownList("MiDrop", (List<SelectListItem>)ViewBag.MiListado)
     </div>
 </body>
 </html>
