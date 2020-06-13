@@ -89,7 +89,7 @@ namespace DevTest1.Controllers
         public ActionResult DropDownList2()
         {
             ViewBag.listado = ObtenerMiListado();
-            return View();
+            return View("DropDownList");
         }
 
         public List<SelectListItem> ObtenerMiListado()
