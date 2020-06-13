@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Reflection;
 using System.ComponentModel;
-using DevTest1.Models;
 
 namespace DevTest1.Controllers
 {
@@ -37,9 +36,34 @@ namespace DevTest1.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Prueba.";
-
+            ViewBag.listado = ObtenerMiListado();
             return View();
+        }
+
+        public List<SelectListItem> ObtenerMiListado()
+        {
+            return new List<SelectListItem>()
+                {
+                    new SelectListItem()
+                    {
+                        Text = "Si",
+                        Value = "1"
+                    },
+
+                      new SelectListItem()
+                    {
+                        Text = "No",
+                        Value = "2"
+                    },
+
+                        new SelectListItem()
+                    {
+                        Text = "Quizas",
+                        Value = "3",
+                        Disabled = true
+                    }
+
+                };
         }
 
         public class Persona
@@ -86,35 +110,6 @@ namespace DevTest1.Controllers
             return result;
         }
 
-        public ActionResult DropDownList2()
-        {
-            ViewBag.listado = ObtenerMiListado();
-            return View("DropDownList");
-        }
 
-        public List<SelectListItem> ObtenerMiListado()
-            {
-            return new List<SelectListItem>()
-                {
-                    new SelectListItem()
-                    {
-                        Text = "Si",
-                        Value = "1"
-                    },
-
-                      new SelectListItem()
-                    {
-                        Text = "No",
-                        Value = "2"
-                    },
-
-                        new SelectListItem()
-                    {
-                        Text = "Quizas",
-                        Value = "3",
-                        Disabled = true
-                    }
-                };
             }
     }
-}

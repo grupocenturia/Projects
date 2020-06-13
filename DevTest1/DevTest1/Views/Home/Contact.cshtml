@@ -18,3 +18,5 @@
 
 @Html.Display("Other")
 @{Html.RenderAction("About");}
+<br />
+@Html.DropDownList("Drop", (List<SelectListItem>)ViewBag.listado)
