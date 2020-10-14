@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Centuria
 {
-    static class Program
+    static class Centuria
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,9 @@ namespace Centuria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmSplashScreen());
+            Application.Run(new FrmLogin());
+
         }
     }
 }
