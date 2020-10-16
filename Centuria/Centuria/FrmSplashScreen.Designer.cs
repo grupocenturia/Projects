@@ -34,17 +34,26 @@
             // 
             // TmrExit
             // 
-            this.TmrExit.Enabled = true;
-            this.TmrExit.Interval = 3000;
+            this.TmrExit.Interval = 6000;
             this.TmrExit.Tick += new System.EventHandler(this.TmrExit_Tick);
             // 
             // FrmSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Centuria.Properties.Resources.ImgSplashScreen;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(448, 248);
+            this.ControlBox = false;
+            this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSplashScreen";
-            this.Text = "FrmSplashScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FrmSplashScreen_Load);
             this.ResumeLayout(false);
 
         }
