@@ -28,6 +28,8 @@ namespace Centuria
 
         private void FxCancel()
         {
+            ImgSplashScreen.Enabled = true;
+
             TmrExit.Enabled = true;
         }
 
@@ -38,6 +40,8 @@ namespace Centuria
             FrmLogin ObjForm = new FrmLogin();
 
             Hide();
+
+            ImgSplashScreen.Enabled = false;
 
             ObjForm.ShowDialog();
 
