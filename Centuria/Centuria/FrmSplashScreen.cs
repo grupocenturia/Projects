@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Centuria
@@ -29,6 +22,8 @@ namespace Centuria
         private void FxCancel()
         {
             ImgSplashScreen.Enabled = true;
+
+            ClsFunctions.FxCreateWorkingPath();
 
             TmrExit.Enabled = true;
         }
