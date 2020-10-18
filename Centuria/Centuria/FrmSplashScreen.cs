@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Centuria
@@ -38,7 +39,10 @@ namespace Centuria
             ImgSplashScreen.Enabled = true;
 
             LblMessage.Parent = ImgSplashScreen;
-            LblMessage.BackColor = System.Drawing.Color.Transparent;
+
+            Color ObjColor = Color.FromArgb(100, Color.Black);
+
+            LblMessage.BackColor = ObjColor;
 
             LblMessage.Visible = true;
 
@@ -82,7 +86,7 @@ namespace Centuria
 
             try
             {
-                lFilesSource = ClsFunctions.FxGetFilesFromPath(ClsVariables.gPathBinSource);
+                lFilesSource = ClsFunctions.FxGetFilesFromPath(ClsVariables.gPathUpdate);
             }
             catch
             {

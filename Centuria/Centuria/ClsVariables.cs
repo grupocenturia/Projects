@@ -8,7 +8,7 @@
         internal static string gPathBin = "";
         internal static string gPathDocs = "";
         internal static string gPathTemp = "";
-        internal static string gPathBinSource = "C:\\Centuria\\BinSource\\";
+        internal static string gPathUpdate = "";
 
         internal static string gServer = "";
     }

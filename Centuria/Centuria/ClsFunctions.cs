@@ -94,6 +94,7 @@ namespace Centuria
                 if (ObjJson != null)
                 {
                     string lServer = (string)ObjJson.SelectToken("Server");
+                    string lPathUpdate = (string)ObjJson.SelectToken("PathUpdate");
 
                     if (string.IsNullOrEmpty(lServer))
                     {
@@ -106,6 +107,19 @@ namespace Centuria
                         lServer = lServer.Trim();
 
                         ClsVariables.gServer = lServer;
+                    }
+
+                    if (string.IsNullOrEmpty(lPathUpdate))
+                    {
+                        lOk = false;
+                    }
+                    else
+                    {
+                        lOk = true;
+
+                        lPathUpdate = lPathUpdate.Trim();
+
+                        ClsVariables.gPathUpdate = lPathUpdate;
                     }
                 }
             }
@@ -287,7 +301,7 @@ namespace Centuria
             return ObjJson;
         }
 
-        internal static void FxWriteJsonSettings(string pServer)
+        internal static void FxWriteJsonSettings(string pServer, string pPathUpdate)
         {
             bool lOk;
 
@@ -296,6 +310,7 @@ namespace Centuria
             dynamic ObjJson = new JObject();
 
             ObjJson.Server = pServer;
+            ObjJson.PathUpdate = pPathUpdate;
 
             for (int lCounter = 0; lCounter < 3; lCounter++)
             {
@@ -331,6 +346,48 @@ namespace Centuria
             }
 
             return lOk;
+        }
+        
+        internal static bool FxCheckPath(string pPath)
+        {
+            bool lOk;
+
+            try
+            {
+                lOk = Directory.Exists(pPath);
+            }
+            catch
+            {
+                lOk = false;
+            }
+
+            return lOk;
+        }
+
+        internal static string FxSelectPath()
+        {
+            string lPath = "";
+
+            OpenFileDialog ObjFileDialog = new OpenFileDialog();
+
+            ObjFileDialog.Title = "Seleccione carpeta";
+            ObjFileDialog.FileName = "Seleccione carpeta";
+            ObjFileDialog.InitialDirectory = "C:\\";
+            ObjFileDialog.ValidateNames = false;
+            ObjFileDialog.CheckFileExists = false;
+            ObjFileDialog.CheckPathExists = true;
+
+            if (ObjFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                lPath = Path.GetDirectoryName(ObjFileDialog.FileName) + "\\";
+            }
+
+            if (string.IsNullOrEmpty(lPath) == true)
+            {
+                lPath = "";
+            }
+
+            return lPath;
         }
     }
 }

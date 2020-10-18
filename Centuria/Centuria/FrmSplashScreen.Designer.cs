@@ -37,10 +37,12 @@
             // LblMessage
             // 
             this.LblMessage.BackColor = System.Drawing.Color.Transparent;
-            this.LblMessage.ForeColor = System.Drawing.Color.DimGray;
-            this.LblMessage.Location = new System.Drawing.Point(12, 394);
+            this.LblMessage.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMessage.ForeColor = System.Drawing.Color.LightGray;
+            this.LblMessage.Location = new System.Drawing.Point(0, 421);
             this.LblMessage.Name = "LblMessage";
-            this.LblMessage.Size = new System.Drawing.Size(735, 20);
+            this.LblMessage.Padding = new System.Windows.Forms.Padding(20, 0, 0, 2);
+            this.LblMessage.Size = new System.Drawing.Size(750, 20);
             this.LblMessage.TabIndex = 0;
             this.LblMessage.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.LblMessage.Visible = false;
@@ -61,7 +63,7 @@
             this.ImgSplashScreen.Location = new System.Drawing.Point(0, 0);
             this.ImgSplashScreen.Margin = new System.Windows.Forms.Padding(0);
             this.ImgSplashScreen.Name = "ImgSplashScreen";
-            this.ImgSplashScreen.Size = new System.Drawing.Size(759, 423);
+            this.ImgSplashScreen.Size = new System.Drawing.Size(750, 450);
             this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgSplashScreen.TabIndex = 0;
             this.ImgSplashScreen.TabStop = false;
@@ -71,7 +73,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(759, 423);
+            this.ClientSize = new System.Drawing.Size(750, 450);
             this.ControlBox = false;
             this.Controls.Add(this.LblMessage);
             this.Controls.Add(this.ImgSplashScreen);
