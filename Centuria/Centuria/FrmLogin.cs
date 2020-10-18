@@ -30,5 +30,15 @@ namespace Centuria
             Show();
 
         }
+
+        private void LblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
