@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -70,7 +71,48 @@ namespace Centuria
 
             return lHash;
         }
-    
+
+        internal static bool FxGetSettings()
+        {
+            bool lOk;
+
+            string lFile = ClsVariables.gPathBin + "Settings.ini";
+
+            try
+            {
+                lOk = File.Exists(lFile);
+            }
+            catch
+            {
+                lOk = false;
+            }
+
+            if (lOk == true)
+            {
+                JObject ObjJson = FxGetJsonFromFile(lFile);
+
+                if (ObjJson != null)
+                {
+                    string lServer = (string)ObjJson.SelectToken("Server");
+
+                    if (string.IsNullOrEmpty(lServer))
+                    {
+                        lOk = false;
+                    }
+                    else
+                    {
+                        lOk = true;
+
+                        lServer = lServer.Trim();
+
+                        ClsVariables.gServer = lServer;
+                    }
+                }
+            }
+
+            return lOk;
+        }
+
         internal static void FxMessage(string pMessage)
         {
             FxMessage(0, pMessage);
@@ -220,6 +262,75 @@ namespace Centuria
         internal static void FxPause(int pMiliseconds)
         {
             Thread.Sleep(pMiliseconds);
+        }
+
+        internal static void FxSelectAll(object pTextBox)
+        {
+            TextBox ObjText = (TextBox)pTextBox;
+
+            ObjText.SelectAll();
+        }
+
+        internal static JObject FxGetJsonFromFile(string pFile)
+        {
+            JObject ObjJson;
+
+            try
+            {
+                ObjJson = JObject.Parse(File.ReadAllText(pFile));
+            }
+            catch
+            {
+                ObjJson = null;
+            }
+
+            return ObjJson;
+        }
+
+        internal static void FxWriteJsonSettings(string pServer)
+        {
+            bool lOk;
+
+            string lFile = ClsVariables.gPathBin + "Settings.ini";
+
+            dynamic ObjJson = new JObject();
+
+            ObjJson.Server = pServer;
+
+            for (int lCounter = 0; lCounter < 3; lCounter++)
+            {
+                lOk = FxWriteJson(lFile, ObjJson);
+
+                if (lOk == true)
+                {
+                    break;
+                }
+
+                lCounter += 1;
+                
+                if (lCounter == 3)
+                {
+                    FxMessage(1, "Configuración no fue guardada");
+                }
+            }
+        }
+
+        internal static bool FxWriteJson(string pFile, JObject pJson)
+        {
+            bool lOk;
+
+            try
+            {
+                lOk = true;
+
+                File.WriteAllText(pFile, pJson.ToString());
+            }
+            catch
+            {
+                lOk = false;
+            }
+
+            return lOk;
         }
     }
 }

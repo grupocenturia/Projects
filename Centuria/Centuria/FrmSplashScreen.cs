@@ -6,6 +6,8 @@ namespace Centuria
 {
     public partial class FrmSplashScreen : Form
     {
+        bool lSettings = false;
+
         public FrmSplashScreen()
         {
             InitializeComponent();
@@ -45,21 +47,33 @@ namespace Centuria
 
         private void FxDoWork()
         {
-            BgwProcess.ReportProgress(0, "Inicializando sistema...");
+            if (lSettings == false)
+            {
+                BgwProcess.ReportProgress(0, "Inicializando sistema...");
 
-            ClsFunctions.FxPause(2000);
+                ClsFunctions.FxPause(1000);
 
-            BgwProcess.ReportProgress(0, "Creando directorios de trabajo...");
+                BgwProcess.ReportProgress(0, "Creando directorios de trabajo...");
 
-            ClsFunctions.FxPause(100);
+                ClsFunctions.FxPause(100);
 
-            ClsFunctions.FxCreateWorkingPath();
+                ClsFunctions.FxCreateWorkingPath();
 
-            FxUpdateFiles();
+                BgwProcess.ReportProgress(0, "Obteniendo configuración...");
 
-            BgwProcess.ReportProgress(0, "Bienvenido!!!");
+                ClsFunctions.FxPause(100);
 
-            ClsFunctions.FxPause(1000);
+                lSettings = ClsFunctions.FxGetSettings();
+            }
+
+            if (lSettings == true)
+            {
+                FxUpdateFiles();
+
+                BgwProcess.ReportProgress(0, "Bienvenido!!!");
+
+                ClsFunctions.FxPause(1000);
+            }
         }
 
         private void FxUpdateFiles()
@@ -98,6 +112,33 @@ namespace Centuria
         }
 
         private void FxCompleteWork()
+        {
+            if (lSettings == false)
+            {
+                FrmSettings ObjForm = new FrmSettings();
+
+                ObjForm.ShowDialog();
+
+                lSettings = ClsFunctions.FxGetSettings();
+
+                if (lSettings == false)
+                {
+                    ClsFunctions.FxMessage(1, "No se ha realizado la configuración inicial");
+
+                    FxExit();
+                }
+                else
+                {
+                    FxCancel();
+                }
+            }
+            else
+            {
+                FxEnter();
+            }
+        }
+
+        private void FxEnter()
         {
             Hide();
 

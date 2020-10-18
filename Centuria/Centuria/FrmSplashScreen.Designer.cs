@@ -28,25 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ImgSplashScreen = new System.Windows.Forms.PictureBox();
             this.LblMessage = new System.Windows.Forms.Label();
             this.BgwProcess = new System.ComponentModel.BackgroundWorker();
+            this.ImgSplashScreen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSplashScreen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ImgSplashScreen
-            // 
-            this.ImgSplashScreen.BackColor = System.Drawing.Color.Transparent;
-            this.ImgSplashScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ImgSplashScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ImgSplashScreen.Image = global::Centuria.Properties.Resources.GifSplashScreen;
-            this.ImgSplashScreen.Location = new System.Drawing.Point(0, 0);
-            this.ImgSplashScreen.Margin = new System.Windows.Forms.Padding(0);
-            this.ImgSplashScreen.Name = "ImgSplashScreen";
-            this.ImgSplashScreen.Size = new System.Drawing.Size(759, 423);
-            this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ImgSplashScreen.TabIndex = 0;
-            this.ImgSplashScreen.TabStop = false;
             // 
             // LblMessage
             // 
@@ -65,6 +51,20 @@
             this.BgwProcess.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwProcess_DoWork);
             this.BgwProcess.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwProcess_ProgressChanged);
             this.BgwProcess.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwProcess_RunWorkerCompleted);
+            // 
+            // ImgSplashScreen
+            // 
+            this.ImgSplashScreen.BackColor = System.Drawing.Color.Transparent;
+            this.ImgSplashScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ImgSplashScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImgSplashScreen.Image = global::Centuria.Properties.Resources.GifSplashScreen;
+            this.ImgSplashScreen.Location = new System.Drawing.Point(0, 0);
+            this.ImgSplashScreen.Margin = new System.Windows.Forms.Padding(0);
+            this.ImgSplashScreen.Name = "ImgSplashScreen";
+            this.ImgSplashScreen.Size = new System.Drawing.Size(759, 423);
+            this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgSplashScreen.TabIndex = 0;
+            this.ImgSplashScreen.TabStop = false;
             // 
             // FrmSplashScreen
             // 
