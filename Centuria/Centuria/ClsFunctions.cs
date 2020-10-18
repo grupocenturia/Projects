@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Centuria
@@ -36,7 +37,7 @@ namespace Centuria
         {
             int lNumber = FxRandomNumber();
 
-            string lHash = FxConvertMD5(lNumber.ToString());
+            string lHash = FxConvertTextToMD5(lNumber.ToString());
 
             return lHash;
         }
@@ -54,22 +55,20 @@ namespace Centuria
             return lRandom;
         }
 
-        internal static string FxConvertMD5(string pText)
+        internal static string FxConvertTextToMD5(string pText)
         {
-            MD5 ObjMD5 = new MD5CryptoServiceProvider();
+            string lHash = "";
 
-            byte[] ObjEncode = Encoding.Default.GetBytes(pText);
-
-            byte[] ObjHash = ObjMD5.ComputeHash(ObjEncode);
-
-            string lText = "";
-
-            foreach(byte lByte in ObjHash)
+            using (MD5 ObjMD5 = MD5.Create())
             {
-                lText += string.Format("{0:x2}", lByte);
+                byte[] ObjEncode = Encoding.Default.GetBytes(pText);
+
+                byte[] ObjHash = ObjMD5.ComputeHash(ObjEncode);
+
+                lHash = BitConverter.ToString(ObjHash).Replace("-", "").ToLowerInvariant();
             }
 
-            return lText;
+            return lHash;
         }
     
         internal static void FxMessage(string pMessage)
@@ -149,6 +148,78 @@ namespace Centuria
             {
                 return;
             }
+        }
+
+        internal static string[] FxGetFilesFromPath(string pPath)
+        {
+            string[] lFiles = Directory.GetFiles(pPath);
+
+            return lFiles;
+        }
+
+        internal static void FxUpdateFile(string pFileSource, string pPathDestination)
+        {
+            string lFileName = FxGetFileName(pFileSource);
+            string lFileDestination = pPathDestination + "\\" + lFileName;
+
+            string lHashSource = FxConvertFileToMD5(pFileSource);
+            string lHashDestination = FxConvertFileToMD5(lFileDestination);
+
+            if(lHashSource != lHashDestination)
+            {
+                try
+                {
+                    File.Copy(pFileSource, lFileDestination, true);
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        internal static string FxGetFileName(string pFile)
+        {
+            string lFileName = Path.GetFileName(pFile);
+
+            return lFileName;
+        }
+
+        internal static string FxConvertFileToMD5(string pFile)
+        {
+            string lHash = "";
+
+            using (MD5 ObjMD5 = MD5.Create())
+            {
+                FileStream ObjFileStream;
+
+                try
+                {
+                    ObjFileStream = File.OpenRead(pFile);
+                }
+                catch
+                {
+                    ObjFileStream = null;
+                }
+
+                if (ObjFileStream != null)
+                {
+                    byte[] ObjHash = ObjMD5.ComputeHash(ObjFileStream);
+
+                    lHash = BitConverter.ToString(ObjHash).Replace("-", "").ToLowerInvariant();
+
+                    ObjFileStream.Close();
+                }
+
+                ObjFileStream = null;
+            }
+
+            return lHash;
+        }
+
+        internal static void FxPause(int pMiliseconds)
+        {
+            Thread.Sleep(pMiliseconds);
         }
     }
 }

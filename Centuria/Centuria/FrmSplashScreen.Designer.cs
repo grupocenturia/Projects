@@ -28,36 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.TmrExit = new System.Windows.Forms.Timer(this.components);
             this.ImgSplashScreen = new System.Windows.Forms.PictureBox();
+            this.LblMessage = new System.Windows.Forms.Label();
+            this.BgwProcess = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.ImgSplashScreen)).BeginInit();
             this.SuspendLayout();
             // 
-            // TmrExit
-            // 
-            this.TmrExit.Interval = 6000;
-            this.TmrExit.Tick += new System.EventHandler(this.TmrExit_Tick);
-            // 
             // ImgSplashScreen
             // 
+            this.ImgSplashScreen.BackColor = System.Drawing.Color.Transparent;
             this.ImgSplashScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ImgSplashScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ImgSplashScreen.Image = global::Centuria.Properties.Resources.GifSplashScreen;
             this.ImgSplashScreen.Location = new System.Drawing.Point(0, 0);
+            this.ImgSplashScreen.Margin = new System.Windows.Forms.Padding(0);
             this.ImgSplashScreen.Name = "ImgSplashScreen";
-            this.ImgSplashScreen.Size = new System.Drawing.Size(444, 244);
+            this.ImgSplashScreen.Size = new System.Drawing.Size(759, 423);
             this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImgSplashScreen.TabIndex = 0;
             this.ImgSplashScreen.TabStop = false;
+            // 
+            // LblMessage
+            // 
+            this.LblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.LblMessage.ForeColor = System.Drawing.Color.DimGray;
+            this.LblMessage.Location = new System.Drawing.Point(12, 394);
+            this.LblMessage.Name = "LblMessage";
+            this.LblMessage.Size = new System.Drawing.Size(735, 20);
+            this.LblMessage.TabIndex = 0;
+            this.LblMessage.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.LblMessage.Visible = false;
+            // 
+            // BgwProcess
+            // 
+            this.BgwProcess.WorkerReportsProgress = true;
+            this.BgwProcess.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgwProcess_DoWork);
+            this.BgwProcess.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BgwProcess_ProgressChanged);
+            this.BgwProcess.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgwProcess_RunWorkerCompleted);
             // 
             // FrmSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(444, 244);
+            this.ClientSize = new System.Drawing.Size(759, 423);
             this.ControlBox = false;
+            this.Controls.Add(this.LblMessage);
             this.Controls.Add(this.ImgSplashScreen);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.DoubleBuffered = true;
@@ -75,8 +91,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer TmrExit;
         private System.Windows.Forms.PictureBox ImgSplashScreen;
+        private System.Windows.Forms.Label LblMessage;
+        private System.ComponentModel.BackgroundWorker BgwProcess;
     }
 }

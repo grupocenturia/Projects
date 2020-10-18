@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Centuria
@@ -14,32 +15,103 @@ namespace Centuria
         {
             FxCancel();
         }
-        private void TmrExit_Tick(object sender, EventArgs e)
+
+        private void BgwProcess_DoWork(object sender, DoWorkEventArgs e)
         {
-            FxExit();
+            FxDoWork();
+        }
+
+        private void BgwProcess_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            FxProcessChanged(e.UserState.ToString());
+        }
+
+        private void BgwProcess_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            FxCompleteWork();
         }
 
         private void FxCancel()
         {
             ImgSplashScreen.Enabled = true;
 
-            ClsFunctions.FxCreateWorkingPath();
+            LblMessage.Parent = ImgSplashScreen;
+            LblMessage.BackColor = System.Drawing.Color.Transparent;
 
-            TmrExit.Enabled = true;
+            LblMessage.Visible = true;
+
+            BgwProcess.RunWorkerAsync();
         }
 
-        private void FxExit()
+        private void FxDoWork()
         {
-            TmrExit.Enabled = false;
+            BgwProcess.ReportProgress(0, "Inicializando sistema...");
 
-            FrmLogin ObjForm = new FrmLogin();
+            ClsFunctions.FxPause(2000);
 
+            BgwProcess.ReportProgress(0, "Creando directorios de trabajo...");
+
+            ClsFunctions.FxPause(100);
+
+            ClsFunctions.FxCreateWorkingPath();
+
+            FxUpdateFiles();
+
+            BgwProcess.ReportProgress(0, "Bienvenido!!!");
+
+            ClsFunctions.FxPause(1000);
+        }
+
+        private void FxUpdateFiles()
+        {
+            string[] lFilesSource;
+
+            try
+            {
+                lFilesSource = ClsFunctions.FxGetFilesFromPath(ClsVariables.gPathBinSource);
+            }
+            catch
+            {
+                lFilesSource = null;
+            }
+
+            if (lFilesSource != null)
+            {
+                foreach (string lFileSource in lFilesSource)
+                {
+                    string lFileName = ClsFunctions.FxGetFileName(lFileSource);
+
+                    BgwProcess.ReportProgress(0, "Verificando " + lFileName + "...");
+
+                    ClsFunctions.FxPause(100);
+
+                    ClsFunctions.FxUpdateFile(lFileSource, ClsVariables.gPathBin);
+                }
+            }
+        }
+
+        private void FxProcessChanged(string pText)
+        {
+            LblMessage.Text = pText;
+
+            LblMessage.Refresh();
+        }
+
+        private void FxCompleteWork()
+        {
             Hide();
 
             ImgSplashScreen.Enabled = false;
 
+            FrmLogin ObjForm = new FrmLogin();
+
             ObjForm.ShowDialog();
 
+            FxExit();
+        }
+
+        private void FxExit()
+        {
             Close();
         }
     }
