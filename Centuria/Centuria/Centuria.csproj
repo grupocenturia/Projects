@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsConnection.cs" />
     <Compile Include="ClsFunctions.cs" />
+    <Compile Include="ClsSql.cs" />
     <Compile Include="ClsVariables.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>

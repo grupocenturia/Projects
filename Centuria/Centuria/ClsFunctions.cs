@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Data;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -124,6 +125,16 @@ namespace Centuria
                 }
             }
 
+            if(lOk == true)
+            {
+                DataTable ObjDt = ClsSql.Fx_sel_tblSetting();
+
+                if (ObjDt == null)
+                {
+                    lOk = false;
+                }
+            }
+
             return lOk;
         }
 
@@ -170,39 +181,42 @@ namespace Centuria
         {
             DirectoryInfo ObjDirectory = new DirectoryInfo(pPath);
 
-            foreach(FileInfo ObjFile in ObjDirectory.GetFiles())
+            if (Directory.Exists(pPath) == true)
             {
+                foreach (FileInfo ObjFile in ObjDirectory.GetFiles())
+                {
+                    try
+                    {
+                        ObjFile.Delete();
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+
+                foreach (DirectoryInfo ObjSubDirectory in ObjDirectory.GetDirectories())
+                {
+                    FxDeleteFiles(ObjSubDirectory.FullName);
+
+                    try
+                    {
+                        ObjSubDirectory.Delete();
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+
                 try
                 {
-                    ObjFile.Delete();
+                    ObjDirectory.Delete();
                 }
                 catch
                 {
-                    continue;
+                    return;
                 }
-            }
-
-            foreach (DirectoryInfo ObjSubDirectory in ObjDirectory.GetDirectories())
-            {
-                FxDeleteFiles(ObjSubDirectory.FullName);
-
-                try
-                {
-                    ObjSubDirectory.Delete();
-                }
-                catch
-                {
-                    continue;
-                }
-            }
-
-            try
-            {
-                ObjDirectory.Delete();
-            }
-            catch
-            {
-                return;
             }
         }
 
