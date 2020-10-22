@@ -40,5 +40,10 @@ namespace Centuria
         {
 
         }
+
+        private void CmdExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

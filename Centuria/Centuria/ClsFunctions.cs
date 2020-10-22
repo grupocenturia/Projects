@@ -287,9 +287,9 @@ namespace Centuria
             return lHash;
         }
 
-        internal static void FxPause(int pMiliseconds)
+        internal static void FxPause(double pSeconds)
         {
-            Thread.Sleep(pMiliseconds);
+            Thread.Sleep((int)(pSeconds * 1000));
         }
 
         internal static void FxSelectAll(object pTextBox)

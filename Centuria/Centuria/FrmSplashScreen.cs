@@ -55,17 +55,17 @@ namespace Centuria
             {
                 BgwProcess.ReportProgress(0, "Inicializando sistema...");
 
-                ClsFunctions.FxPause(1000);
+                ClsFunctions.FxPause(1);
 
                 BgwProcess.ReportProgress(0, "Creando directorios de trabajo...");
 
-                ClsFunctions.FxPause(100);
+                ClsFunctions.FxPause(0.1);
 
                 ClsFunctions.FxCreateWorkingPath();
 
                 BgwProcess.ReportProgress(0, "Obteniendo configuración...");
 
-                ClsFunctions.FxPause(100);
+                ClsFunctions.FxPause(0.1);
 
                 lSettings = ClsFunctions.FxGetSettings();
             }
@@ -76,7 +76,7 @@ namespace Centuria
 
                 BgwProcess.ReportProgress(0, "Bienvenido!!!");
 
-                ClsFunctions.FxPause(1000);
+                ClsFunctions.FxPause(1);
             }
         }
 
@@ -101,7 +101,7 @@ namespace Centuria
 
                     BgwProcess.ReportProgress(0, "Verificando " + lFileName + "...");
 
-                    ClsFunctions.FxPause(100);
+                    ClsFunctions.FxPause(0.1);
 
                     ClsFunctions.FxUpdateFile(lFileSource, ClsVariables.gPathBin);
                 }
