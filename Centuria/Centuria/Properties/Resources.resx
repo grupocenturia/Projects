@@ -124,4 +124,7 @@
   <data name="GifSplashScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\GifSplashScreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\ImgLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

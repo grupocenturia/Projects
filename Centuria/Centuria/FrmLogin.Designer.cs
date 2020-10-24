@@ -28,68 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.LblLoginUser = new System.Windows.Forms.Label();
-            this.LblloginPassword = new System.Windows.Forms.Label();
-            this.TxtLoginUser = new System.Windows.Forms.TextBox();
-            this.TxtLoginPassword = new System.Windows.Forms.TextBox();
-            this.CmdLoginEnter = new System.Windows.Forms.Button();
+            this.LblUserName = new System.Windows.Forms.Label();
+            this.LblPassword = new System.Windows.Forms.Label();
+            this.TxtUserName = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
+            this.CmdEnter = new System.Windows.Forms.Button();
             this.CmdExit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ImgLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // LblLoginUser
+            // LblUserName
             // 
-            this.LblLoginUser.AutoSize = true;
-            this.LblLoginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLoginUser.Location = new System.Drawing.Point(33, 126);
-            this.LblLoginUser.Name = "LblLoginUser";
-            this.LblLoginUser.Size = new System.Drawing.Size(86, 25);
-            this.LblLoginUser.TabIndex = 1;
-            this.LblLoginUser.Text = "Usuario";
+            this.LblUserName.AutoSize = true;
+            this.LblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUserName.Location = new System.Drawing.Point(33, 127);
+            this.LblUserName.Name = "LblUserName";
+            this.LblUserName.Size = new System.Drawing.Size(74, 24);
+            this.LblUserName.TabIndex = 1;
+            this.LblUserName.Text = "Usuario";
             // 
-            // LblloginPassword
+            // LblPassword
             // 
-            this.LblloginPassword.AutoSize = true;
-            this.LblloginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblloginPassword.Location = new System.Drawing.Point(33, 195);
-            this.LblloginPassword.Name = "LblloginPassword";
-            this.LblloginPassword.Size = new System.Drawing.Size(106, 25);
-            this.LblloginPassword.TabIndex = 2;
-            this.LblloginPassword.Text = "Password";
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPassword.Location = new System.Drawing.Point(33, 196);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(92, 24);
+            this.LblPassword.TabIndex = 2;
+            this.LblPassword.Text = "Password";
             // 
-            // TxtLoginUser
+            // TxtUserName
             // 
-            this.TxtLoginUser.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.TxtLoginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLoginUser.Location = new System.Drawing.Point(33, 154);
-            this.TxtLoginUser.Name = "TxtLoginUser";
-            this.TxtLoginUser.Size = new System.Drawing.Size(318, 29);
-            this.TxtLoginUser.TabIndex = 3;
+            this.TxtUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.TxtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUserName.Location = new System.Drawing.Point(33, 154);
+            this.TxtUserName.Name = "TxtUserName";
+            this.TxtUserName.Size = new System.Drawing.Size(318, 29);
+            this.TxtUserName.TabIndex = 0;
+            this.TxtUserName.Enter += new System.EventHandler(this.TxtUserName_Enter);
             // 
-            // TxtLoginPassword
+            // TxtPassword
             // 
-            this.TxtLoginPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.TxtLoginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtLoginPassword.Location = new System.Drawing.Point(33, 223);
-            this.TxtLoginPassword.Name = "TxtLoginPassword";
-            this.TxtLoginPassword.PasswordChar = '●';
-            this.TxtLoginPassword.Size = new System.Drawing.Size(318, 29);
-            this.TxtLoginPassword.TabIndex = 4;
+            this.TxtPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(33, 223);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '●';
+            this.TxtPassword.Size = new System.Drawing.Size(318, 29);
+            this.TxtPassword.TabIndex = 1;
+            this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
             // 
-            // CmdLoginEnter
+            // CmdEnter
             // 
-            this.CmdLoginEnter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.CmdLoginEnter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CmdLoginEnter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.CmdLoginEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.CmdLoginEnter.Location = new System.Drawing.Point(33, 278);
-            this.CmdLoginEnter.Name = "CmdLoginEnter";
-            this.CmdLoginEnter.Size = new System.Drawing.Size(80, 50);
-            this.CmdLoginEnter.TabIndex = 5;
-            this.CmdLoginEnter.Text = "Ingresar";
-            this.CmdLoginEnter.UseVisualStyleBackColor = false;
+            this.CmdEnter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.CmdEnter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CmdEnter.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.CmdEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.CmdEnter.Location = new System.Drawing.Point(33, 278);
+            this.CmdEnter.Name = "CmdEnter";
+            this.CmdEnter.Size = new System.Drawing.Size(80, 50);
+            this.CmdEnter.TabIndex = 2;
+            this.CmdEnter.Text = "Ingresar";
+            this.CmdEnter.UseVisualStyleBackColor = false;
+            this.CmdEnter.Click += new System.EventHandler(this.CmdEnter_Click);
             // 
             // CmdExit
             // 
@@ -100,57 +102,56 @@
             this.CmdExit.Location = new System.Drawing.Point(271, 278);
             this.CmdExit.Name = "CmdExit";
             this.CmdExit.Size = new System.Drawing.Size(80, 50);
-            this.CmdExit.TabIndex = 6;
+            this.CmdExit.TabIndex = 3;
             this.CmdExit.Text = "Salir";
             this.CmdExit.UseVisualStyleBackColor = false;
             this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
-            // pictureBox1
+            // ImgLogo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 68);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.ImgLogo.Image = global::Centuria.Properties.Resources.ImgLogo;
+            this.ImgLogo.Location = new System.Drawing.Point(33, 33);
+            this.ImgLogo.Name = "ImgLogo";
+            this.ImgLogo.Size = new System.Drawing.Size(318, 68);
+            this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImgLogo.TabIndex = 7;
+            this.ImgLogo.TabStop = false;
             // 
             // FrmLogin
             // 
-            this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(384, 361);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ImgLogo);
             this.Controls.Add(this.CmdExit);
-            this.Controls.Add(this.CmdLoginEnter);
-            this.Controls.Add(this.TxtLoginPassword);
-            this.Controls.Add(this.TxtLoginUser);
-            this.Controls.Add(this.LblloginPassword);
-            this.Controls.Add(this.LblLoginUser);
+            this.Controls.Add(this.CmdEnter);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.TxtUserName);
+            this.Controls.Add(this.LblPassword);
+            this.Controls.Add(this.LblUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.Padding = new System.Windows.Forms.Padding(30);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar sesión";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label LblLoginUser;
-        private System.Windows.Forms.Label LblloginPassword;
-        private System.Windows.Forms.TextBox TxtLoginUser;
-        private System.Windows.Forms.TextBox TxtLoginPassword;
-        private System.Windows.Forms.Button CmdLoginEnter;
+        private System.Windows.Forms.Label LblUserName;
+        private System.Windows.Forms.Label LblPassword;
+        private System.Windows.Forms.TextBox TxtUserName;
+        private System.Windows.Forms.TextBox TxtPassword;
+        private System.Windows.Forms.Button CmdEnter;
         private System.Windows.Forms.Button CmdExit;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ImgLogo;
     }
 }

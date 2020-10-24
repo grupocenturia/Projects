@@ -64,7 +64,7 @@
             this.ImgSplashScreen.Margin = new System.Windows.Forms.Padding(0);
             this.ImgSplashScreen.Name = "ImgSplashScreen";
             this.ImgSplashScreen.Size = new System.Drawing.Size(750, 450);
-            this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ImgSplashScreen.TabIndex = 0;
             this.ImgSplashScreen.TabStop = false;
             // 
@@ -78,7 +78,6 @@
             this.Controls.Add(this.LblMessage);
             this.Controls.Add(this.ImgSplashScreen);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

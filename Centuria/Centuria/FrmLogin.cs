@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Centuria
@@ -17,31 +10,68 @@ namespace Centuria
             InitializeComponent();
         }
 
-        private void CmdLogin_Click(object sender, EventArgs e)
-        {
-            FxLogin();
-        }
-
-        private void FxLogin()
-        {
-            FrmMainMenu ObjForm = new FrmMainMenu();
-            Hide();
-            ObjForm.ShowDialog();
-            Show();
-
-        }
-
-        private void LblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            FxCancel();
+        }
 
+        private void TxtUserName_Enter(object sender, EventArgs e)
+        {
+            ClsFunctions.FxSelectAll(sender);
+        }
+
+        private void TxtPassword_Enter(object sender, EventArgs e)
+        {
+            ClsFunctions.FxSelectAll(sender);
+        }
+
+        private void CmdEnter_Click(object sender, EventArgs e)
+        {
+            FxEnter();
         }
 
         private void CmdExit_Click(object sender, EventArgs e)
+        {
+            FxExit();
+        }
+
+        private void FxCancel()
+        {
+            TxtUserName.Text = "";
+            TxtPassword.Text = "";
+            
+            CmdEnter.Enabled = true;
+
+            TxtUserName.Focus();
+        }
+
+        private void FxEnter()
+        {
+            string lUserName = TxtUserName.Text.Trim();
+            string lPassword = TxtPassword.Text.Trim();
+
+            if (lUserName.Length == 0 || lPassword.Length == 0)
+            {
+                ClsFunctions.FxMessage(1, "Usuario y/o contraseña incorrectos");
+
+                TxtUserName.Text = "";
+                TxtPassword.Text = "";
+
+                TxtUserName.Focus();
+
+                return;
+            }
+
+            FrmMainMenu ObjFrm = new FrmMainMenu();
+
+            Hide();
+
+            ObjFrm.ShowDialog();
+
+            FxExit();
+        }
+
+        private void FxExit()
         {
             Close();
         }
