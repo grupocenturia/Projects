@@ -127,6 +127,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IcoCenturia.ico" />
+    <None Include="Resources\Administrator.png" />
+    <None Include="Resources\Assets.png" />
+    <None Include="Resources\Customers.png" />
+    <None Include="Resources\Payroll Register.png" />
+    <None Include="Resources\invoice.png" />
+    <None Include="Resources\Accounts payable1.png" />
+    <None Include="Resources\Accounts payable.png" />
+    <None Include="Resources\Cuentas x cobrar.png" />
+    <None Include="Resources\inventory.png" />
+    <None Include="Resources\accounting.png" />
     <None Include="Images\ImgLogo.png" />
     <Content Include="propuesta 3.ico" />
   </ItemGroup>
