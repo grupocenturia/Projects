@@ -57,6 +57,12 @@
     <Compile Include="ClsFunctions.cs" />
     <Compile Include="ClsSql.cs" />
     <Compile Include="ClsVariables.cs" />
+    <Compile Include="FmrAccounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAccounting.Designer.cs">
+      <DependentUpon>FmrAccounting.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </Compile>
     <Compile Include="Centuria.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrAccounting.resx">
+      <DependentUpon>FmrAccounting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,7 +132,16 @@
     <None Include="Images\GifSplashScreen.gif" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Content Include="Images\IcoCenturia.ico" />
+=======
+    <None Include="Images\ImgSplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IcoCenturia.ico" />
+    <None Include="Resources\Logo 300 x 100.png" />
+    <None Include="Resources\Accounts receivable1.png" />
+>>>>>>> Stashed changes
     <None Include="Resources\Administrator.png" />
     <None Include="Resources\Assets.png" />
     <None Include="Resources\Customers.png" />
