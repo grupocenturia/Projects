@@ -53,7 +53,7 @@ namespace Centuria
 
         internal static DataTable FxSqlExecute(string pSchema, string pStoredProcedure)
         {
-            string[][] lParameters = new string[2][];
+            object[][] lParameters = new object[2][];
 
             DataTable ObjDt = FxSqlExecute(pSchema, pStoredProcedure, lParameters);
 

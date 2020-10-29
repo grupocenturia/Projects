@@ -73,7 +73,7 @@
             "FMLN",
             "ARENA",
             "NUEVAS IDEAS"});
-            this.CmbCompany.Location = new System.Drawing.Point(492, 97);
+            this.CmbCompany.Location = new System.Drawing.Point(307, 97);
             this.CmbCompany.Name = "CmbCompany";
             this.CmbCompany.Size = new System.Drawing.Size(257, 21);
             this.CmbCompany.TabIndex = 0;
@@ -95,7 +95,7 @@
             this.LklAccounting.ActiveLinkColor = System.Drawing.Color.DarkBlue;
             this.LklAccounting.AutoSize = true;
             this.LklAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LklAccounting.Location = new System.Drawing.Point(296, 195);
+            this.LklAccounting.Location = new System.Drawing.Point(111, 195);
             this.LklAccounting.Name = "LklAccounting";
             this.LklAccounting.Size = new System.Drawing.Size(0, 13);
             this.LklAccounting.TabIndex = 9;
@@ -105,7 +105,7 @@
             // 
             this.LblAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblAccounting.AutoSize = true;
-            this.LblAccounting.Location = new System.Drawing.Point(416, 142);
+            this.LblAccounting.Location = new System.Drawing.Point(231, 142);
             this.LblAccounting.Name = "LblAccounting";
             this.LblAccounting.Size = new System.Drawing.Size(65, 13);
             this.LblAccounting.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             this.LblInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblInventory.AutoSize = true;
-            this.LblInventory.Location = new System.Drawing.Point(649, 142);
+            this.LblInventory.Location = new System.Drawing.Point(464, 142);
             this.LblInventory.Name = "LblInventory";
             this.LblInventory.Size = new System.Drawing.Size(54, 13);
             this.LblInventory.TabIndex = 11;
@@ -127,7 +127,7 @@
             // 
             this.LblAccountsReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblAccountsReceivable.AutoSize = true;
-            this.LblAccountsReceivable.Location = new System.Drawing.Point(869, 142);
+            this.LblAccountsReceivable.Location = new System.Drawing.Point(684, 142);
             this.LblAccountsReceivable.Name = "LblAccountsReceivable";
             this.LblAccountsReceivable.Size = new System.Drawing.Size(98, 13);
             this.LblAccountsReceivable.TabIndex = 12;
@@ -138,7 +138,7 @@
             // 
             this.LblAccountsPayable.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblAccountsPayable.AutoSize = true;
-            this.LblAccountsPayable.Location = new System.Drawing.Point(416, 247);
+            this.LblAccountsPayable.Location = new System.Drawing.Point(231, 247);
             this.LblAccountsPayable.Name = "LblAccountsPayable";
             this.LblAccountsPayable.Size = new System.Drawing.Size(94, 13);
             this.LblAccountsPayable.TabIndex = 13;
@@ -149,7 +149,7 @@
             // 
             this.LblInvoice.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblInvoice.AutoSize = true;
-            this.LblInvoice.Location = new System.Drawing.Point(649, 247);
+            this.LblInvoice.Location = new System.Drawing.Point(464, 247);
             this.LblInvoice.Name = "LblInvoice";
             this.LblInvoice.Size = new System.Drawing.Size(42, 13);
             this.LblInvoice.TabIndex = 14;
@@ -161,7 +161,7 @@
             // 
             this.LblPayrolleRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblPayrolleRegister.AutoSize = true;
-            this.LblPayrolleRegister.Location = new System.Drawing.Point(869, 247);
+            this.LblPayrolleRegister.Location = new System.Drawing.Point(684, 247);
             this.LblPayrolleRegister.Name = "LblPayrolleRegister";
             this.LblPayrolleRegister.Size = new System.Drawing.Size(103, 13);
             this.LblPayrolleRegister.TabIndex = 15;
@@ -172,7 +172,7 @@
             // 
             this.LblCustomers.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblCustomers.AutoSize = true;
-            this.LblCustomers.Location = new System.Drawing.Point(416, 349);
+            this.LblCustomers.Location = new System.Drawing.Point(231, 349);
             this.LblCustomers.Name = "LblCustomers";
             this.LblCustomers.Size = new System.Drawing.Size(44, 13);
             this.LblCustomers.TabIndex = 16;
@@ -184,7 +184,7 @@
             // 
             this.LblAssets.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblAssets.AutoSize = true;
-            this.LblAssets.Location = new System.Drawing.Point(649, 349);
+            this.LblAssets.Location = new System.Drawing.Point(464, 349);
             this.LblAssets.Name = "LblAssets";
             this.LblAssets.Size = new System.Drawing.Size(56, 13);
             this.LblAssets.TabIndex = 17;
@@ -198,7 +198,7 @@
             this.PtbConfiguration.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbConfiguration.Image = global::Centuria.Properties.Resources.Administrator;
             this.PtbConfiguration.InitialImage = null;
-            this.PtbConfiguration.Location = new System.Drawing.Point(763, 349);
+            this.PtbConfiguration.Location = new System.Drawing.Point(578, 349);
             this.PtbConfiguration.Name = "PtbConfiguration";
             this.PtbConfiguration.Size = new System.Drawing.Size(100, 50);
             this.PtbConfiguration.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +211,7 @@
             this.PtbAssets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbAssets.Image = global::Centuria.Properties.Resources.Assets;
             this.PtbAssets.InitialImage = null;
-            this.PtbAssets.Location = new System.Drawing.Point(543, 349);
+            this.PtbAssets.Location = new System.Drawing.Point(358, 349);
             this.PtbAssets.Name = "PtbAssets";
             this.PtbAssets.Size = new System.Drawing.Size(100, 50);
             this.PtbAssets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +224,7 @@
             this.PtbAccountsPayable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbAccountsPayable.Image = global::Centuria.Properties.Resources.Accounts_payable1;
             this.PtbAccountsPayable.InitialImage = null;
-            this.PtbAccountsPayable.Location = new System.Drawing.Point(310, 247);
+            this.PtbAccountsPayable.Location = new System.Drawing.Point(125, 247);
             this.PtbAccountsPayable.Name = "PtbAccountsPayable";
             this.PtbAccountsPayable.Size = new System.Drawing.Size(100, 50);
             this.PtbAccountsPayable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +237,7 @@
             this.PtbInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbInvoice.Image = global::Centuria.Properties.Resources.invoice;
             this.PtbInvoice.InitialImage = null;
-            this.PtbInvoice.Location = new System.Drawing.Point(543, 247);
+            this.PtbInvoice.Location = new System.Drawing.Point(358, 247);
             this.PtbInvoice.Name = "PtbInvoice";
             this.PtbInvoice.Size = new System.Drawing.Size(100, 50);
             this.PtbInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +250,7 @@
             this.PtbCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbCustomers.Image = global::Centuria.Properties.Resources.Customers;
             this.PtbCustomers.InitialImage = null;
-            this.PtbCustomers.Location = new System.Drawing.Point(310, 349);
+            this.PtbCustomers.Location = new System.Drawing.Point(125, 349);
             this.PtbCustomers.Name = "PtbCustomers";
             this.PtbCustomers.Size = new System.Drawing.Size(100, 50);
             this.PtbCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -261,7 +261,7 @@
             // 
             this.LblConfiguration.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.LblConfiguration.AutoSize = true;
-            this.LblConfiguration.Location = new System.Drawing.Point(869, 349);
+            this.LblConfiguration.Location = new System.Drawing.Point(684, 349);
             this.LblConfiguration.Name = "LblConfiguration";
             this.LblConfiguration.Size = new System.Drawing.Size(72, 13);
             this.LblConfiguration.TabIndex = 19;
@@ -274,7 +274,7 @@
             this.PtbPayrolRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbPayrolRegister.Image = global::Centuria.Properties.Resources.Payroll_Register;
             this.PtbPayrolRegister.InitialImage = null;
-            this.PtbPayrolRegister.Location = new System.Drawing.Point(763, 247);
+            this.PtbPayrolRegister.Location = new System.Drawing.Point(578, 247);
             this.PtbPayrolRegister.Name = "PtbPayrolRegister";
             this.PtbPayrolRegister.Size = new System.Drawing.Size(100, 50);
             this.PtbPayrolRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +287,7 @@
             this.PtbAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbAccounting.Image = global::Centuria.Properties.Resources.accounting;
             this.PtbAccounting.InitialImage = null;
-            this.PtbAccounting.Location = new System.Drawing.Point(310, 142);
+            this.PtbAccounting.Location = new System.Drawing.Point(125, 142);
             this.PtbAccounting.Name = "PtbAccounting";
             this.PtbAccounting.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.PtbAccounting.Size = new System.Drawing.Size(100, 50);
@@ -301,7 +301,7 @@
             this.PtbInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbInventory.Image = global::Centuria.Properties.Resources.inventory;
             this.PtbInventory.InitialImage = null;
-            this.PtbInventory.Location = new System.Drawing.Point(543, 142);
+            this.PtbInventory.Location = new System.Drawing.Point(358, 142);
             this.PtbInventory.Name = "PtbInventory";
             this.PtbInventory.Size = new System.Drawing.Size(100, 50);
             this.PtbInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,7 +314,7 @@
             this.PtbAccountsReceivable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PtbAccountsReceivable.Image = global::Centuria.Properties.Resources.Cuentas_x_cobrar;
             this.PtbAccountsReceivable.InitialImage = null;
-            this.PtbAccountsReceivable.Location = new System.Drawing.Point(763, 142);
+            this.PtbAccountsReceivable.Location = new System.Drawing.Point(578, 142);
             this.PtbAccountsReceivable.Name = "PtbAccountsReceivable";
             this.PtbAccountsReceivable.Size = new System.Drawing.Size(100, 50);
             this.PtbAccountsReceivable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -325,7 +325,7 @@
             // 
             this.pictureBox1.Image = global::Centuria.Properties.Resources.ImgLogo;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(492, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(307, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(256, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -338,7 +338,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.PtbAccountsReceivable);
             this.Controls.Add(this.PtbInventory);
@@ -364,7 +364,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "FrmMainMenu";
-            this.Text = "Menu Principal - Centuria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.FrmMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PtbConfiguration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbAssets)).EndInit();

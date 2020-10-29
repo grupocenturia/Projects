@@ -95,7 +95,6 @@ namespace Centuria
                 if (ObjJson != null)
                 {
                     string lServer = (string)ObjJson.SelectToken("Server");
-                    string lPathUpdate = (string)ObjJson.SelectToken("PathUpdate");
 
                     if (string.IsNullOrEmpty(lServer))
                     {
@@ -109,29 +108,29 @@ namespace Centuria
 
                         ClsVariables.gServer = lServer;
                     }
-
-                    if (string.IsNullOrEmpty(lPathUpdate))
-                    {
-                        lOk = false;
-                    }
-                    else
-                    {
-                        lOk = true;
-
-                        lPathUpdate = lPathUpdate.Trim();
-
-                        ClsVariables.gPathUpdate = lPathUpdate;
-                    }
                 }
             }
 
             if(lOk == true)
             {
-                DataTable ObjDt = ClsSql.Fx_sel_tblSetting();
+                lOk = false;
 
-                if (ObjDt == null)
+                DataTable ObjDt = ClsSql.Fx_sel_tblSetting(true);
+
+                if (ObjDt != null)
                 {
-                    lOk = false;
+                    foreach(DataRow ObjRow in ObjDt.Rows)
+                    {
+                        string lVariable = ObjRow[2].ToString();
+                        string lValue = ObjRow[3].ToString();
+                        
+                        if (lVariable == "PathUpdate")
+                        {
+                            lOk = true;
+
+                            ClsVariables.gPathUpdate = lValue;
+                        }
+                    }
                 }
             }
 
@@ -315,7 +314,7 @@ namespace Centuria
             return ObjJson;
         }
 
-        internal static void FxWriteJsonSettings(string pServer, string pPathUpdate)
+        internal static void FxWriteJsonSettings(string pServer)
         {
             bool lOk;
 
@@ -324,7 +323,6 @@ namespace Centuria
             dynamic ObjJson = new JObject();
 
             ObjJson.Server = pServer;
-            ObjJson.PathUpdate = pPathUpdate;
 
             for (int lCounter = 0; lCounter < 3; lCounter++)
             {

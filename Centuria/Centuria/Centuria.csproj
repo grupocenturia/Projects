@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>IcoCenturia.ico</ApplicationIcon>
+    <ApplicationIcon>Images\IcoCenturia.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -97,19 +97,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -123,10 +123,7 @@
     <None Include="Images\GifSplashScreen.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\ImgSplashScreen.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="IcoCenturia.ico" />
+    <Content Include="Images\IcoCenturia.ico" />
     <None Include="Resources\Administrator.png" />
     <None Include="Resources\Assets.png" />
     <None Include="Resources\Customers.png" />
@@ -138,7 +135,6 @@
     <None Include="Resources\inventory.png" />
     <None Include="Resources\accounting.png" />
     <None Include="Images\ImgLogo.png" />
-    <Content Include="propuesta 3.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
