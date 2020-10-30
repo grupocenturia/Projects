@@ -93,16 +93,6 @@ namespace Centuria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Accounts_receivable {
-            get {
-                object obj = ResourceManager.GetObject("Accounts receivable", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Administrator {
             get {
                 object obj = ResourceManager.GetObject("Administrator", resourceCulture);
@@ -176,16 +166,6 @@ namespace Centuria.Properties {
         internal static System.Drawing.Bitmap invoice {
             get {
                 object obj = ResourceManager.GetObject("invoice", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo_300_x_100 {
-            get {
-                object obj = ResourceManager.GetObject("Logo 300 x 100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
