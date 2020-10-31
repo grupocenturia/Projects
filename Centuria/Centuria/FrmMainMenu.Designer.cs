@@ -33,36 +33,36 @@
             this.CmbCompany = new System.Windows.Forms.ComboBox();
             this.TtpAccounting = new System.Windows.Forms.ToolTip(this.components);
             this.TtpInventory = new System.Windows.Forms.ToolTip(this.components);
-            this.LklAccounting = new System.Windows.Forms.LinkLabel();
             this.LblAccounting = new System.Windows.Forms.Label();
-            this.LblInventory = new System.Windows.Forms.Label();
+            this.LklAccounting = new System.Windows.Forms.LinkLabel();
             this.LblAccountsReceivable = new System.Windows.Forms.Label();
-            this.LblAccountsPayable = new System.Windows.Forms.Label();
-            this.LblInvoice = new System.Windows.Forms.Label();
             this.LblPayrolleRegister = new System.Windows.Forms.Label();
-            this.LblCustomers = new System.Windows.Forms.Label();
+            this.LblConfiguration = new System.Windows.Forms.Label();
+            this.LblInventory = new System.Windows.Forms.Label();
+            this.LblInvoice = new System.Windows.Forms.Label();
             this.LblAssets = new System.Windows.Forms.Label();
+            this.LblCustomers = new System.Windows.Forms.Label();
+            this.LblAccountsPayable = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PtbAccountsReceivable = new System.Windows.Forms.PictureBox();
+            this.PtbInventory = new System.Windows.Forms.PictureBox();
+            this.PtbPayrolRegister = new System.Windows.Forms.PictureBox();
             this.PtbConfiguration = new System.Windows.Forms.PictureBox();
+            this.PtbAccounting = new System.Windows.Forms.PictureBox();
             this.PtbAssets = new System.Windows.Forms.PictureBox();
             this.PtbAccountsPayable = new System.Windows.Forms.PictureBox();
             this.PtbInvoice = new System.Windows.Forms.PictureBox();
             this.PtbCustomers = new System.Windows.Forms.PictureBox();
-            this.LblConfiguration = new System.Windows.Forms.Label();
-            this.PtbPayrolRegister = new System.Windows.Forms.PictureBox();
-            this.PtbAccounting = new System.Windows.Forms.PictureBox();
-            this.PtbInventory = new System.Windows.Forms.PictureBox();
-            this.PtbAccountsReceivable = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsReceivable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbInventory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbPayrolRegister)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbConfiguration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbAccounting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbAssets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsPayable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbCustomers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbPayrolRegister)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbAccounting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbInventory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsReceivable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CmbCompany
@@ -89,6 +89,17 @@
             this.TtpInventory.IsBalloon = true;
             this.TtpInventory.ToolTipTitle = "Modulo de Inventario";
             // 
+            // LblAccounting
+            // 
+            this.LblAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblAccounting.AutoSize = true;
+            this.LblAccounting.Location = new System.Drawing.Point(231, 142);
+            this.LblAccounting.Name = "LblAccounting";
+            this.LblAccounting.Size = new System.Drawing.Size(65, 13);
+            this.LblAccounting.TabIndex = 10;
+            this.LblAccounting.Text = "Contabilidad";
+            this.LblAccounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LklAccounting
             // 
             this.LklAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -101,28 +112,6 @@
             this.LklAccounting.TabIndex = 9;
             this.LklAccounting.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LklAccounting_LinkClicked);
             // 
-            // LblAccounting
-            // 
-            this.LblAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblAccounting.AutoSize = true;
-            this.LblAccounting.Location = new System.Drawing.Point(231, 142);
-            this.LblAccounting.Name = "LblAccounting";
-            this.LblAccounting.Size = new System.Drawing.Size(65, 13);
-            this.LblAccounting.TabIndex = 10;
-            this.LblAccounting.Text = "Contabilidad";
-            this.LblAccounting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LblInventory
-            // 
-            this.LblInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblInventory.AutoSize = true;
-            this.LblInventory.Location = new System.Drawing.Point(464, 142);
-            this.LblInventory.Name = "LblInventory";
-            this.LblInventory.Size = new System.Drawing.Size(54, 13);
-            this.LblInventory.TabIndex = 11;
-            this.LblInventory.Text = "Inventario";
-            this.LblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // LblAccountsReceivable
             // 
             this.LblAccountsReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
@@ -134,16 +123,38 @@
             this.LblAccountsReceivable.Text = "Cuentas por Cobrar";
             this.LblAccountsReceivable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LblAccountsPayable
+            // LblPayrolleRegister
             // 
-            this.LblAccountsPayable.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblAccountsPayable.AutoSize = true;
-            this.LblAccountsPayable.Location = new System.Drawing.Point(231, 247);
-            this.LblAccountsPayable.Name = "LblAccountsPayable";
-            this.LblAccountsPayable.Size = new System.Drawing.Size(94, 13);
-            this.LblAccountsPayable.TabIndex = 13;
-            this.LblAccountsPayable.Text = "Cuentas por pagar";
-            this.LblAccountsPayable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblPayrolleRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblPayrolleRegister.AutoSize = true;
+            this.LblPayrolleRegister.Location = new System.Drawing.Point(684, 247);
+            this.LblPayrolleRegister.Name = "LblPayrolleRegister";
+            this.LblPayrolleRegister.Size = new System.Drawing.Size(103, 13);
+            this.LblPayrolleRegister.TabIndex = 15;
+            this.LblPayrolleRegister.Text = "Registro de nóminas";
+            this.LblPayrolleRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblConfiguration
+            // 
+            this.LblConfiguration.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblConfiguration.AutoSize = true;
+            this.LblConfiguration.Location = new System.Drawing.Point(684, 349);
+            this.LblConfiguration.Name = "LblConfiguration";
+            this.LblConfiguration.Size = new System.Drawing.Size(72, 13);
+            this.LblConfiguration.TabIndex = 19;
+            this.LblConfiguration.Text = "Configuración";
+            this.LblConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LblInventory
+            // 
+            this.LblInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblInventory.AutoSize = true;
+            this.LblInventory.Location = new System.Drawing.Point(464, 142);
+            this.LblInventory.Name = "LblInventory";
+            this.LblInventory.Size = new System.Drawing.Size(54, 13);
+            this.LblInventory.TabIndex = 11;
+            this.LblInventory.Text = "Inventario";
+            this.LblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblInvoice
             // 
@@ -157,16 +168,17 @@
             this.LblInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblInvoice.Click += new System.EventHandler(this.label1_Click);
             // 
-            // LblPayrolleRegister
+            // LblAssets
             // 
-            this.LblPayrolleRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblPayrolleRegister.AutoSize = true;
-            this.LblPayrolleRegister.Location = new System.Drawing.Point(684, 247);
-            this.LblPayrolleRegister.Name = "LblPayrolleRegister";
-            this.LblPayrolleRegister.Size = new System.Drawing.Size(103, 13);
-            this.LblPayrolleRegister.TabIndex = 15;
-            this.LblPayrolleRegister.Text = "Registro de nóminas";
-            this.LblPayrolleRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblAssets.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblAssets.AutoSize = true;
+            this.LblAssets.Location = new System.Drawing.Point(464, 349);
+            this.LblAssets.Name = "LblAssets";
+            this.LblAssets.Size = new System.Drawing.Size(56, 13);
+            this.LblAssets.TabIndex = 17;
+            this.LblAssets.Text = "Activo Fijo";
+            this.LblAssets.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LblAssets.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // LblCustomers
             // 
@@ -180,17 +192,66 @@
             this.LblCustomers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LblCustomers.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // LblAssets
+            // LblAccountsPayable
             // 
-            this.LblAssets.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblAssets.AutoSize = true;
-            this.LblAssets.Location = new System.Drawing.Point(464, 349);
-            this.LblAssets.Name = "LblAssets";
-            this.LblAssets.Size = new System.Drawing.Size(56, 13);
-            this.LblAssets.TabIndex = 17;
-            this.LblAssets.Text = "Activo Fijo";
-            this.LblAssets.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LblAssets.Click += new System.EventHandler(this.label1_Click_2);
+            this.LblAccountsPayable.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.LblAccountsPayable.AutoSize = true;
+            this.LblAccountsPayable.Location = new System.Drawing.Point(231, 247);
+            this.LblAccountsPayable.Name = "LblAccountsPayable";
+            this.LblAccountsPayable.Size = new System.Drawing.Size(94, 13);
+            this.LblAccountsPayable.TabIndex = 13;
+            this.LblAccountsPayable.Text = "Cuentas por pagar";
+            this.LblAccountsPayable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Centuria.Properties.Resources.ImgLogo;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(272, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(318, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PtbAccountsReceivable
+            // 
+            this.PtbAccountsReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbAccountsReceivable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbAccountsReceivable.Image = global::Centuria.Properties.Resources.Cuentas_x_cobrar;
+            this.PtbAccountsReceivable.InitialImage = null;
+            this.PtbAccountsReceivable.Location = new System.Drawing.Point(578, 142);
+            this.PtbAccountsReceivable.Name = "PtbAccountsReceivable";
+            this.PtbAccountsReceivable.Size = new System.Drawing.Size(100, 50);
+            this.PtbAccountsReceivable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbAccountsReceivable.TabIndex = 7;
+            this.PtbAccountsReceivable.TabStop = false;
+            // 
+            // PtbInventory
+            // 
+            this.PtbInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbInventory.Image = global::Centuria.Properties.Resources.inventory;
+            this.PtbInventory.InitialImage = null;
+            this.PtbInventory.Location = new System.Drawing.Point(358, 142);
+            this.PtbInventory.Name = "PtbInventory";
+            this.PtbInventory.Size = new System.Drawing.Size(100, 50);
+            this.PtbInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbInventory.TabIndex = 8;
+            this.PtbInventory.TabStop = false;
+            // 
+            // PtbPayrolRegister
+            // 
+            this.PtbPayrolRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbPayrolRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbPayrolRegister.Image = global::Centuria.Properties.Resources.Payroll_Register;
+            this.PtbPayrolRegister.InitialImage = null;
+            this.PtbPayrolRegister.Location = new System.Drawing.Point(578, 247);
+            this.PtbPayrolRegister.Name = "PtbPayrolRegister";
+            this.PtbPayrolRegister.Size = new System.Drawing.Size(100, 50);
+            this.PtbPayrolRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbPayrolRegister.TabIndex = 5;
+            this.PtbPayrolRegister.TabStop = false;
             // 
             // PtbConfiguration
             // 
@@ -204,6 +265,20 @@
             this.PtbConfiguration.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PtbConfiguration.TabIndex = 18;
             this.PtbConfiguration.TabStop = false;
+            // 
+            // PtbAccounting
+            // 
+            this.PtbAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbAccounting.Image = global::Centuria.Properties.Resources.accounting;
+            this.PtbAccounting.InitialImage = null;
+            this.PtbAccounting.Location = new System.Drawing.Point(125, 142);
+            this.PtbAccounting.Name = "PtbAccounting";
+            this.PtbAccounting.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.PtbAccounting.Size = new System.Drawing.Size(100, 50);
+            this.PtbAccounting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PtbAccounting.TabIndex = 1;
+            this.PtbAccounting.TabStop = false;
             // 
             // PtbAssets
             // 
@@ -257,81 +332,6 @@
             this.PtbCustomers.TabIndex = 2;
             this.PtbCustomers.TabStop = false;
             // 
-            // LblConfiguration
-            // 
-            this.LblConfiguration.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.LblConfiguration.AutoSize = true;
-            this.LblConfiguration.Location = new System.Drawing.Point(684, 349);
-            this.LblConfiguration.Name = "LblConfiguration";
-            this.LblConfiguration.Size = new System.Drawing.Size(72, 13);
-            this.LblConfiguration.TabIndex = 19;
-            this.LblConfiguration.Text = "Configuración";
-            this.LblConfiguration.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PtbPayrolRegister
-            // 
-            this.PtbPayrolRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbPayrolRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbPayrolRegister.Image = global::Centuria.Properties.Resources.Payroll_Register;
-            this.PtbPayrolRegister.InitialImage = null;
-            this.PtbPayrolRegister.Location = new System.Drawing.Point(578, 247);
-            this.PtbPayrolRegister.Name = "PtbPayrolRegister";
-            this.PtbPayrolRegister.Size = new System.Drawing.Size(100, 50);
-            this.PtbPayrolRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbPayrolRegister.TabIndex = 5;
-            this.PtbPayrolRegister.TabStop = false;
-            // 
-            // PtbAccounting
-            // 
-            this.PtbAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbAccounting.Image = global::Centuria.Properties.Resources.accounting;
-            this.PtbAccounting.InitialImage = null;
-            this.PtbAccounting.Location = new System.Drawing.Point(125, 142);
-            this.PtbAccounting.Name = "PtbAccounting";
-            this.PtbAccounting.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.PtbAccounting.Size = new System.Drawing.Size(100, 50);
-            this.PtbAccounting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbAccounting.TabIndex = 1;
-            this.PtbAccounting.TabStop = false;
-            // 
-            // PtbInventory
-            // 
-            this.PtbInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbInventory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbInventory.Image = global::Centuria.Properties.Resources.inventory;
-            this.PtbInventory.InitialImage = null;
-            this.PtbInventory.Location = new System.Drawing.Point(358, 142);
-            this.PtbInventory.Name = "PtbInventory";
-            this.PtbInventory.Size = new System.Drawing.Size(100, 50);
-            this.PtbInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbInventory.TabIndex = 8;
-            this.PtbInventory.TabStop = false;
-            // 
-            // PtbAccountsReceivable
-            // 
-            this.PtbAccountsReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbAccountsReceivable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbAccountsReceivable.Image = global::Centuria.Properties.Resources.Cuentas_x_cobrar;
-            this.PtbAccountsReceivable.InitialImage = null;
-            this.PtbAccountsReceivable.Location = new System.Drawing.Point(578, 142);
-            this.PtbAccountsReceivable.Name = "PtbAccountsReceivable";
-            this.PtbAccountsReceivable.Size = new System.Drawing.Size(100, 50);
-            this.PtbAccountsReceivable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PtbAccountsReceivable.TabIndex = 7;
-            this.PtbAccountsReceivable.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Centuria.Properties.Resources.ImgLogo;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(307, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmMainMenu
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -366,16 +366,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.FrmMainMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsReceivable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbInventory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbPayrolRegister)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbConfiguration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbAccounting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbAssets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsPayable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PtbCustomers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbPayrolRegister)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbAccounting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbInventory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbAccountsReceivable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,27 +384,27 @@
         #endregion
 
         private System.Windows.Forms.ComboBox CmbCompany;
-        private System.Windows.Forms.PictureBox PtbCustomers;
-        private System.Windows.Forms.PictureBox PtbInvoice;
-        private System.Windows.Forms.PictureBox PtbAccountsPayable;
-        private System.Windows.Forms.PictureBox PtbAssets;
         private System.Windows.Forms.ToolTip TtpAccounting;
         private System.Windows.Forms.ToolTip TtpInventory;
-        private System.Windows.Forms.LinkLabel LklAccounting;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label LblAccounting;
-        private System.Windows.Forms.Label LblInventory;
+        private System.Windows.Forms.PictureBox PtbAccounting;
+        private System.Windows.Forms.LinkLabel LklAccounting;
         private System.Windows.Forms.Label LblAccountsReceivable;
-        private System.Windows.Forms.Label LblAccountsPayable;
-        private System.Windows.Forms.Label LblInvoice;
         private System.Windows.Forms.Label LblPayrolleRegister;
-        private System.Windows.Forms.Label LblCustomers;
-        private System.Windows.Forms.Label LblAssets;
         private System.Windows.Forms.PictureBox PtbConfiguration;
         private System.Windows.Forms.Label LblConfiguration;
         private System.Windows.Forms.PictureBox PtbPayrolRegister;
-        private System.Windows.Forms.PictureBox PtbAccounting;
-        private System.Windows.Forms.PictureBox PtbInventory;
         private System.Windows.Forms.PictureBox PtbAccountsReceivable;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LblInventory;
+        private System.Windows.Forms.PictureBox PtbInventory;
+        private System.Windows.Forms.Label LblInvoice;
+        private System.Windows.Forms.PictureBox PtbInvoice;
+        private System.Windows.Forms.Label LblAssets;
+        private System.Windows.Forms.PictureBox PtbAssets;
+        private System.Windows.Forms.Label LblCustomers;
+        private System.Windows.Forms.PictureBox PtbCustomers;
+        private System.Windows.Forms.Label LblAccountsPayable;
+        private System.Windows.Forms.PictureBox PtbAccountsPayable;
     }
 }
