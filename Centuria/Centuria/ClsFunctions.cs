@@ -119,16 +119,24 @@ namespace Centuria
 
                 if (ObjDt != null)
                 {
-                    foreach(DataRow ObjRow in ObjDt.Rows)
+                    if (ObjDt.Rows.Count > 0)
                     {
-                        string lVariable = ObjRow[2].ToString();
-                        string lValue = ObjRow[3].ToString();
-                        
-                        if (lVariable == "PathUpdate")
-                        {
-                            lOk = true;
+                        lOk = true;
 
-                            ClsVariables.gPathUpdate = lValue;
+                        foreach (DataRow ObjRow in ObjDt.Rows)
+                        {
+                            string lVariable = ObjRow[2].ToString();
+                            string lValue = ObjRow[3].ToString();
+
+                            if (lVariable == "PathUpdate")
+                            {
+                                ClsVariables.gPathUpdate = lValue;
+                            }
+
+                            if (lVariable == "Authentication")
+                            {
+                                ClsVariables.gAuthentication = FxConvertTextToBool(lValue);
+                            }
                         }
                     }
                 }
@@ -400,6 +408,25 @@ namespace Centuria
             }
 
             return lPath;
+        }
+
+        internal static bool FxConvertTextToBool(string pText)
+        {
+            bool lReturn = false;
+
+            if (pText == "1")
+            {
+                lReturn = true;
+            }
+
+            return lReturn;
+        }
+
+        internal static string FxGetWindowsUserName()
+        {
+            string lUserName = Environment.UserName;
+
+            return lUserName;
         }
     }
 }

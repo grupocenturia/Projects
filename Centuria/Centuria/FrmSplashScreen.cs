@@ -148,9 +148,36 @@ namespace Centuria
 
             ImgSplashScreen.Enabled = false;
 
-            FrmLogin ObjForm = new FrmLogin();
+            if (ClsVariables.gAuthentication == true)
+            {
+                FrmLogin ObjFormLogin = new FrmLogin();
 
-            ObjForm.ShowDialog();
+                ObjFormLogin.ShowDialog();
+
+                if (ClsVariables.gUserId > 0)
+                {
+                    FrmMainMenu ObjForm = new FrmMainMenu();
+
+                    ObjForm.ShowDialog();
+                }
+            }
+            else
+            {
+                string lUserName = ClsFunctions.FxGetWindowsUserName();
+
+                ClsVariables.gUserId = ClsSql.Fx_sel_tblUser_check(lUserName);
+
+                if (ClsVariables.gUserId == 0)
+                {
+                    ClsFunctions.FxMessage(1, "Usuario no tiene permisos para ingresar");
+                }
+                else
+                {
+                    FrmMainMenu ObjForm = new FrmMainMenu();
+
+                    ObjForm.ShowDialog();
+                }
+            }
 
             FxExit();
         }

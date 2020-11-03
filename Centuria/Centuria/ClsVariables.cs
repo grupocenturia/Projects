@@ -8,8 +8,14 @@
         internal static string gPathBin = "";
         internal static string gPathDocs = "";
         internal static string gPathTemp = "";
-        internal static string gPathUpdate = "";
 
+        //Settings.ini
         internal static string gServer = "";
+
+        //Administrator.tblSettings
+        internal static string gPathUpdate = "";
+        internal static bool gAuthentication = false;
+
+        internal static long gUserId = 0;
     }
 }

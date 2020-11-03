@@ -62,11 +62,19 @@ namespace Centuria
                 return;
             }
 
-            FrmMainMenu ObjFrm = new FrmMainMenu();
+            ClsVariables.gUserId = ClsSql.Fx_sel_tblUser_checkPassword(lUserName, lPassword);
 
-            Hide();
+            if (ClsVariables.gUserId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Usuario y/o contraseña incorrectos");
 
-            ObjFrm.ShowDialog();
+                TxtUserName.Text = "";
+                TxtPassword.Text = "";
+
+                TxtUserName.Focus();
+
+                return;
+            }
 
             FxExit();
         }
