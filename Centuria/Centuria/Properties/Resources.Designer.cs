@@ -83,9 +83,9 @@ namespace Centuria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Accounts_payable1 {
+        internal static System.Drawing.Bitmap Accounts_receivable {
             get {
-                object obj = ResourceManager.GetObject("Accounts payable1", resourceCulture);
+                object obj = ResourceManager.GetObject("Accounts receivable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Centuria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cuentas_x_cobrar {
+        internal static System.Drawing.Bitmap Bank_reconcilliation {
             get {
-                object obj = ResourceManager.GetObject("Cuentas x cobrar", resourceCulture);
+                object obj = ResourceManager.GetObject("Bank reconcilliation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,26 +156,6 @@ namespace Centuria.Properties {
         internal static System.Drawing.Bitmap inventory {
             get {
                 object obj = ResourceManager.GetObject("inventory", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap invoice {
-            get {
-                object obj = ResourceManager.GetObject("invoice", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Payroll_Register {
-            get {
-                object obj = ResourceManager.GetObject("Payroll Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

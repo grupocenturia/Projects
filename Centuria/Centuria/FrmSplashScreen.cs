@@ -186,5 +186,10 @@ namespace Centuria
         {
             Close();
         }
+
+        private void ImgSplashScreen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
