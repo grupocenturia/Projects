@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,6 +46,19 @@ namespace Centuria
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string lExecutable = ClsVariables.gPathBin + "Administrator.exe";
+
+            ProcessStartInfo startInfo = new ProcessStartInfo(lExecutable);
+            startInfo.Arguments = "prueba";
+            startInfo.UseShellExecute = false;
+            var process = Process.Start(startInfo);
+            process.WaitForExit();
+
+            ClsFunctions.FxMessage("retorno");
         }
     }
 }

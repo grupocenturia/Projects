@@ -31,29 +31,32 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
             this.TtpAccounting = new System.Windows.Forms.ToolTip(this.components);
+            this.PtbMainMenuAccounting = new System.Windows.Forms.PictureBox();
+            this.PtbMainMenuAccountPayable = new System.Windows.Forms.PictureBox();
             this.TtpInventory = new System.Windows.Forms.ToolTip(this.components);
+            this.PtbMainMenuInventory = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.PtbMainMenuAccountReceivable = new System.Windows.Forms.PictureBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.PtbMainMenuAssets = new System.Windows.Forms.PictureBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.PtbMainMenuBankReconciation = new System.Windows.Forms.PictureBox();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.PtbMainMenuCustomers = new System.Windows.Forms.PictureBox();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TtpAccountsPayable = new System.Windows.Forms.ToolTip(this.components);
             this.TtpAccountsReceivable = new System.Windows.Forms.ToolTip(this.components);
             this.TtpAssets = new System.Windows.Forms.ToolTip(this.components);
             this.TtpMainMenuCustomers = new System.Windows.Forms.ToolTip(this.components);
             this.TtpBankReconciliation = new System.Windows.Forms.ToolTip(this.components);
-            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.PtbMainMenuAccounting = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuAccountPayable = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuAccountReceivable = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuAssets = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuInventory = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuBankReconciation = new System.Windows.Forms.PictureBox();
-            this.PtbMainMenuCustomers = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccounting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountPayable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuInventory)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -64,28 +67,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountReceivable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAssets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuBankReconciation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel1.SuspendLayout();
             this.splitContainer7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.Panel1.SuspendLayout();
             this.splitContainer8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccounting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountPayable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountReceivable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAssets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuInventory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuBankReconciation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,10 +95,53 @@
             this.TtpAccounting.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.TtpAccounting.ToolTipTitle = "Modulo de Contabilidad";
             // 
+            // PtbMainMenuAccounting
+            // 
+            this.PtbMainMenuAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuAccounting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuAccounting.Image = global::Centuria.Properties.Resources.accounting;
+            this.PtbMainMenuAccounting.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuAccounting.Name = "PtbMainMenuAccounting";
+            this.PtbMainMenuAccounting.Size = new System.Drawing.Size(75, 86);
+            this.PtbMainMenuAccounting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuAccounting.TabIndex = 0;
+            this.PtbMainMenuAccounting.TabStop = false;
+            this.TtpAccounting.SetToolTip(this.PtbMainMenuAccounting, "Administración de cuentas contables");
+            // 
+            // PtbMainMenuAccountPayable
+            // 
+            this.PtbMainMenuAccountPayable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuAccountPayable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuAccountPayable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuAccountPayable.Image = global::Centuria.Properties.Resources.Accounts_payable;
+            this.PtbMainMenuAccountPayable.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuAccountPayable.Name = "PtbMainMenuAccountPayable";
+            this.PtbMainMenuAccountPayable.Size = new System.Drawing.Size(84, 86);
+            this.PtbMainMenuAccountPayable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuAccountPayable.TabIndex = 1;
+            this.PtbMainMenuAccountPayable.TabStop = false;
+            this.TtpAccountsPayable.SetToolTip(this.PtbMainMenuAccountPayable, "Administración de cuentas por pagar");
+            this.TtpAccounting.SetToolTip(this.PtbMainMenuAccountPayable, "Modulo de Cuentas por pagar");
+            // 
             // TtpInventory
             // 
             this.TtpInventory.IsBalloon = true;
             this.TtpInventory.ToolTipTitle = "Modulo de Inventario";
+            // 
+            // PtbMainMenuInventory
+            // 
+            this.PtbMainMenuInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuInventory.Image = global::Centuria.Properties.Resources.inventory;
+            this.PtbMainMenuInventory.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuInventory.Name = "PtbMainMenuInventory";
+            this.PtbMainMenuInventory.Size = new System.Drawing.Size(76, 86);
+            this.PtbMainMenuInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuInventory.TabIndex = 4;
+            this.PtbMainMenuInventory.TabStop = false;
+            this.TtpInventory.SetToolTip(this.PtbMainMenuInventory, "Crear, modificar inventarios");
             // 
             // tableLayoutPanel1
             // 
@@ -168,6 +211,20 @@
             this.splitContainer3.SplitterDistance = 74;
             this.splitContainer3.TabIndex = 2;
             // 
+            // PtbMainMenuAccountReceivable
+            // 
+            this.PtbMainMenuAccountReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuAccountReceivable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuAccountReceivable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuAccountReceivable.Image = global::Centuria.Properties.Resources.Accounts_receivable;
+            this.PtbMainMenuAccountReceivable.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuAccountReceivable.Name = "PtbMainMenuAccountReceivable";
+            this.PtbMainMenuAccountReceivable.Size = new System.Drawing.Size(74, 86);
+            this.PtbMainMenuAccountReceivable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuAccountReceivable.TabIndex = 2;
+            this.PtbMainMenuAccountReceivable.TabStop = false;
+            this.TtpAccountsReceivable.SetToolTip(this.PtbMainMenuAccountReceivable, "Administración de Cuentas por Cobrar");
+            // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -180,6 +237,20 @@
             this.splitContainer4.Size = new System.Drawing.Size(153, 86);
             this.splitContainer4.SplitterDistance = 77;
             this.splitContainer4.TabIndex = 3;
+            // 
+            // PtbMainMenuAssets
+            // 
+            this.PtbMainMenuAssets.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuAssets.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuAssets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuAssets.Image = global::Centuria.Properties.Resources.Assets;
+            this.PtbMainMenuAssets.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuAssets.Name = "PtbMainMenuAssets";
+            this.PtbMainMenuAssets.Size = new System.Drawing.Size(77, 86);
+            this.PtbMainMenuAssets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuAssets.TabIndex = 3;
+            this.PtbMainMenuAssets.TabStop = false;
+            this.TtpAssets.SetToolTip(this.PtbMainMenuAssets, "Crear, editar y consultar Activos Fijos");
             // 
             // splitContainer5
             // 
@@ -207,6 +278,20 @@
             this.splitContainer6.SplitterDistance = 75;
             this.splitContainer6.TabIndex = 5;
             // 
+            // PtbMainMenuBankReconciation
+            // 
+            this.PtbMainMenuBankReconciation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuBankReconciation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuBankReconciation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuBankReconciation.Image = global::Centuria.Properties.Resources.Bank_reconcilliation;
+            this.PtbMainMenuBankReconciation.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuBankReconciation.Name = "PtbMainMenuBankReconciation";
+            this.PtbMainMenuBankReconciation.Size = new System.Drawing.Size(75, 87);
+            this.PtbMainMenuBankReconciation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuBankReconciation.TabIndex = 5;
+            this.PtbMainMenuBankReconciation.TabStop = false;
+            this.TtpBankReconciliation.SetToolTip(this.PtbMainMenuBankReconciation, "Conciliaciones Bancarias");
+            // 
             // splitContainer7
             // 
             this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -219,6 +304,44 @@
             this.splitContainer7.Size = new System.Drawing.Size(183, 87);
             this.splitContainer7.SplitterDistance = 86;
             this.splitContainer7.TabIndex = 6;
+            // 
+            // PtbMainMenuCustomers
+            // 
+            this.PtbMainMenuCustomers.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.PtbMainMenuCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PtbMainMenuCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PtbMainMenuCustomers.Image = global::Centuria.Properties.Resources.Customers;
+            this.PtbMainMenuCustomers.Location = new System.Drawing.Point(0, 0);
+            this.PtbMainMenuCustomers.Name = "PtbMainMenuCustomers";
+            this.PtbMainMenuCustomers.Size = new System.Drawing.Size(86, 87);
+            this.PtbMainMenuCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtbMainMenuCustomers.TabIndex = 6;
+            this.PtbMainMenuCustomers.TabStop = false;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(354, 95);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.pictureBox1);
+            this.splitContainer8.Size = new System.Drawing.Size(163, 87);
+            this.splitContainer8.SplitterDistance = 73;
+            this.splitContainer8.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Centuria.Properties.Resources.Administrator;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // TtpAccountsPayable
             // 
@@ -244,128 +367,6 @@
             this.TtpBankReconciliation.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.TtpBankReconciliation.ToolTipTitle = "Modulo de Conciliaciones Bancarias";
             // 
-            // splitContainer8
-            // 
-            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer8.Location = new System.Drawing.Point(354, 95);
-            this.splitContainer8.Name = "splitContainer8";
-            // 
-            // splitContainer8.Panel1
-            // 
-            this.splitContainer8.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer8.Size = new System.Drawing.Size(163, 87);
-            this.splitContainer8.SplitterDistance = 73;
-            this.splitContainer8.TabIndex = 7;
-            // 
-            // PtbMainMenuAccounting
-            // 
-            this.PtbMainMenuAccounting.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuAccounting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuAccounting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuAccounting.Image = global::Centuria.Properties.Resources.accounting;
-            this.PtbMainMenuAccounting.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuAccounting.Name = "PtbMainMenuAccounting";
-            this.PtbMainMenuAccounting.Size = new System.Drawing.Size(75, 86);
-            this.PtbMainMenuAccounting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuAccounting.TabIndex = 0;
-            this.PtbMainMenuAccounting.TabStop = false;
-            this.TtpAccounting.SetToolTip(this.PtbMainMenuAccounting, "Administración de cuentas contables");
-            // 
-            // PtbMainMenuAccountPayable
-            // 
-            this.PtbMainMenuAccountPayable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuAccountPayable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuAccountPayable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuAccountPayable.Image = global::Centuria.Properties.Resources.Accounts_payable;
-            this.PtbMainMenuAccountPayable.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuAccountPayable.Name = "PtbMainMenuAccountPayable";
-            this.PtbMainMenuAccountPayable.Size = new System.Drawing.Size(84, 86);
-            this.PtbMainMenuAccountPayable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuAccountPayable.TabIndex = 1;
-            this.PtbMainMenuAccountPayable.TabStop = false;
-            this.TtpAccountsPayable.SetToolTip(this.PtbMainMenuAccountPayable, "Administración de cuentas por pagar");
-            this.TtpAccounting.SetToolTip(this.PtbMainMenuAccountPayable, "Modulo de Cuentas por pagar");
-            // 
-            // PtbMainMenuAccountReceivable
-            // 
-            this.PtbMainMenuAccountReceivable.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuAccountReceivable.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuAccountReceivable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuAccountReceivable.Image = global::Centuria.Properties.Resources.Accounts_receivable;
-            this.PtbMainMenuAccountReceivable.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuAccountReceivable.Name = "PtbMainMenuAccountReceivable";
-            this.PtbMainMenuAccountReceivable.Size = new System.Drawing.Size(74, 86);
-            this.PtbMainMenuAccountReceivable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuAccountReceivable.TabIndex = 2;
-            this.PtbMainMenuAccountReceivable.TabStop = false;
-            this.TtpAccountsReceivable.SetToolTip(this.PtbMainMenuAccountReceivable, "Administración de Cuentas por Cobrar");
-            // 
-            // PtbMainMenuAssets
-            // 
-            this.PtbMainMenuAssets.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuAssets.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuAssets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuAssets.Image = global::Centuria.Properties.Resources.Assets;
-            this.PtbMainMenuAssets.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuAssets.Name = "PtbMainMenuAssets";
-            this.PtbMainMenuAssets.Size = new System.Drawing.Size(77, 86);
-            this.PtbMainMenuAssets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuAssets.TabIndex = 3;
-            this.PtbMainMenuAssets.TabStop = false;
-            this.TtpAssets.SetToolTip(this.PtbMainMenuAssets, "Crear, editar y consultar Activos Fijos");
-            // 
-            // PtbMainMenuInventory
-            // 
-            this.PtbMainMenuInventory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuInventory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuInventory.Image = global::Centuria.Properties.Resources.inventory;
-            this.PtbMainMenuInventory.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuInventory.Name = "PtbMainMenuInventory";
-            this.PtbMainMenuInventory.Size = new System.Drawing.Size(76, 86);
-            this.PtbMainMenuInventory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuInventory.TabIndex = 4;
-            this.PtbMainMenuInventory.TabStop = false;
-            this.TtpInventory.SetToolTip(this.PtbMainMenuInventory, "Crear, modificar inventarios");
-            // 
-            // PtbMainMenuBankReconciation
-            // 
-            this.PtbMainMenuBankReconciation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuBankReconciation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuBankReconciation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuBankReconciation.Image = global::Centuria.Properties.Resources.Bank_reconcilliation;
-            this.PtbMainMenuBankReconciation.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuBankReconciation.Name = "PtbMainMenuBankReconciation";
-            this.PtbMainMenuBankReconciation.Size = new System.Drawing.Size(75, 87);
-            this.PtbMainMenuBankReconciation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuBankReconciation.TabIndex = 5;
-            this.PtbMainMenuBankReconciation.TabStop = false;
-            this.TtpBankReconciliation.SetToolTip(this.PtbMainMenuBankReconciation, "Conciliaciones Bancarias");
-            // 
-            // PtbMainMenuCustomers
-            // 
-            this.PtbMainMenuCustomers.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.PtbMainMenuCustomers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PtbMainMenuCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PtbMainMenuCustomers.Image = global::Centuria.Properties.Resources.Customers;
-            this.PtbMainMenuCustomers.Location = new System.Drawing.Point(0, 0);
-            this.PtbMainMenuCustomers.Name = "PtbMainMenuCustomers";
-            this.PtbMainMenuCustomers.Size = new System.Drawing.Size(86, 87);
-            this.PtbMainMenuCustomers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtbMainMenuCustomers.TabIndex = 6;
-            this.PtbMainMenuCustomers.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Centuria.Properties.Resources.Administrator;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmMainMenu
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -380,6 +381,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.FrmMainMenu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccounting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountPayable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuInventory)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -390,28 +394,25 @@
             this.splitContainer3.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountReceivable)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAssets)).EndInit();
             this.splitContainer5.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             this.splitContainer6.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuBankReconciation)).EndInit();
             this.splitContainer7.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuCustomers)).EndInit();
             this.splitContainer8.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
             this.splitContainer8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccounting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountPayable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAccountReceivable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuAssets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuInventory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuBankReconciation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PtbMainMenuCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
