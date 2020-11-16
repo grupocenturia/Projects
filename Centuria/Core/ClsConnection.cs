@@ -6,106 +6,106 @@ namespace Core
 {
     public class ClsConnection
     {
-        //private static SqlCommand FxSqlConnection()
-        //{
-        //    SqlConnection ObjSqlConnection = new SqlConnection();
+        private static SqlCommand FxSqlConnection(string pDatabase)
+        {
+            SqlConnection ObjSqlConnection = new SqlConnection();
 
-        //    SqlCommand ObjSqlCommand = new SqlCommand();
+            SqlCommand ObjSqlCommand = new SqlCommand();
 
-        //    SqlConnectionStringBuilder ObjSqlConnectionString = FxSqlConnectionString();
+            SqlConnectionStringBuilder ObjSqlConnectionString = FxSqlConnectionString(pDatabase);
 
-        //    ObjSqlConnection.ConnectionString = ObjSqlConnectionString.ConnectionString;
+            ObjSqlConnection.ConnectionString = ObjSqlConnectionString.ConnectionString;
 
-        //    ObjSqlCommand.Connection = ObjSqlConnection;
+            ObjSqlCommand.Connection = ObjSqlConnection;
 
-        //    try
-        //    {
-        //        ObjSqlConnection.Open();
-        //    }
-        //    catch
-        //    {
-        //        ObjSqlCommand = null;
+            try
+            {
+                ObjSqlConnection.Open();
+            }
+            catch
+            {
+                ObjSqlCommand = null;
 
-        //        ClsFunctions.FxMessage(1, "No pudo conectarse con el servidor");
+                ClsFunctions.FxMessage(1, "No pudo conectarse con el servidor");
 
-        //        ClsFunctions.FxExit();
-        //    }
+                ClsFunctions.FxExit();
+            }
 
-        //    ObjSqlConnectionString.Clear();
+            ObjSqlConnectionString.Clear();
 
-        //    return ObjSqlCommand;
-        //}
+            return ObjSqlCommand;
+        }
 
-        //private static SqlConnectionStringBuilder FxSqlConnectionString()
-        //{
-        //    SqlConnectionStringBuilder ObjSqlConnectionString = new SqlConnectionStringBuilder
-        //    {
-        //        DataSource = ClsVariables.gServer,
-        //        InitialCatalog = "CNTDB00",
-        //        UserID = "CenturiaUser",
-        //        Password = "GrupoCenturia2020--",
-        //        IntegratedSecurity = false,
-        //        MaxPoolSize = 500
-        //    };
+        private static SqlConnectionStringBuilder FxSqlConnectionString(string pDatabase)
+        {
+            SqlConnectionStringBuilder ObjSqlConnectionString = new SqlConnectionStringBuilder
+            {
+                DataSource = ClsVariables.gServer,
+                InitialCatalog = pDatabase,
+                UserID = "CenturiaUser",
+                Password = "GrupoCenturia2020--",
+                IntegratedSecurity = false,
+                MaxPoolSize = 500
+            };
 
-        //    return ObjSqlConnectionString;
-        //}
+            return ObjSqlConnectionString;
+        }
 
-        //internal static DataTable FxSqlExecute(string pSchema, string pStoredProcedure)
-        //{
-        //    object[][] lParameters = new object[2][];
+        internal static DataTable FxSqlExecute(string pDatabase, string pSchema, string pStoredProcedure)
+        {
+            object[][] lParameters = new object[2][];
 
-        //    DataTable ObjDt = FxSqlExecute(pSchema, pStoredProcedure, lParameters);
+            DataTable ObjDt = FxSqlExecute(pDatabase, pSchema, pStoredProcedure, lParameters);
 
-        //    return ObjDt;
-        //}
+            return ObjDt;
+        }
 
-        //internal static DataTable FxSqlExecute(string pSchema, string pStoredProcedure, object[][] pParameters)
-        //{
-        //    DataTable ObjDt = new DataTable();
+        internal static DataTable FxSqlExecute(string pDatabase, string pSchema, string pStoredProcedure, object[][] pParameters)
+        {
+            DataTable ObjDt = new DataTable();
 
-        //    using (SqlDataAdapter ObjSqlDa = new SqlDataAdapter())
-        //    {
-        //        using (SqlCommand ObjSqlCommand = FxSqlConnection())
-        //        {
-        //            if (ObjSqlCommand != null)
-        //            {
-        //                if (pParameters[0] != null)
-        //                {
-        //                    FxSqlParameters(ObjSqlCommand, pParameters);
-        //                }
+            using (SqlDataAdapter ObjSqlDa = new SqlDataAdapter())
+            {
+                using (SqlCommand ObjSqlCommand = FxSqlConnection(pDatabase))
+                {
+                    if (ObjSqlCommand != null)
+                    {
+                        if (pParameters[0] != null)
+                        {
+                            FxSqlParameters(ObjSqlCommand, pParameters);
+                        }
 
-        //                ObjSqlCommand.CommandType = CommandType.StoredProcedure;
+                        ObjSqlCommand.CommandType = CommandType.StoredProcedure;
 
-        //                ObjSqlCommand.CommandText = pSchema + "." + pStoredProcedure;
+                        ObjSqlCommand.CommandText = pSchema + "." + pStoredProcedure;
 
-        //                ObjSqlDa.SelectCommand = ObjSqlCommand;
+                        ObjSqlDa.SelectCommand = ObjSqlCommand;
 
-        //                try
-        //                {
-        //                    ObjSqlDa.Fill(ObjDt);
-        //                }
-        //                catch
-        //                {
-        //                    ObjDt = null;
+                        try
+                        {
+                            ObjSqlDa.Fill(ObjDt);
+                        }
+                        catch
+                        {
+                            ObjDt = null;
 
-        //                    ClsFunctions.FxMessage(1, "Operación no fue completada");
+                            ClsFunctions.FxMessage(1, "Operación no fue completada");
 
-        //                    ClsFunctions.FxExit();
-        //                }
-        //            }
+                            ClsFunctions.FxExit();
+                        }
+                    }
 
-        //            if (ObjSqlCommand != null)
-        //            {
-        //                ObjSqlCommand.Connection.Close();
-        //            }
-        //        }
-        //    }
+                    if (ObjSqlCommand != null)
+                    {
+                        ObjSqlCommand.Connection.Close();
+                    }
+                }
+            }
 
-        //    return ObjDt;
-        //}
+            return ObjDt;
+        }
 
-        public static void FxSqlParameters(SqlCommand pSqlCommand, object[][] pParameters)
+        private static void FxSqlParameters(SqlCommand pSqlCommand, object[][] pParameters)
         {
             for (int lCounter = 0; lCounter < pParameters[0].Length; lCounter++)
             {
@@ -136,5 +136,80 @@ namespace Core
                 }
             }
         }
+
+        internal static DataTable FxSqlExecuteImage(string pDatabase, string pSchema, string pStoredProcedure, object[][] pParameters)
+        {
+            DataTable ObjDt = new DataTable();
+
+            using (SqlDataAdapter ObjSqlDa = new SqlDataAdapter())
+            {
+                using (SqlCommand ObjSqlCommand = FxSqlConnection(pDatabase))
+                {
+                    if (ObjSqlCommand != null)
+                    {
+                        if (pParameters[0] != null)
+                        {
+                            FxSqlParametersImage(ObjSqlCommand, pParameters);
+                        }
+
+                        ObjSqlCommand.CommandType = CommandType.StoredProcedure;
+
+                        ObjSqlCommand.CommandText = pSchema + "." + pStoredProcedure;
+
+                        ObjSqlDa.SelectCommand = ObjSqlCommand;
+
+                        try
+                        {
+                            ObjSqlDa.Fill(ObjDt);
+                        }
+                        catch
+                        {
+                            ObjDt = null;
+
+                            ClsFunctions.FxMessage(1, "Operación no fue completada");
+
+                            ClsFunctions.FxExit();
+                        }
+                    }
+
+                    if (ObjSqlCommand != null)
+                    {
+                        ObjSqlCommand.Connection.Close();
+                    }
+                }
+            }
+
+            return ObjDt;
+        }
+
+        private static void FxSqlParametersImage(SqlCommand pSqlCommand, object[][] pParameters)
+        {
+            for (int lCounter = 0; lCounter < pParameters[0].Length; lCounter++)
+            {
+                string lParameter = "@" + pParameters[0][lCounter];
+
+                var lValue = pParameters[1][lCounter];
+                var lType = lValue.GetType();
+
+                if (lType == typeof(long))
+                {
+                    pSqlCommand.Parameters.AddWithValue(lParameter, lValue).SqlDbType = SqlDbType.Int;
+                }
+                else
+                {
+                    byte[] ObjBuffer = ClsFunctions.FxConvertFileByte(lValue.ToString());
+
+                    if (ObjBuffer != null)
+                    {
+                        pSqlCommand.Parameters.AddWithValue(lParameter, ObjBuffer).SqlDbType = SqlDbType.VarBinary;
+                    }
+                    else
+                    {
+                        pSqlCommand.Parameters.AddWithValue(lParameter, DBNull.Value).SqlDbType = SqlDbType.VarBinary;
+                    }
+                }
+            }
+        }
+
     }
 }

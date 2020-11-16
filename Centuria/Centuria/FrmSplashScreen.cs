@@ -7,7 +7,7 @@ namespace Centuria
 {
     public partial class FrmSplashScreen : Form
     {
-        bool lSettings = false;
+        bool lSettingIni = false;
 
         public FrmSplashScreen()
         {
@@ -51,32 +51,41 @@ namespace Centuria
 
         private void FxDoWork()
         {
-            if (lSettings == false)
+            if (lSettingIni == false)
             {
                 BgwProcess.ReportProgress(0, "Inicializando sistema...");
 
                 ClsFunctions.FxPause(1);
 
-                BgwProcess.ReportProgress(0, "Creando directorios de trabajo...");
+                BgwProcess.ReportProgress(0, "Verificando directorios de trabajo...");
 
                 ClsFunctions.FxPause(0.1);
 
-                ClsFunctions.FxCreateWorkingPath();
+                ClsFunctions.FxCreateWorkingPaths();
 
+                BgwProcess.ReportProgress(0, "Obteniendo configuración inicial...");
+
+                ClsFunctions.FxPause(0.1);
+
+                lSettingIni = ClsFunctions.FxGetSettingIni();
+            }
+
+            if (lSettingIni == true)
+            {
                 BgwProcess.ReportProgress(0, "Obteniendo configuración...");
 
                 ClsFunctions.FxPause(0.1);
 
-                lSettings = ClsFunctions.FxGetSettings();
-            }
+                bool lSettings = ClsFunctions.FxGetSettings();
 
-            if (lSettings == true)
-            {
-                FxUpdateFiles();
+                if (lSettings == true)
+                {
+                    FxUpdateFiles();
 
-                BgwProcess.ReportProgress(0, "Bienvenido!!!");
+                    BgwProcess.ReportProgress(0, "Bienvenido!!!");
 
-                ClsFunctions.FxPause(1);
+                    ClsFunctions.FxPause(1);
+                }
             }
         }
 
@@ -117,15 +126,15 @@ namespace Centuria
 
         private void FxCompleteWork()
         {
-            if (lSettings == false)
+            if (lSettingIni == false)
             {
                 FrmSettings ObjForm = new FrmSettings();
 
                 ObjForm.ShowDialog();
 
-                lSettings = ClsFunctions.FxGetSettings();
+                lSettingIni = ClsFunctions.FxGetSettingIni();
 
-                if (lSettings == false)
+                if (lSettingIni == false)
                 {
                     ClsFunctions.FxMessage(1, "No se ha realizado la configuración inicial");
 
@@ -150,33 +159,27 @@ namespace Centuria
 
             if (ClsVariables.gAuthentication == true)
             {
-                FrmLogin ObjFormLogin = new FrmLogin();
+                FrmLogin ObjForm = new FrmLogin();
 
-                ObjFormLogin.ShowDialog();
-
-                if (ClsVariables.gUserId > 0)
-                {
-                    FrmMainMenu ObjForm = new FrmMainMenu();
-
-                    ObjForm.ShowDialog();
-                }
+                ObjForm.ShowDialog();
             }
             else
             {
                 string lUserName = ClsFunctions.FxGetWindowsUserName();
 
-                ClsVariables.gUserId = ClsSql.Fx_sel_tblUser_check(lUserName);
+                long lUserId = ClsSql.Fx_sel_tblUser_check(lUserName);
 
-                if (ClsVariables.gUserId == 0)
+                if (lUserId == 0)
                 {
                     ClsFunctions.FxMessage(1, "Usuario no tiene permisos para ingresar");
                 }
-                else
-                {
-                    FrmMainMenu ObjForm = new FrmMainMenu();
+            }
 
-                    ObjForm.ShowDialog();
-                }
+            if (ClsVariables.gUserId > 0)
+            {
+                FrmMainMenu ObjForm = new FrmMainMenu();
+
+                ObjForm.ShowDialog();
             }
 
             FxExit();
@@ -185,11 +188,6 @@ namespace Centuria
         private void FxExit()
         {
             Close();
-        }
-
-        private void ImgSplashScreen_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

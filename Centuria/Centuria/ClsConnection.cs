@@ -6,13 +6,13 @@ namespace Centuria
 {
     class ClsConnection
     {
-        private static SqlCommand FxSqlConnection()
+        private static SqlCommand FxSqlConnection(string pDatabase)
         {
             SqlConnection ObjSqlConnection = new SqlConnection();
 
             SqlCommand ObjSqlCommand = new SqlCommand();
 
-            SqlConnectionStringBuilder ObjSqlConnectionString = FxSqlConnectionString();
+            SqlConnectionStringBuilder ObjSqlConnectionString = FxSqlConnectionString(pDatabase);
 
             ObjSqlConnection.ConnectionString = ObjSqlConnectionString.ConnectionString;
 
@@ -36,12 +36,12 @@ namespace Centuria
             return ObjSqlCommand;
         }
 
-        private static SqlConnectionStringBuilder FxSqlConnectionString()
+        private static SqlConnectionStringBuilder FxSqlConnectionString(string pDatabase)
         {
             SqlConnectionStringBuilder ObjSqlConnectionString = new SqlConnectionStringBuilder
             {
                 DataSource = ClsVariables.gServer,
-                InitialCatalog = "CNTDB00",
+                InitialCatalog = pDatabase,
                 UserID = "CenturiaUser",
                 Password = "GrupoCenturia2020--",
                 IntegratedSecurity = false,
@@ -51,22 +51,22 @@ namespace Centuria
             return ObjSqlConnectionString;
         }
 
-        internal static DataTable FxSqlExecute(string pSchema, string pStoredProcedure)
+        internal static DataTable FxSqlExecute(string pDatabase, string pSchema, string pStoredProcedure)
         {
             object[][] lParameters = new object[2][];
 
-            DataTable ObjDt = FxSqlExecute(pSchema, pStoredProcedure, lParameters);
+            DataTable ObjDt = FxSqlExecute(pDatabase, pSchema, pStoredProcedure, lParameters);
 
             return ObjDt;
         }
 
-        internal static DataTable FxSqlExecute(string pSchema, string pStoredProcedure, object[][] pParameters)
+        internal static DataTable FxSqlExecute(string pDatabase, string pSchema, string pStoredProcedure, object[][] pParameters)
         {
             DataTable ObjDt = new DataTable();
 
             using (SqlDataAdapter ObjSqlDa = new SqlDataAdapter())
             {
-                using (SqlCommand ObjSqlCommand = FxSqlConnection())
+                using (SqlCommand ObjSqlCommand = FxSqlConnection(pDatabase))
                 {
                     if (ObjSqlCommand != null)
                     {
@@ -95,7 +95,7 @@ namespace Centuria
                         }
                     }
 
-                    if(ObjSqlCommand != null)
+                    if (ObjSqlCommand != null)
                     {
                         ObjSqlCommand.Connection.Close();
                     }

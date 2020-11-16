@@ -1,21 +1,26 @@
-﻿namespace Centuria
+﻿using System;
+
+namespace Centuria
 {
     class ClsVariables
     {
         internal static string gTitle = "Centuria";
-        
+
         internal static string gPathRoot = "C:\\Centuria\\";
-        internal static string gPathBin = "";
-        internal static string gPathDocs = "";
-        internal static string gPathTemp = "";
+        internal static string gPathBin = ClsVariables.gPathRoot + "Bin\\";
+        internal static string gPathTemp = ClsVariables.gPathRoot + "Temp\\";
 
-        //Settings.ini
-        internal static string gServer = "";
+        internal static string gServer;
+        internal static string gDatabase = "CNTDB00";
 
-        //Administrator.tblSettings
-        internal static string gPathUpdate = "";
-        internal static bool gAuthentication = false;
+        internal static string gPathUpdate;
+        internal static bool gAuthentication;
+        internal static long gPasswordExpiry;
+        internal static long gPasswordAlert;
 
-        internal static long gUserId = 0;
+        internal static long gUserId;
+        internal static string gUserName;
+        internal static DateTime gUserExpirationDate;
+        internal static bool gPasswordChanged;
     }
 }

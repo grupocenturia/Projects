@@ -37,6 +37,11 @@ namespace Centuria
 
         private void FxCancel()
         {
+            Text = ClsVariables.gTitle;
+
+            ClsVariables.gUserId = 0;
+            ClsVariables.gUserName = "";
+
             TxtUserName.Text = "";
             TxtPassword.Text = "";
             
@@ -62,9 +67,9 @@ namespace Centuria
                 return;
             }
 
-            ClsVariables.gUserId = ClsSql.Fx_sel_tblUser_checkPassword(lUserName, lPassword);
+            long lUserId = ClsSql.Fx_sel_tblUser_checkPassword(lUserName, lPassword);
 
-            if (ClsVariables.gUserId == 0)
+            if (lUserId == 0)
             {
                 ClsFunctions.FxMessage(1, "Usuario y/o contraseña incorrectos");
 
@@ -74,6 +79,45 @@ namespace Centuria
                 TxtUserName.Focus();
 
                 return;
+            }
+
+            if (lPassword == "centuria")
+            {
+                FrmChangePassword ObjForm = new FrmChangePassword();
+
+                ObjForm.ShowDialog();
+
+                if (ClsVariables.gPasswordChanged == false)
+                {
+                    ClsFunctions.FxMessage(1, "No es posible ingresar si no cambia su contraseña. Favor vuelva a intentar");
+
+                    FxCancel();
+
+                    return;
+                }
+            }
+
+            if (ClsVariables.gPasswordExpiry > 0)
+            {
+                if (ClsVariables.gUserExpirationDate <= DateTime.Today)
+                {
+                    FrmChangePassword ObjForm = new FrmChangePassword();
+
+                    ObjForm.ShowDialog();
+
+                    if (ClsVariables.gPasswordChanged == false)
+                    {
+                        ClsFunctions.FxMessage(1, "No es posible ingresar si no cambia su contraseña. Favor vuelva a intentar");
+
+                        FxCancel();
+
+                        return;
+                    }
+                }
+                else
+                {
+                    ClsFunctions.FxExpirationAlert();
+                }
             }
 
             FxExit();

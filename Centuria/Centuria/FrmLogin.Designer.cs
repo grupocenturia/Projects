@@ -43,27 +43,27 @@
             // 
             this.LblUserName.AutoSize = true;
             this.LblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUserName.Location = new System.Drawing.Point(33, 127);
+            this.LblUserName.Location = new System.Drawing.Point(33, 130);
             this.LblUserName.Name = "LblUserName";
-            this.LblUserName.Size = new System.Drawing.Size(74, 24);
+            this.LblUserName.Size = new System.Drawing.Size(79, 24);
             this.LblUserName.TabIndex = 1;
-            this.LblUserName.Text = "Usuario";
+            this.LblUserName.Text = "Usuario:";
             // 
             // LblPassword
             // 
             this.LblPassword.AutoSize = true;
             this.LblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.Location = new System.Drawing.Point(33, 196);
+            this.LblPassword.Location = new System.Drawing.Point(33, 189);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(92, 24);
+            this.LblPassword.Size = new System.Drawing.Size(111, 24);
             this.LblPassword.TabIndex = 2;
-            this.LblPassword.Text = "Password";
+            this.LblPassword.Text = "Contraseña:";
             // 
             // TxtUserName
             // 
             this.TxtUserName.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.TxtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUserName.Location = new System.Drawing.Point(33, 154);
+            this.TxtUserName.Location = new System.Drawing.Point(33, 157);
             this.TxtUserName.Name = "TxtUserName";
             this.TxtUserName.Size = new System.Drawing.Size(318, 29);
             this.TxtUserName.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             this.TxtPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(33, 223);
+            this.TxtPassword.Location = new System.Drawing.Point(33, 216);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '●';
             this.TxtPassword.Size = new System.Drawing.Size(318, 29);
@@ -98,6 +98,7 @@
             // 
             this.CmdExit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.CmdExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CmdExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CmdExit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.CmdExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.CmdExit.Location = new System.Drawing.Point(271, 278);
@@ -113,13 +114,14 @@
             this.ImgLogo.Image = global::Centuria.Properties.Resources.ImgLogo;
             this.ImgLogo.Location = new System.Drawing.Point(33, 33);
             this.ImgLogo.Name = "ImgLogo";
-            this.ImgLogo.Size = new System.Drawing.Size(318, 68);
+            this.ImgLogo.Size = new System.Drawing.Size(318, 70);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgLogo.TabIndex = 7;
             this.ImgLogo.TabStop = false;
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.CmdEnter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

@@ -33,11 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Administrator.Program</StartupObject>
+    <StartupObject>Administrator.Administrator</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Core">
-      <HintPath>..\..\..\..\Bin\Core.dll</HintPath>
+      <HintPath>..\Core\bin\Debug\Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,14 +52,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsConnection.cs" />
-    <Compile Include="ClsFunctions.cs" />
-    <Compile Include="ClsVariables.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmMainMenu.Designer.cs">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModule.Designer.cs">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModule_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModule_detail.Designer.cs">
+      <DependentUpon>FrmModule_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
@@ -67,13 +76,28 @@
     <Compile Include="FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Administrator.cs" />
+    <Compile Include="FrmUser_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUser_detail.Designer.cs">
+      <DependentUpon>FrmUser_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMainMenu.resx">
+      <DependentUpon>FrmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModule.resx">
+      <DependentUpon>FrmModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModule_detail.resx">
+      <DependentUpon>FrmModule_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUser_detail.resx">
+      <DependentUpon>FrmUser_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

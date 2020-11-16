@@ -67,7 +67,6 @@
             this.ImgSplashScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ImgSplashScreen.TabIndex = 0;
             this.ImgSplashScreen.TabStop = false;
-            this.ImgSplashScreen.Click += new System.EventHandler(this.ImgSplashScreen_Click);
             // 
             // FrmSplashScreen
             // 

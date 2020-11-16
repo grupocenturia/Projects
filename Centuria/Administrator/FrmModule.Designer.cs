@@ -1,6 +1,7 @@
-﻿namespace Administrator
+﻿
+namespace Administrator
 {
-    partial class FrmUser
+    partial class FrmModule
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +29,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GrdData = new System.Windows.Forms.DataGridView();
-            this.CmdNew = new System.Windows.Forms.Button();
-            this.CmdEdit = new System.Windows.Forms.Button();
             this.CmdExit = new System.Windows.Forms.Button();
-            this.CmdReset = new System.Windows.Forms.Button();
+            this.CmdEdit = new System.Windows.Forms.Button();
+            this.CmdNew = new System.Windows.Forms.Button();
+            this.GrdData = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).BeginInit();
             this.SuspendLayout();
+            // 
+            // CmdExit
+            // 
+            this.CmdExit.Location = new System.Drawing.Point(792, 499);
+            this.CmdExit.Name = "CmdExit";
+            this.CmdExit.Size = new System.Drawing.Size(80, 50);
+            this.CmdExit.TabIndex = 3;
+            this.CmdExit.Text = "Salir";
+            this.CmdExit.UseVisualStyleBackColor = false;
+            this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
+            // 
+            // CmdEdit
+            // 
+            this.CmdEdit.Location = new System.Drawing.Point(98, 499);
+            this.CmdEdit.Name = "CmdEdit";
+            this.CmdEdit.Size = new System.Drawing.Size(80, 50);
+            this.CmdEdit.TabIndex = 2;
+            this.CmdEdit.Text = "Modificar";
+            this.CmdEdit.UseVisualStyleBackColor = false;
+            this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
+            // 
+            // CmdNew
+            // 
+            this.CmdNew.Location = new System.Drawing.Point(12, 499);
+            this.CmdNew.Name = "CmdNew";
+            this.CmdNew.Size = new System.Drawing.Size(80, 50);
+            this.CmdNew.TabIndex = 1;
+            this.CmdNew.Text = "Adicionar";
+            this.CmdNew.UseVisualStyleBackColor = false;
+            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // GrdData
             // 
@@ -62,54 +92,13 @@
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
             // 
-            // CmdNew
-            // 
-            this.CmdNew.Location = new System.Drawing.Point(12, 499);
-            this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(80, 50);
-            this.CmdNew.TabIndex = 1;
-            this.CmdNew.Text = "Adicionar";
-            this.CmdNew.UseVisualStyleBackColor = false;
-            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
-            // 
-            // CmdEdit
-            // 
-            this.CmdEdit.Location = new System.Drawing.Point(98, 499);
-            this.CmdEdit.Name = "CmdEdit";
-            this.CmdEdit.Size = new System.Drawing.Size(80, 50);
-            this.CmdEdit.TabIndex = 2;
-            this.CmdEdit.Text = "Modificar";
-            this.CmdEdit.UseVisualStyleBackColor = false;
-            this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
-            // 
-            // CmdExit
-            // 
-            this.CmdExit.Location = new System.Drawing.Point(792, 499);
-            this.CmdExit.Name = "CmdExit";
-            this.CmdExit.Size = new System.Drawing.Size(80, 50);
-            this.CmdExit.TabIndex = 4;
-            this.CmdExit.Text = "Salir";
-            this.CmdExit.UseVisualStyleBackColor = false;
-            this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
-            // 
-            // CmdReset
-            // 
-            this.CmdReset.Location = new System.Drawing.Point(184, 499);
-            this.CmdReset.Name = "CmdReset";
-            this.CmdReset.Size = new System.Drawing.Size(80, 50);
-            this.CmdReset.TabIndex = 3;
-            this.CmdReset.Text = "Restablecer contraseña";
-            this.CmdReset.UseVisualStyleBackColor = false;
-            this.CmdReset.Click += new System.EventHandler(this.CmdReset_Click);
-            // 
-            // FrmUser
+            // FrmModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.CmdReset);
             this.Controls.Add(this.CmdExit);
             this.Controls.Add(this.CmdEdit);
             this.Controls.Add(this.CmdNew);
@@ -117,12 +106,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmUser";
+            this.Name = "FrmModule";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usuario";
-            this.Load += new System.EventHandler(this.FrmUser_Load);
+            this.Text = "Módulo";
+            this.Load += new System.EventHandler(this.FrmModule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
             this.ResumeLayout(false);
 
@@ -130,10 +119,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GrdData;
-        private System.Windows.Forms.Button CmdNew;
-        private System.Windows.Forms.Button CmdEdit;
         private System.Windows.Forms.Button CmdExit;
-        private System.Windows.Forms.Button CmdReset;
+        private System.Windows.Forms.Button CmdEdit;
+        private System.Windows.Forms.Button CmdNew;
+        private System.Windows.Forms.DataGridView GrdData;
     }
 }

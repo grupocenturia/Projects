@@ -5,18 +5,18 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmUser : Form
+    public partial class FrmModule : Form
     {
         DataTable ObjDt;
 
-        public FrmUser()
+        public FrmModule()
         {
             InitializeComponent();
         }
 
-        private void FrmUser_Load(object sender, EventArgs e)
+        private void FrmModule_Load(object sender, EventArgs e)
         {
-            FxCancel();   
+            FxCancel();
         }
 
         private void CmdNew_Click(object sender, EventArgs e)
@@ -27,11 +27,6 @@ namespace Administrator
         private void CmdEdit_Click(object sender, EventArgs e)
         {
             FxEdit();
-        }
-
-        private void CmdReset_Click(object sender, EventArgs e)
-        {
-            FxReset();
         }
 
         private void CmdExit_Click(object sender, EventArgs e)
@@ -49,7 +44,6 @@ namespace Administrator
 
             CmdNew.Enabled = true;
             CmdEdit.Enabled = false;
-            CmdReset.Enabled = false;
 
             FxData();
         }
@@ -63,9 +57,8 @@ namespace Administrator
             GrdData.Enabled = false;
 
             CmdEdit.Enabled = false;
-            CmdReset.Enabled = false;
 
-            ObjDt = ClsSqlAdministrator.Fx_sel_tblUser(false);
+            ObjDt = ClsSqlAdministrator.Fx_sel_tblModule(false);
 
             if (ObjDt != null)
             {
@@ -73,7 +66,9 @@ namespace Administrator
                 {
                     GrdData.DataSource = ObjDt.DefaultView;
 
-                    GrdData.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    GrdData.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                    GrdData.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
                     GrdData.Columns[4].Visible = false;
 
@@ -82,7 +77,6 @@ namespace Administrator
                     GrdData.Enabled = true;
 
                     CmdEdit.Enabled = true;
-                    CmdReset.Enabled = true;
 
                     GrdData.Focus();
                 }
@@ -96,75 +90,36 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lUserId;
+            long lModuleId;
 
             try
             {
-                lUserId = long.Parse(GrdData.SelectedRows[0].Cells[4].Value.ToString());
+                lModuleId = long.Parse(GrdData.SelectedRows[0].Cells[4].Value.ToString());
             }
             catch
             {
-                lUserId = 0;
+                lModuleId = 0;
             }
 
-            if (lUserId == 0)
+            if (lModuleId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione usuario");
+                ClsFunctions.FxMessage(1, "Seleccione módulo");
 
                 GrdData.Focus();
 
                 return;
             }
 
-            FxFormDetail(lUserId);
+            FxFormDetail(lModuleId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmUser_detail ObjForm = new FrmUser_detail(pId);
+            FrmModule_detail ObjForm = new FrmModule_detail(pId);
 
             ObjForm.ShowDialog();
 
             FxCancel();
-        }
-
-        private void FxReset()
-        {
-            long lUserId;
-
-            try
-            {
-                lUserId = long.Parse(GrdData.SelectedRows[0].Cells[4].Value.ToString());
-            }
-            catch
-            {
-                lUserId = 0;
-            }
-
-            if (lUserId == 0)
-            {
-                ClsFunctions.FxMessage(1, "Seleccione usuario");
-
-                GrdData.Focus();
-
-                return;
-            }
-
-            if (ClsFunctions.FxMessage(2, "¿Está seguro de restablecer la constraseña?") == true)
-            {
-                long lUserId_new = ClsSqlAdministrator.Fx_upt_tblUser_resetPassword(lUserId);
-
-                if (lUserId_new == 0)
-                {
-                    ClsFunctions.FxMessage(1, "Contraseña no fue restablecida. Intente de nuevo");
-                }
-                else
-                {
-                    ClsFunctions.FxMessage("Contraseña fue restablecida satisfactoriamente");
-
-                    FxCancel();
-                }
-            }
         }
 
         private void FxExit()

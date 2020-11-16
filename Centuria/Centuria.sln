@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Centuria", "Centuria\Centur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administrator", "Administrator\Administrator.csproj", "{D00331BD-F6E3-4644-807E-D0EBD55064A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{0B7D14ED-2CF2-4AB4-8221-E76F1BAE9AC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{88B29FFC-20D9-480B-BC4D-83713CD88181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{D00331BD-F6E3-4644-807E-D0EBD55064A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D00331BD-F6E3-4644-807E-D0EBD55064A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D00331BD-F6E3-4644-807E-D0EBD55064A5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B7D14ED-2CF2-4AB4-8221-E76F1BAE9AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B7D14ED-2CF2-4AB4-8221-E76F1BAE9AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B7D14ED-2CF2-4AB4-8221-E76F1BAE9AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B7D14ED-2CF2-4AB4-8221-E76F1BAE9AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
