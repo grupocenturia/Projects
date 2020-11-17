@@ -32,9 +32,10 @@
             this.MnuMainMenu = new System.Windows.Forms.MenuStrip();
             this.MnuSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.OptUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptModule = new System.Windows.Forms.ToolStripMenuItem();
             this.BarStatus = new System.Windows.Forms.StatusStrip();
             this.LblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OptModule = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMainMenu.SuspendLayout();
             this.BarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             // 
             this.MnuSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OptUser,
-            this.OptModule});
+            this.OptModule,
+            this.OptProfile});
             this.MnuSettings.Name = "MnuSettings";
             this.MnuSettings.Size = new System.Drawing.Size(95, 20);
             this.MnuSettings.Text = "Configuración";
@@ -64,6 +66,13 @@
             this.OptUser.Size = new System.Drawing.Size(180, 22);
             this.OptUser.Text = "Usuario";
             this.OptUser.Click += new System.EventHandler(this.OptUser_Click);
+            // 
+            // OptModule
+            // 
+            this.OptModule.Name = "OptModule";
+            this.OptModule.Size = new System.Drawing.Size(180, 22);
+            this.OptModule.Text = "Módulo";
+            this.OptModule.Click += new System.EventHandler(this.OptModule_Click);
             // 
             // BarStatus
             // 
@@ -80,12 +89,12 @@
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // OptModule
+            // OptProfile
             // 
-            this.OptModule.Name = "OptModule";
-            this.OptModule.Size = new System.Drawing.Size(180, 22);
-            this.OptModule.Text = "Módulo";
-            this.OptModule.Click += new System.EventHandler(this.OptModule_Click);
+            this.OptProfile.Name = "OptProfile";
+            this.OptProfile.Size = new System.Drawing.Size(180, 22);
+            this.OptProfile.Text = "Perfil";
+            this.OptProfile.Click += new System.EventHandler(this.OptProfile_Click);
             // 
             // FrmMainMenu
             // 
@@ -119,6 +128,7 @@
         private System.Windows.Forms.StatusStrip BarStatus;
         private System.Windows.Forms.ToolStripStatusLabel LblStatus;
         private System.Windows.Forms.ToolStripMenuItem OptModule;
+        private System.Windows.Forms.ToolStripMenuItem OptProfile;
     }
 }
 

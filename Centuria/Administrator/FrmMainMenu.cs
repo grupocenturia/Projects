@@ -36,5 +36,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptProfile_Click(object sender, EventArgs e)
+        {
+            FrmProfile ObjForm = new FrmProfile();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

@@ -70,6 +70,18 @@
     <Compile Include="FrmModule_detail.Designer.cs">
       <DependentUpon>FrmModule_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfile.Designer.cs">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfile_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfile_detail.Designer.cs">
+      <DependentUpon>FrmProfile_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModule_detail.resx">
       <DependentUpon>FrmModule_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfile.resx">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfile_detail.resx">
+      <DependentUpon>FrmProfile_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>

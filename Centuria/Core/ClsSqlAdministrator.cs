@@ -325,5 +325,111 @@ namespace Core
 
             return lId;
         }
+
+        public static DataTable Fx_sel_tblProfile(bool pEnabled)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Enabled" };
+            lParameters[1] = new object[] { pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblProfile", lParameters);
+
+            return ObjDt;
+        }
+
+        public static DataTable Fx_sel_tblProfile_detail(long pProfileId)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "ProfileId" };
+            lParameters[1] = new object[] { pProfileId};
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblProfile_detail", lParameters);
+
+            return ObjDt;
+        }
+
+        public static long Fx_ins_tblProfile(string pName)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Name" };
+            lParameters[1] = new object[] { pName};
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_ins_tblProfile", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
+
+        public static long Fx_upt_tblProfile(long pProfileId, string pName, bool pEnabled)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "ProfileId", "Name", "Enabled" };
+            lParameters[1] = new object[] { pProfileId, pName, pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_upt_tblProfile", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
     }
+
+
 }
