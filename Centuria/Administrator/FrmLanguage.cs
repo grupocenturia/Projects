@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Core;
 
+
 namespace Administrator
 {
     public partial class FrmLanguage : Form
@@ -136,6 +137,10 @@ namespace Administrator
             Close();
         }
 
+        private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

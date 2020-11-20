@@ -59,7 +59,7 @@ namespace Administrator
                 TxtName.Enabled = true;
 
 
-                ChkEnabled.Checked = true;
+                ChkEnabled.Checked = false;
 
                 CmdSave.Enabled = true;
 
