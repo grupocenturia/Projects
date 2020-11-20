@@ -8,40 +8,7 @@ namespace Core
     {
         static readonly string lSchema = "Core";
 
-        internal static Bitmap FxSqlImage(string pDatabase, string pSchema, string pStoredProcedure, object[][] pParameters)
-        {
-            DataTable ObjDt = ClsConnection.FxSqlExecute(pDatabase, pSchema, pStoredProcedure, pParameters);
-
-            if (ObjDt != null)
-            {
-                if (ObjDt.Rows.Count > 0)
-                {
-                    byte[] ObjBuffer = (byte[])ObjDt.Rows[0][0];
-
-                    MemoryStream ObjStream = new MemoryStream(ObjBuffer);
-
-                    Bitmap ObjImage = new Bitmap(ObjStream);
-
-                    ObjStream.Close();
-                    ObjStream.Dispose();
-
-                    return ObjImage;
-                }
-                else
-                {
-                    ObjDt.Dispose();
-
-                    return null;
-                }
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-
-      
+  
         public static DataTable Fx_sel_tblLanguage(bool pEnabled)
         {
             object[][] lParameters = new object[2][];
@@ -54,12 +21,12 @@ namespace Core
             return ObjDt;
         }
 
-        public static DataTable Fx_sel_tblLanguage_detail(long pProfileId)
+        public static DataTable Fx_sel_tblLanguage_detail(long pLanguageId)
         {
             object[][] lParameters = new object[2][];
 
-            lParameters[0] = new object[] { "ProfileId" };
-            lParameters[1] = new object[] { pProfileId };
+            lParameters[0] = new object[] { "LanguageId" };
+            lParameters[1] = new object[] { pLanguageId };
 
             DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblLanguage_detail", lParameters);
 

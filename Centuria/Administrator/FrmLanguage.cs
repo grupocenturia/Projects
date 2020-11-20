@@ -77,8 +77,6 @@ namespace Administrator
 
                     GrdData.Enabled = true;
 
-                    GrdData.Enabled = true;
-
                     CmdEdit.Enabled = true;
 
 
@@ -137,10 +135,7 @@ namespace Administrator
             Close();
         }
 
-        private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
     }
 }
 
