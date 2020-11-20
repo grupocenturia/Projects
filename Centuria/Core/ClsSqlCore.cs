@@ -41,7 +41,7 @@ namespace Core
         }
 
 
-
+      
         public static DataTable Fx_sel_tblLanguage(bool pEnabled)
         {
             object[][] lParameters = new object[2][];

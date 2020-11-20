@@ -106,7 +106,7 @@ namespace Administrator
 
             if (lLanguageId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione Perfil");
+                ClsFunctions.FxMessage(1, "Seleccione Lenguaje");
 
                 GrdData.Focus();
 
@@ -136,10 +136,6 @@ namespace Administrator
             Close();
         }
 
-        private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
     }
 }
 

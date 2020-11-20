@@ -95,7 +95,7 @@
             this.GrdData.Size = new System.Drawing.Size(1290, 740);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
-            this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
+          //  this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
             // FrmLanguage
             // 
