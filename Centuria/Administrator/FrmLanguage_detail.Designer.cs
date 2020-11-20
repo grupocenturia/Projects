@@ -67,7 +67,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(838, 26);
             this.TxtName.TabIndex = 0;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
+            this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
             // 
             // LblName
             // 
@@ -110,6 +110,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lenguaje";
+            this.Load += new System.EventHandler(this.FrmLanguage_detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

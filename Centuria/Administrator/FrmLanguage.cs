@@ -138,7 +138,7 @@ namespace Administrator
 
         private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
     }
 }

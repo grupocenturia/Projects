@@ -16,6 +16,7 @@ namespace Administrator
             InitializeComponent();
         }
 
+
         private void FrmLanguage_detail_Load(object sender, EventArgs e)
         {
             FxCancel();
@@ -25,7 +26,6 @@ namespace Administrator
         {
             ClsFunctions.FxSelectAll(sender);
         }
-
 
 
         private void CmdSave_Click(object sender, EventArgs e)
@@ -139,11 +139,6 @@ namespace Administrator
         }
 
         private void ChkEnabled_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtName_TextChanged(object sender, EventArgs e)
         {
 
         }
