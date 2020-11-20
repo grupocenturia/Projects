@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmProfile
+    partial class FrmLanguage
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(1188, 768);
+            this.CmdExit.Location = new System.Drawing.Point(1183, 764);
             this.CmdExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdExit.Name = "CmdExit";
             this.CmdExit.Size = new System.Drawing.Size(120, 77);
@@ -48,7 +48,7 @@
             // 
             // CmdEdit
             // 
-            this.CmdEdit.Location = new System.Drawing.Point(147, 768);
+            this.CmdEdit.Location = new System.Drawing.Point(142, 764);
             this.CmdEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdEdit.Name = "CmdEdit";
             this.CmdEdit.Size = new System.Drawing.Size(120, 77);
@@ -59,7 +59,7 @@
             // 
             // CmdNew
             // 
-            this.CmdNew.Location = new System.Drawing.Point(18, 768);
+            this.CmdNew.Location = new System.Drawing.Point(13, 764);
             this.CmdNew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdNew.Name = "CmdNew";
             this.CmdNew.Size = new System.Drawing.Size(120, 77);
@@ -79,7 +79,7 @@
             this.GrdData.BackgroundColor = System.Drawing.Color.White;
             this.GrdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdData.GridColor = System.Drawing.Color.Gray;
-            this.GrdData.Location = new System.Drawing.Point(18, 18);
+            this.GrdData.Location = new System.Drawing.Point(13, 14);
             this.GrdData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrdData.MultiSelect = false;
             this.GrdData.Name = "GrdData";
@@ -95,9 +95,8 @@
             this.GrdData.Size = new System.Drawing.Size(1290, 740);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
-            this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
-            // FrmProfile
+            // FrmLanguage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,21 +108,20 @@
             this.Controls.Add(this.CmdNew);
             this.Controls.Add(this.GrdData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmProfile";
+            this.Name = "FrmLanguage";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil";
-            this.Load += new System.EventHandler(this.FrmProfile_Load);
+            this.Text = "Lenguaje";
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button CmdExit;
         private System.Windows.Forms.Button CmdEdit;
         private System.Windows.Forms.Button CmdNew;

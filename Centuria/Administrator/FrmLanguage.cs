@@ -5,16 +5,16 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmProfile : Form
+    public partial class FrmLanguage : Form
     {
         DataTable ObjDt;
 
-        public FrmProfile()
+        public FrmLanguage()
         {
             InitializeComponent();
         }
 
-        private void FrmProfile_Load(object sender, EventArgs e)
+        private void FrmLanguage_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -29,7 +29,7 @@ namespace Administrator
             FxEdit();
         }
 
-     
+
 
         private void CmdExit_Click(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace Administrator
 
             CmdNew.Enabled = true;
             CmdEdit.Enabled = false;
-           
+
 
             FxData();
         }
@@ -60,9 +60,9 @@ namespace Administrator
             GrdData.Enabled = false;
 
             CmdEdit.Enabled = false;
-           
 
-            ObjDt = ClsSqlAdministrator.Fx_sel_tblProfile(false);
+
+            ObjDt = ClsSqlAdministrator.Fx_sel_tblLanguage(false);
 
             if (ObjDt != null)
             {
@@ -79,7 +79,7 @@ namespace Administrator
                     GrdData.Enabled = true;
 
                     CmdEdit.Enabled = true;
-                   
+
 
                     GrdData.Focus();
                 }
@@ -93,18 +93,18 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lProfileId;
+            long lLanguageId;
 
             try
             {
-                lProfileId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
+                lLanguageId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
             }
             catch
             {
-                lProfileId = 0;
+                lLanguageId = 0;
             }
 
-            if (lProfileId == 0)
+            if (lLanguageId == 0)
             {
                 ClsFunctions.FxMessage(1, "Seleccione Perfil");
 
@@ -113,19 +113,19 @@ namespace Administrator
                 return;
             }
 
-            FxFormDetail(lProfileId);
+            FxFormDetail(lLanguageId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmProfile_detail ObjForm = new FrmProfile_detail(pId);
+            FrmLanguage_detail ObjForm = new FrmLanguage_detail(pId);
 
             ObjForm.ShowDialog();
 
             FxCancel();
         }
 
-       
+
 
         private void FxExit()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmProfile_detail
+    partial class FrmLanguage_detail
     {
         /// <summary>
         /// Required designer variable.
@@ -45,6 +45,7 @@
             this.ChkEnabled.TabIndex = 1;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
+           // this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
             // 
             // CmdSave
             // 
@@ -66,7 +67,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(838, 26);
             this.TxtName.TabIndex = 0;
-            this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
+            //this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // LblName
             // 
@@ -75,7 +76,7 @@
             this.LblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(69, 20);
-            this.LblName.TabIndex = 13;
+            this.LblName.TabIndex = 18;
             this.LblName.Text = "Nombre:";
             // 
             // CmdExit
@@ -89,7 +90,7 @@
             this.CmdExit.UseVisualStyleBackColor = false;
             this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
-            // FrmProfile_detail
+            // FrmLanguage_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,15 +103,13 @@
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.CmdExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmProfile_detail";
+            this.Name = "FrmLanguage_detail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil";
-            this.Load += new System.EventHandler(this.FrmProfile_detail_Load);
+            this.Text = "Lenguaje";
             this.ResumeLayout(false);
             this.PerformLayout();
 
