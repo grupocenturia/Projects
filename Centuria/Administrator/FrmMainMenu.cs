@@ -43,5 +43,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptLanguage_Click(object sender, EventArgs e)
+        {
+            FrmLanguage ObjForm = new FrmLanguage();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

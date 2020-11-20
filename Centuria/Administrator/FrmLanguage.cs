@@ -62,7 +62,7 @@ namespace Administrator
             CmdEdit.Enabled = false;
 
 
-            ObjDt = ClsSqlAdministrator.Fx_sel_tblLanguage(false);
+            ObjDt = ClsSqlCore.Fx_sel_tblLanguage(false);
 
             if (ObjDt != null)
             {

@@ -69,7 +69,7 @@ namespace Administrator
             {
                 Text += " - Modificar";
 
-                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblLanguage_detail(lLanguageId);
+                DataTable ObjDt = ClsSqlCore.Fx_sel_tblLanguage_detail(lLanguageId);
 
                 if (ObjDt != null)
                 {
@@ -119,11 +119,11 @@ namespace Administrator
 
                 if (lLanguageId == 0)
                 {
-                    lLanguageId_new = ClsSqlAdministrator.Fx_ins_tblLanguage(lName);
+                    lLanguageId_new = ClsSqlCore.Fx_ins_tblLanguage(lName);
                 }
                 else
                 {
-                    lLanguageId_new = ClsSqlAdministrator.Fx_upt_tblLanguage(lLanguageId, lName, lEnabled);
+                    lLanguageId_new = ClsSqlCore.Fx_upt_tblLanguage(lLanguageId, lName, lEnabled);
                 }
 
                 if (lLanguageId_new > 0)
@@ -136,6 +136,16 @@ namespace Administrator
         private void FxExit()
         {
             Close();
+        }
+
+        private void ChkEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -79,7 +79,7 @@
             this.GrdData.BackgroundColor = System.Drawing.Color.White;
             this.GrdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdData.GridColor = System.Drawing.Color.Gray;
-            this.GrdData.Location = new System.Drawing.Point(13, 14);
+            this.GrdData.Location = new System.Drawing.Point(18, 18);
             this.GrdData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GrdData.MultiSelect = false;
             this.GrdData.Name = "GrdData";
@@ -95,6 +95,7 @@
             this.GrdData.Size = new System.Drawing.Size(1290, 740);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
+            this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
             // FrmLanguage
             // 

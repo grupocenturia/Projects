@@ -38,18 +38,18 @@
             // ChkEnabled
             // 
             this.ChkEnabled.AutoSize = true;
-            this.ChkEnabled.Location = new System.Drawing.Point(13, 73);
+            this.ChkEnabled.Location = new System.Drawing.Point(13, 69);
             this.ChkEnabled.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChkEnabled.Name = "ChkEnabled";
             this.ChkEnabled.Size = new System.Drawing.Size(78, 24);
             this.ChkEnabled.TabIndex = 1;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
-           // this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
+            this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(604, 132);
+            this.CmdSave.Location = new System.Drawing.Point(604, 128);
             this.CmdSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.Size = new System.Drawing.Size(120, 77);
@@ -61,18 +61,18 @@
             // TxtName
             // 
             this.TxtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtName.Location = new System.Drawing.Point(13, 33);
+            this.TxtName.Location = new System.Drawing.Point(13, 29);
             this.TxtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtName.MaxLength = 100;
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(838, 26);
             this.TxtName.TabIndex = 0;
-            //this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(13, 9);
+            this.LblName.Location = new System.Drawing.Point(13, 5);
             this.LblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(69, 20);
@@ -81,7 +81,7 @@
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(733, 132);
+            this.CmdExit.Location = new System.Drawing.Point(733, 128);
             this.CmdExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmdExit.Name = "CmdExit";
             this.CmdExit.Size = new System.Drawing.Size(120, 77);

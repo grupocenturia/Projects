@@ -56,7 +56,8 @@
             this.PanLogo.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.PanLogo.IsSplitterFixed = true;
             this.PanLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanLogo.MinimumSize = new System.Drawing.Size(200, 200);
+            this.PanLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanLogo.MinimumSize = new System.Drawing.Size(300, 308);
             this.PanLogo.Name = "PanLogo";
             this.PanLogo.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -64,14 +65,15 @@
             // 
             this.PanLogo.Panel1.Controls.Add(this.LnkChangePassword);
             this.PanLogo.Panel1.Controls.Add(this.ImgLogo);
-            this.PanLogo.Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.PanLogo.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.PanLogo.Panel1MinSize = 90;
             // 
             // PanLogo.Panel2
             // 
             this.PanLogo.Panel2.Controls.Add(this.PanCompany);
-            this.PanLogo.Size = new System.Drawing.Size(884, 561);
+            this.PanLogo.Size = new System.Drawing.Size(1326, 863);
             this.PanLogo.SplitterDistance = 90;
+            this.PanLogo.SplitterWidth = 6;
             this.PanLogo.TabIndex = 0;
             this.PanLogo.TabStop = false;
             // 
@@ -79,9 +81,10 @@
             // 
             this.LnkChangePassword.AutoSize = true;
             this.LnkChangePassword.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LnkChangePassword.Location = new System.Drawing.Point(773, 10);
+            this.LnkChangePassword.Location = new System.Drawing.Point(1159, 15);
+            this.LnkChangePassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LnkChangePassword.Name = "LnkChangePassword";
-            this.LnkChangePassword.Size = new System.Drawing.Size(101, 13);
+            this.LnkChangePassword.Size = new System.Drawing.Size(152, 20);
             this.LnkChangePassword.TabIndex = 0;
             this.LnkChangePassword.TabStop = true;
             this.LnkChangePassword.Text = "Cambiar contraseña";
@@ -92,9 +95,10 @@
             // 
             this.ImgLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ImgLogo.Image = global::Centuria.Properties.Resources.ImgLogo;
-            this.ImgLogo.Location = new System.Drawing.Point(10, 10);
+            this.ImgLogo.Location = new System.Drawing.Point(15, 15);
+            this.ImgLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ImgLogo.Name = "ImgLogo";
-            this.ImgLogo.Size = new System.Drawing.Size(864, 70);
+            this.ImgLogo.Size = new System.Drawing.Size(1296, 60);
             this.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImgLogo.TabIndex = 8;
             this.ImgLogo.TabStop = false;
@@ -105,6 +109,7 @@
             this.PanCompany.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.PanCompany.IsSplitterFixed = true;
             this.PanCompany.Location = new System.Drawing.Point(0, 0);
+            this.PanCompany.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanCompany.Name = "PanCompany";
             this.PanCompany.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -112,15 +117,16 @@
             // 
             this.PanCompany.Panel1.Controls.Add(this.CmbCompany);
             this.PanCompany.Panel1.Controls.Add(this.LblCompany);
-            this.PanCompany.Panel1.Padding = new System.Windows.Forms.Padding(10);
+            this.PanCompany.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.PanCompany.Panel1MinSize = 80;
             // 
             // PanCompany.Panel2
             // 
             this.PanCompany.Panel2.Controls.Add(this.PanModule);
-            this.PanCompany.Panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.PanCompany.Size = new System.Drawing.Size(884, 467);
+            this.PanCompany.Panel2.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanCompany.Size = new System.Drawing.Size(1326, 767);
             this.PanCompany.SplitterDistance = 80;
+            this.PanCompany.SplitterWidth = 6;
             this.PanCompany.TabIndex = 0;
             this.PanCompany.TabStop = false;
             // 
@@ -130,9 +136,10 @@
             this.CmbCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbCompany.FormattingEnabled = true;
-            this.CmbCompany.Location = new System.Drawing.Point(244, 35);
+            this.CmbCompany.Location = new System.Drawing.Point(366, 54);
+            this.CmbCompany.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CmbCompany.Name = "CmbCompany";
-            this.CmbCompany.Size = new System.Drawing.Size(400, 24);
+            this.CmbCompany.Size = new System.Drawing.Size(598, 33);
             this.CmbCompany.TabIndex = 1;
             this.CmbCompany.SelectedIndexChanged += new System.EventHandler(this.CmbCompany_SelectedIndexChanged);
             // 
@@ -140,9 +147,10 @@
             // 
             this.LblCompany.Dock = System.Windows.Forms.DockStyle.Top;
             this.LblCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCompany.Location = new System.Drawing.Point(10, 10);
+            this.LblCompany.Location = new System.Drawing.Point(15, 15);
+            this.LblCompany.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCompany.Name = "LblCompany";
-            this.LblCompany.Size = new System.Drawing.Size(864, 22);
+            this.LblCompany.Size = new System.Drawing.Size(1296, 34);
             this.LblCompany.TabIndex = 2;
             this.LblCompany.Text = "Seleccione empresa";
             this.LblCompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,37 +159,41 @@
             // 
             this.PanModule.AutoScroll = true;
             this.PanModule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanModule.Location = new System.Drawing.Point(10, 10);
+            this.PanModule.Location = new System.Drawing.Point(15, 15);
+            this.PanModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanModule.Name = "PanModule";
-            this.PanModule.Padding = new System.Windows.Forms.Padding(10);
-            this.PanModule.Size = new System.Drawing.Size(864, 363);
+            this.PanModule.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanModule.Size = new System.Drawing.Size(1296, 651);
             this.PanModule.TabIndex = 0;
             // 
             // BarStatus
             // 
+            this.BarStatus.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.BarStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LblStatus});
-            this.BarStatus.Location = new System.Drawing.Point(0, 539);
+            this.BarStatus.Location = new System.Drawing.Point(0, 841);
             this.BarStatus.Name = "BarStatus";
-            this.BarStatus.Size = new System.Drawing.Size(884, 22);
+            this.BarStatus.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.BarStatus.Size = new System.Drawing.Size(1326, 22);
             this.BarStatus.TabIndex = 1;
             // 
             // LblStatus
             // 
             this.LblStatus.BackColor = System.Drawing.Color.Transparent;
             this.LblStatus.Name = "LblStatus";
-            this.LblStatus.Size = new System.Drawing.Size(0, 17);
+            this.LblStatus.Size = new System.Drawing.Size(0, 15);
             // 
             // FrmMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(1326, 863);
             this.Controls.Add(this.BarStatus);
             this.Controls.Add(this.PanLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(500, 400);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MinimumSize = new System.Drawing.Size(739, 585);
             this.Name = "FrmMainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";

@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ClsConnection.cs" />
     <Compile Include="ClsFunctions.cs" />
+    <Compile Include="ClsSqlCore.cs" />
     <Compile Include="ClsSqlAdministrator.cs" />
     <Compile Include="ClsVariables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

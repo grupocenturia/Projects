@@ -6,7 +6,7 @@ using Core;
 namespace Administrator
 {
     public partial class FrmProfile : Form
-    {
+    { 
         DataTable ObjDt;
 
         public FrmProfile()

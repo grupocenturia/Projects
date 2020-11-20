@@ -45,6 +45,7 @@
             this.ChkEnabled.TabIndex = 1;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
+            this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
             // 
             // CmdSave
             // 
@@ -66,6 +67,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(838, 26);
             this.TxtName.TabIndex = 0;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
             // 
             // LblName
