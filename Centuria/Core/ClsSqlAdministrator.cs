@@ -429,6 +429,110 @@ namespace Core
 
             return lId;
         }
+
+        public static DataTable Fx_sel_tblStore(bool pEnabled)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Enabled" };
+            lParameters[1] = new object[] { pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblStore", lParameters);
+
+            return ObjDt;
+        }
+
+        public static DataTable Fx_sel_tblStore_detail(long pStoreId)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "StoreId" };
+            lParameters[1] = new object[] { pStoreId };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblStore_detail", lParameters);
+
+            return ObjDt;
+        }
+
+        public static long Fx_ins_tblStore(string pName)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Name" };
+            lParameters[1] = new object[] { pName };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_ins_tblStore", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
+
+        public static long Fx_upt_tblStore(long pStoreId, string pName, bool pEnabled)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "StoreId", "Name", "Enabled" };
+            lParameters[1] = new object[] { pStoreId, pName, pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_upt_tblStore", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
     }
 
 

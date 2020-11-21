@@ -33,9 +33,10 @@
             this.MnuSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.OptUser = new System.Windows.Forms.ToolStripMenuItem();
             this.OptModule = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptStore = new System.Windows.Forms.ToolStripMenuItem();
             this.BarStatus = new System.Windows.Forms.StatusStrip();
             this.LblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMainMenu.SuspendLayout();
             this.BarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +56,8 @@
             this.MnuSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OptUser,
             this.OptModule,
-            this.OptProfile});
+            this.OptProfile,
+            this.OptStore});
             this.MnuSettings.Name = "MnuSettings";
             this.MnuSettings.Size = new System.Drawing.Size(95, 20);
             this.MnuSettings.Text = "Configuración";
@@ -74,6 +76,20 @@
             this.OptModule.Text = "Módulo";
             this.OptModule.Click += new System.EventHandler(this.OptModule_Click);
             // 
+            // OptProfile
+            // 
+            this.OptProfile.Name = "OptProfile";
+            this.OptProfile.Size = new System.Drawing.Size(180, 22);
+            this.OptProfile.Text = "Perfil";
+            this.OptProfile.Click += new System.EventHandler(this.OptProfile_Click);
+            // 
+            // OptStore
+            // 
+            this.OptStore.Name = "OptStore";
+            this.OptStore.Size = new System.Drawing.Size(180, 22);
+            this.OptStore.Text = "Sucursal";
+            this.OptStore.Click += new System.EventHandler(this.OptStore_Click);
+            // 
             // BarStatus
             // 
             this.BarStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,13 +104,6 @@
             this.LblStatus.BackColor = System.Drawing.Color.Transparent;
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 17);
-            // 
-            // OptProfile
-            // 
-            this.OptProfile.Name = "OptProfile";
-            this.OptProfile.Size = new System.Drawing.Size(180, 22);
-            this.OptProfile.Text = "Perfil";
-            this.OptProfile.Click += new System.EventHandler(this.OptProfile_Click);
             // 
             // FrmMainMenu
             // 
@@ -129,6 +138,7 @@
         private System.Windows.Forms.ToolStripStatusLabel LblStatus;
         private System.Windows.Forms.ToolStripMenuItem OptModule;
         private System.Windows.Forms.ToolStripMenuItem OptProfile;
+        private System.Windows.Forms.ToolStripMenuItem OptStore;
     }
 }
 

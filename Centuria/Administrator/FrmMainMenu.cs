@@ -43,5 +43,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptStore_Click(object sender, EventArgs e)
+        {
+            FrmStore ObjForm = new FrmStore();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

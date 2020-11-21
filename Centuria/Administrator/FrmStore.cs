@@ -5,16 +5,16 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmProfile : Form
+    public partial class FrmStore : Form
     {
         DataTable ObjDt;
 
-        public FrmProfile()
+        public FrmStore()
         {
             InitializeComponent();
         }
 
-        private void FrmProfile_Load(object sender, EventArgs e)
+        private void FrmStore_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -29,7 +29,7 @@ namespace Administrator
             FxEdit();
         }
 
-     
+
 
         private void CmdExit_Click(object sender, EventArgs e)
         {
@@ -46,7 +46,7 @@ namespace Administrator
 
             CmdNew.Enabled = true;
             CmdEdit.Enabled = false;
-           
+
 
             FxData();
         }
@@ -60,9 +60,9 @@ namespace Administrator
             GrdData.Enabled = false;
 
             CmdEdit.Enabled = false;
-           
 
-            ObjDt = ClsSqlAdministrator.Fx_sel_tblProfile(false);
+
+            ObjDt = ClsSqlAdministrator.Fx_sel_tblStore(false);
 
             if (ObjDt != null)
             {
@@ -76,10 +76,8 @@ namespace Administrator
 
                     GrdData.Enabled = true;
 
-                    GrdData.Enabled = true;
-
                     CmdEdit.Enabled = true;
-                   
+
 
                     GrdData.Focus();
                 }
@@ -93,39 +91,39 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lProfileId;
+            long lStoreId;
 
             try
             {
-                lProfileId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
+                lStoreId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
             }
             catch
             {
-                lProfileId = 0;
+                lStoreId = 0;
             }
 
-            if (lProfileId == 0)
+            if (lStoreId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione Perfil");
+                ClsFunctions.FxMessage(1, "Seleccione Sucursal");
 
                 GrdData.Focus();
 
                 return;
             }
 
-            FxFormDetail(lProfileId);
+            FxFormDetail(lStoreId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmProfile_detail ObjForm = new FrmProfile_detail(pId);
+            FrmStore_detail ObjForm = new FrmStore_detail(pId);
 
             ObjForm.ShowDialog();
 
             FxCancel();
         }
 
-       
+
 
         private void FxExit()
         {
@@ -142,4 +140,3 @@ namespace Administrator
         }
     }
 }
-

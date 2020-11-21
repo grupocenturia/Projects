@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmProfile
+    partial class FrmStore
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.GrdData.TabIndex = 0;
             this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
-            // FrmProfile
+            // FrmStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,18 +106,19 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmProfile";
+            this.Name = "FrmStore";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil";
-            this.Load += new System.EventHandler(this.FrmProfile_Load);
+            this.Text = "Sucursal";
+            this.Load += new System.EventHandler(this.FrmStore_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private System.Windows.Forms.Button CmdExit;
         private System.Windows.Forms.Button CmdEdit;
         private System.Windows.Forms.Button CmdNew;
