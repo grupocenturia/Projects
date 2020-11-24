@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDataType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataType.Designer.cs">
+      <DependentUpon>FrmDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataType_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataType_detail.Designer.cs">
+      <DependentUpon>FrmDataType_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,12 @@
       <DependentUpon>FrmUser_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDataType.resx">
+      <DependentUpon>FrmDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataType_detail.resx">
+      <DependentUpon>FrmDataType_detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLanguage.resx">
       <DependentUpon>FrmLanguage.cs</DependentUpon>
     </EmbeddedResource>

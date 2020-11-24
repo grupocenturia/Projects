@@ -50,5 +50,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptDataType_Click(object sender, EventArgs e)
+        {
+            FrmDataType ObjForm = new FrmDataType();
+
+            ObjForm.ShowDialog();
+        }
     }
 }
