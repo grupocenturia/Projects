@@ -57,5 +57,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptCountry_Click(object sender, EventArgs e)
+        {
+            FrmCountry ObjForm = new FrmCountry();
+
+            ObjForm.ShowDialog();
+        }
     }
 }
