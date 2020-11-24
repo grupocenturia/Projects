@@ -31,7 +31,7 @@
             this.CmdExit = new System.Windows.Forms.Button();
             this.LblName = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
-            this.TxtUserName = new System.Windows.Forms.TextBox();
+        
             this.LblUserName = new System.Windows.Forms.Label();
             this.CmdSave = new System.Windows.Forms.Button();
             this.ChkEnabled = new System.Windows.Forms.CheckBox();

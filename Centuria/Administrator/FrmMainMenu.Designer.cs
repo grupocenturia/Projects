@@ -36,9 +36,10 @@
             this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.OptStore = new System.Windows.Forms.ToolStripMenuItem();
             this.OptAction = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptOptionType = new System.Windows.Forms.ToolStripMenuItem();
             this.BarStatus = new System.Windows.Forms.StatusStrip();
             this.LblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OptOptionType = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptCompany = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMainMenu.SuspendLayout();
             this.BarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,8 @@
             this.OptProfile,
             this.OptStore,
             this.OptAction,
-            this.OptOptionType});
+            this.OptOptionType,
+            this.OptCompany});
             this.MnuSettings.Name = "MnuSettings";
             this.MnuSettings.Size = new System.Drawing.Size(95, 20);
             this.MnuSettings.Text = "Configuración";
@@ -101,6 +103,13 @@
             this.OptAction.Text = "Acciones para Log";
             this.OptAction.Click += new System.EventHandler(this.OptAction_Click);
             // 
+            // OptOptionType
+            // 
+            this.OptOptionType.Name = "OptOptionType";
+            this.OptOptionType.Size = new System.Drawing.Size(180, 22);
+            this.OptOptionType.Text = "Opciones";
+            this.OptOptionType.Click += new System.EventHandler(this.OptOptionType_Click);
+            // 
             // BarStatus
             // 
             this.BarStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -116,12 +125,12 @@
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // OptOptionType
+            // OptCompany
             // 
-            this.OptOptionType.Name = "OptOptionType";
-            this.OptOptionType.Size = new System.Drawing.Size(180, 22);
-            this.OptOptionType.Text = "Opciones";
-            this.OptOptionType.Click += new System.EventHandler(this.OptOptionType_Click);
+            this.OptCompany.Name = "OptCompany";
+            this.OptCompany.Size = new System.Drawing.Size(180, 22);
+            this.OptCompany.Text = "Compañia";
+            this.OptCompany.Click += new System.EventHandler(this.OptCompany_Click);
             // 
             // FrmMainMenu
             // 
@@ -159,6 +168,7 @@
         private System.Windows.Forms.ToolStripMenuItem OptStore;
         private System.Windows.Forms.ToolStripMenuItem OptAction;
         private System.Windows.Forms.ToolStripMenuItem OptOptionType;
+        private System.Windows.Forms.ToolStripMenuItem OptCompany;
     }
 }
 

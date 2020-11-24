@@ -64,5 +64,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptCompany_Click(object sender, EventArgs e)
+        {
+            FrmCompany ObjForm = new FrmCompany();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

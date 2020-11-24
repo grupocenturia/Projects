@@ -64,6 +64,18 @@
     <Compile Include="FrmAction_detail.Designer.cs">
       <DependentUpon>FrmAction_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompany_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany_detail.Designer.cs">
+      <DependentUpon>FrmCompany_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAction_detail.resx">
       <DependentUpon>FrmAction_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany_detail.resx">
+      <DependentUpon>FrmCompany_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.cs</DependentUpon>

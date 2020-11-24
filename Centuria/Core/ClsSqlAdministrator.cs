@@ -175,18 +175,6 @@ namespace Core
             return lUserId;
         }
 
-        internal static DataTable Fx_sel_tblCompany_detail(long pCompanyId)
-        {
-            object[][] lParameters = new object[2][];
-
-            lParameters[0] = new object[] { "CompanyId" };
-            lParameters[1] = new object[] { pCompanyId };
-
-            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblCompany_detail", lParameters);
-
-            return ObjDt;
-        }
-
         public static DataTable Fx_sel_tblModule(bool pEnabled)
         {
             object[][] lParameters = new object[2][];
@@ -712,6 +700,110 @@ namespace Core
             lParameters[1] = new object[] { pOptionTypeId, pName, pEnabled };
 
             DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_upt_tblOptionType", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
+
+        public static DataTable Fx_sel_tblCompany(bool pEnabled)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Enabled" };
+            lParameters[1] = new object[] { pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblCompany", lParameters);
+
+            return ObjDt;
+        }
+
+        public static DataTable Fx_sel_tblCompany_detail(long pCompanyId)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "CompanyId" };
+            lParameters[1] = new object[] { pCompanyId };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblCompany_detail", lParameters);
+
+            return ObjDt;
+        }
+
+        public static long Fx_ins_tblCompany(string pName, string pTradeName, string pShortName, string pDBName )
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Name", "TradeName", "ShortName", "DBName" };
+            lParameters[1] = new object[] { pName, pTradeName, pShortName, pDBName };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_ins_tblCompany", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
+
+        public static long Fx_upt_tblCompany(long pCompanyId, string pName, string pTradeName, string pShortName, string pDBName, bool pEnabled)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "CompanyId", "Name", "TradeName", "ShortName", "DBName", "Enabled" };
+            lParameters[1] = new object[] { pCompanyId, pName, pTradeName, pShortName, pDBName , pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_upt_tblCompany", lParameters);
 
             if (ObjDt != null)
             {
