@@ -50,5 +50,19 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptAction_Click(object sender, EventArgs e)
+        {
+            FrmAction ObjForm = new FrmAction();
+
+            ObjForm.ShowDialog();
+        }
+
+        private void OptOptionType_Click(object sender, EventArgs e)
+        {
+            FrmOptionType ObjForm = new FrmOptionType();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

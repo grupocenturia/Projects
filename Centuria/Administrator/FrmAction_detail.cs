@@ -5,18 +5,18 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmProfile_detail : Form
+    public partial class FrmAction_detail : Form
     {
-        readonly long lProfileId;
+        readonly long lActionId;
 
-        public FrmProfile_detail(long pProfileId)
+        public FrmAction_detail(long pActionId)
         {
-            lProfileId = pProfileId;
+            lActionId = pActionId;
 
             InitializeComponent();
         }
 
-        private void FrmProfile_detail_Load(object sender, EventArgs e)
+        private void FrmAction_detail_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -26,7 +26,7 @@ namespace Administrator
             ClsFunctions.FxSelectAll(sender);
         }
 
-    
+
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
@@ -41,23 +41,23 @@ namespace Administrator
         private void FxCancel()
         {
             TxtName.Text = "";
-           
+
 
             ChkEnabled.Checked = false;
 
             TxtName.Enabled = false;
-           
+
 
             ChkEnabled.Enabled = false;
 
             CmdSave.Enabled = false;
 
-            if (lProfileId == 0)
+            if (lActionId == 0)
             {
                 Text += " - Adicionar";
 
                 TxtName.Enabled = true;
-              
+
 
                 ChkEnabled.Checked = true;
 
@@ -69,19 +69,19 @@ namespace Administrator
             {
                 Text += " - Modificar";
 
-                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblProfile_detail(lProfileId);
+                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblAction_detail(lActionId);
 
                 if (ObjDt != null)
                 {
                     if (ObjDt.Rows.Count > 0)
                     {
                         TxtName.Text = ObjDt.Rows[0][0].ToString();
-                      
+
 
                         ChkEnabled.Checked = ClsFunctions.FxConvertStringToBool(ObjDt.Rows[0][1].ToString());
 
                         TxtName.Enabled = true;
-                        
+
 
                         ChkEnabled.Enabled = true;
 
@@ -96,7 +96,7 @@ namespace Administrator
         private void FxSave()
         {
             string lName = TxtName.Text.Trim();
-        
+
 
             bool lEnabled = ChkEnabled.Checked;
 
@@ -111,22 +111,22 @@ namespace Administrator
                 return;
             }
 
-     
+
 
             if (ClsFunctions.FxMessage(2, "¿Está seguro de guardar los cambios?") == true)
             {
-                long lProfileId_new;
+                long lActionId_new;
 
-                if (lProfileId == 0)
+                if (lActionId == 0)
                 {
-                    lProfileId_new = ClsSqlAdministrator.Fx_ins_tblProfile(lName);
+                    lActionId_new = ClsSqlAdministrator.Fx_ins_tblAction(lName);
                 }
                 else
                 {
-                    lProfileId_new = ClsSqlAdministrator.Fx_upt_tblProfile(lProfileId, lName, lEnabled);
+                    lActionId_new = ClsSqlAdministrator.Fx_upt_tblAction(lActionId, lName, lEnabled);
                 }
 
-                if (lProfileId_new > 0)
+                if (lActionId_new > 0)
                 {
                     FxExit();
                 }
@@ -149,4 +149,3 @@ namespace Administrator
         }
     }
 }
-

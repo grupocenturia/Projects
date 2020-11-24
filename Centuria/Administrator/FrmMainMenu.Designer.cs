@@ -35,8 +35,10 @@
             this.OptModule = new System.Windows.Forms.ToolStripMenuItem();
             this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.OptStore = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptAction = new System.Windows.Forms.ToolStripMenuItem();
             this.BarStatus = new System.Windows.Forms.StatusStrip();
             this.LblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.OptOptionType = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMainMenu.SuspendLayout();
             this.BarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,9 @@
             this.OptUser,
             this.OptModule,
             this.OptProfile,
-            this.OptStore});
+            this.OptStore,
+            this.OptAction,
+            this.OptOptionType});
             this.MnuSettings.Name = "MnuSettings";
             this.MnuSettings.Size = new System.Drawing.Size(95, 20);
             this.MnuSettings.Text = "Configuración";
@@ -90,6 +94,13 @@
             this.OptStore.Text = "Sucursal";
             this.OptStore.Click += new System.EventHandler(this.OptStore_Click);
             // 
+            // OptAction
+            // 
+            this.OptAction.Name = "OptAction";
+            this.OptAction.Size = new System.Drawing.Size(180, 22);
+            this.OptAction.Text = "Acciones para Log";
+            this.OptAction.Click += new System.EventHandler(this.OptAction_Click);
+            // 
             // BarStatus
             // 
             this.BarStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -104,6 +115,13 @@
             this.LblStatus.BackColor = System.Drawing.Color.Transparent;
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 17);
+            // 
+            // OptOptionType
+            // 
+            this.OptOptionType.Name = "OptOptionType";
+            this.OptOptionType.Size = new System.Drawing.Size(180, 22);
+            this.OptOptionType.Text = "Opciones";
+            this.OptOptionType.Click += new System.EventHandler(this.OptOptionType_Click);
             // 
             // FrmMainMenu
             // 
@@ -139,6 +157,8 @@
         private System.Windows.Forms.ToolStripMenuItem OptModule;
         private System.Windows.Forms.ToolStripMenuItem OptProfile;
         private System.Windows.Forms.ToolStripMenuItem OptStore;
+        private System.Windows.Forms.ToolStripMenuItem OptAction;
+        private System.Windows.Forms.ToolStripMenuItem OptOptionType;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmProfile_detail
+    partial class FrmOptionType_detail
     {
         /// <summary>
         /// Required designer variable.
@@ -64,7 +64,6 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(560, 20);
             this.TxtName.TabIndex = 0;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
             // 
             // LblName
@@ -73,7 +72,7 @@
             this.LblName.Location = new System.Drawing.Point(12, 9);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(47, 13);
-            this.LblName.TabIndex = 13;
+            this.LblName.TabIndex = 18;
             this.LblName.Text = "Nombre:";
             // 
             // CmdExit
@@ -86,7 +85,7 @@
             this.CmdExit.UseVisualStyleBackColor = false;
             this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
-            // FrmProfile_detail
+            // FrmOptionType_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,12 +100,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmProfile_detail";
+            this.Name = "FrmOptionType_detail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil";
-            this.Load += new System.EventHandler(this.FrmProfile_detail_Load);
+            this.Text = "Opciones";
+            this.Load += new System.EventHandler(this.FrmOptionType_detail_Load);
             this.Enter += new System.EventHandler(this.TxtName_Enter);
             this.ResumeLayout(false);
             this.PerformLayout();
