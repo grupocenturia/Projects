@@ -90,7 +90,6 @@
             this.GrdData.Size = new System.Drawing.Size(860, 481);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
-//            this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
             // FrmCountry
             // 

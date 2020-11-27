@@ -320,6 +320,110 @@ namespace Core
 
             return lId;
         }
+
+        public static DataTable Fx_sel_tblCurrency(bool pEnabled)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Enabled" };
+            lParameters[1] = new object[] { pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblCurrency", lParameters);
+
+            return ObjDt;
+        }
+
+        public static DataTable Fx_sel_tblCurrency_detail(long pCurrencyId)
+        {
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "CurrencyId" };
+            lParameters[1] = new object[] { pCurrencyId };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_sel_tblCurrency_detail", lParameters);
+
+            return ObjDt;
+        }
+
+        public static long Fx_ins_tblCurrency(string pName,  string pIsoCode, string pSymbol)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "Name", "IsoCode", "Symbol" };
+            lParameters[1] = new object[] { pName, pIsoCode,  pSymbol };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_ins_tblCurrency", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
+
+        public static long Fx_upt_tblCurrency(long pCurrencyId, string pName, string pIsoCode, string pSymbol, bool pEnabled)
+        {
+            long lId = 0;
+
+            object[][] lParameters = new object[2][];
+
+            lParameters[0] = new object[] { "CurrencyId", "Name", "IsoCode", "Symbol", "Enabled" };
+            lParameters[1] = new object[] { pCurrencyId, pName, pIsoCode, pSymbol, pEnabled };
+
+            DataTable ObjDt = ClsConnection.FxSqlExecute(ClsVariables.gDatabaseCore, lSchema, "sp_upt_tblCurrency", lParameters);
+
+            if (ObjDt != null)
+            {
+                if (ObjDt.Rows.Count > 0)
+                {
+                    try
+                    {
+                        lId = long.Parse(ObjDt.Rows[0][0].ToString());
+                    }
+                    catch
+                    {
+                        lId = 0;
+                    }
+                }
+
+                ObjDt.Dispose();
+            }
+
+            if (lId == 0)
+            {
+                ClsFunctions.FxMessage(1, "Registro no pudo ser guardado");
+            }
+            else
+            {
+                ClsFunctions.FxMessage("Proceso concluido");
+            }
+
+            return lId;
+        }
     }
 
 

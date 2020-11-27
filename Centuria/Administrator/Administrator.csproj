@@ -58,6 +58,18 @@
     <Compile Include="FrmCountry_detail.Designer.cs">
       <DependentUpon>FrmCountry_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurrency.Designer.cs">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCurrency_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurrency_detail.Designer.cs">
+      <DependentUpon>FrmCurrency_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDataType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCountry_detail.resx">
       <DependentUpon>FrmCountry_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCurrency.resx">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCurrency_detail.resx">
+      <DependentUpon>FrmCurrency_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDataType.resx">
       <DependentUpon>FrmDataType.cs</DependentUpon>

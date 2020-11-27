@@ -1,20 +1,20 @@
-﻿using Core;
-using System;
+﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using Core;
 
 namespace Administrator
 {
-    public partial class FrmCountry : Form
+    public partial class FrmCurrency : Form
     {
         DataTable ObjDt;
 
-        public FrmCountry()
+        public FrmCurrency()
         {
             InitializeComponent();
         }
 
-        private void FrmCountry_Load(object sender, EventArgs e)
+        private void FrmCurrency_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -58,7 +58,7 @@ namespace Administrator
 
             CmdEdit.Enabled = false;
 
-            ObjDt = ClsSqlCore.Fx_sel_tblCountry(false);
+            ObjDt = ClsSqlCore.Fx_sel_tblCurrency(false);
 
             if (ObjDt != null)
             {
@@ -68,7 +68,9 @@ namespace Administrator
 
                     GrdData.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                    GrdData.Columns[3].Visible = false;
+                    GrdData.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+                    GrdData.Columns[4].Visible = false;
 
                     GrdData.Enabled = true;
 
@@ -86,32 +88,32 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lCountryId;
+            long lCurrencyId;
 
             try
             {
-                lCountryId = long.Parse(GrdData.SelectedRows[0].Cells[3].Value.ToString());
+                lCurrencyId = long.Parse(GrdData.SelectedRows[0].Cells[4].Value.ToString());
             }
             catch
             {
-                lCountryId = 0;
+                lCurrencyId = 0;
             }
 
-            if (lCountryId == 0)
+            if (lCurrencyId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione país");
+                ClsFunctions.FxMessage(1, "Seleccione moneda");
 
                 GrdData.Focus();
 
                 return;
             }
 
-            FxFormDetail(lCountryId);
+            FxFormDetail(lCurrencyId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmCountry_detail ObjForm = new FrmCountry_detail(pId);
+            FrmCurrency_detail ObjForm = new FrmCurrency_detail(pId);
 
             ObjForm.ShowDialog();
 

@@ -64,5 +64,12 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptCurrency_Click(object sender, EventArgs e)
+        {
+            FrmCurrency ObjForm = new FrmCurrency();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

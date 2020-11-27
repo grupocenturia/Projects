@@ -36,9 +36,10 @@
             this.OptProfile = new System.Windows.Forms.ToolStripMenuItem();
             this.OptLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.OptDataType = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptCountry = new System.Windows.Forms.ToolStripMenuItem();
             this.BarStatus = new System.Windows.Forms.StatusStrip();
             this.LblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OptCountry = new System.Windows.Forms.ToolStripMenuItem();
+            this.OptCurrency = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuMainMenu.SuspendLayout();
             this.BarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,8 @@
             this.OptProfile,
             this.OptLanguage,
             this.OptDataType,
-            this.OptCountry});
+            this.OptCountry,
+            this.OptCurrency});
             this.MnuSettings.Name = "MnuSettings";
             this.MnuSettings.Size = new System.Drawing.Size(95, 22);
             this.MnuSettings.Text = "Configuración";
@@ -103,6 +105,13 @@
             this.OptDataType.Text = "Tipo de dato";
             this.OptDataType.Click += new System.EventHandler(this.OptDataType_Click);
             // 
+            // OptCountry
+            // 
+            this.OptCountry.Name = "OptCountry";
+            this.OptCountry.Size = new System.Drawing.Size(180, 22);
+            this.OptCountry.Text = "País";
+            this.OptCountry.Click += new System.EventHandler(this.OptCountry_Click);
+            // 
             // BarStatus
             // 
             this.BarStatus.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -119,12 +128,12 @@
             this.LblStatus.Name = "LblStatus";
             this.LblStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // OptCountry
+            // OptCurrency
             // 
-            this.OptCountry.Name = "OptCountry";
-            this.OptCountry.Size = new System.Drawing.Size(180, 22);
-            this.OptCountry.Text = "País";
-            this.OptCountry.Click += new System.EventHandler(this.OptCountry_Click);
+            this.OptCurrency.Name = "OptCurrency";
+            this.OptCurrency.Size = new System.Drawing.Size(180, 22);
+            this.OptCurrency.Text = "Moneda";
+            this.OptCurrency.Click += new System.EventHandler(this.OptCurrency_Click);
             // 
             // FrmMainMenu
             // 
@@ -162,6 +171,7 @@
         private System.Windows.Forms.ToolStripMenuItem OptLanguage;
         private System.Windows.Forms.ToolStripMenuItem OptDataType;
         private System.Windows.Forms.ToolStripMenuItem OptCountry;
+        private System.Windows.Forms.ToolStripMenuItem OptCurrency;
     }
 }
 
