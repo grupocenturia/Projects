@@ -25,7 +25,6 @@ namespace Administrator
         {
             ClsFunctions.FxSelectAll(sender);
         }
-
         private void TxtUserName_Enter(object sender, EventArgs e)
         {
             ClsFunctions.FxSelectAll(sender);
@@ -149,5 +148,8 @@ namespace Administrator
         {
             Close();
         }
+
+
+     
     }
 }

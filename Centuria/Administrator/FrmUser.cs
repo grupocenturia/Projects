@@ -79,8 +79,6 @@ namespace Administrator
 
                     GrdData.Enabled = true;
 
-                    GrdData.Enabled = true;
-
                     CmdEdit.Enabled = true;
                     CmdReset.Enabled = true;
 
