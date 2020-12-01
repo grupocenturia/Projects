@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.GrdData = new System.Windows.Forms.DataGridView();
-            this.CmdNew = new System.Windows.Forms.Button();
-            this.CmdEdit = new System.Windows.Forms.Button();
-            this.CmdExit = new System.Windows.Forms.Button();
-            this.CmdReset = new System.Windows.Forms.Button();
+            this.MnuToolbar = new System.Windows.Forms.ToolStrip();
+            this.CmdNew = new System.Windows.Forms.ToolStripButton();
+            this.CmdEdit = new System.Windows.Forms.ToolStripButton();
+            this.CmdReset = new System.Windows.Forms.ToolStripButton();
+            this.CmdExit = new System.Windows.Forms.ToolStripButton();
+            this.PanPrincipal = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).BeginInit();
+            this.MnuToolbar.SuspendLayout();
+            this.PanPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // GrdData
@@ -46,8 +51,9 @@
             this.GrdData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.GrdData.BackgroundColor = System.Drawing.Color.White;
             this.GrdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GrdData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrdData.GridColor = System.Drawing.Color.Gray;
-            this.GrdData.Location = new System.Drawing.Point(12, 12);
+            this.GrdData.Location = new System.Drawing.Point(0, 0);
             this.GrdData.MultiSelect = false;
             this.GrdData.Name = "GrdData";
             this.GrdData.ReadOnly = true;
@@ -58,49 +64,76 @@
             this.GrdData.ShowCellToolTips = false;
             this.GrdData.ShowEditingIcon = false;
             this.GrdData.ShowRowErrors = false;
-            this.GrdData.Size = new System.Drawing.Size(860, 481);
+            this.GrdData.Size = new System.Drawing.Size(884, 522);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
             // 
+            // MnuToolbar
+            // 
+            this.MnuToolbar.BackColor = System.Drawing.Color.White;
+            this.MnuToolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.MnuToolbar.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.MnuToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CmdNew,
+            this.CmdEdit,
+            this.CmdReset,
+            this.CmdExit});
+            this.MnuToolbar.Location = new System.Drawing.Point(0, 0);
+            this.MnuToolbar.Name = "MnuToolbar";
+            this.MnuToolbar.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.MnuToolbar.Size = new System.Drawing.Size(884, 39);
+            this.MnuToolbar.TabIndex = 5;
+            // 
             // CmdNew
             // 
-            this.CmdNew.Location = new System.Drawing.Point(12, 499);
+            this.CmdNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CmdNew.Image = ((System.Drawing.Image)(resources.GetObject("CmdNew.Image")));
+            this.CmdNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(80, 50);
-            this.CmdNew.TabIndex = 1;
+            this.CmdNew.Size = new System.Drawing.Size(36, 36);
             this.CmdNew.Text = "Adicionar";
-            this.CmdNew.UseVisualStyleBackColor = false;
+            this.CmdNew.ToolTipText = "Adicionar";
             this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // CmdEdit
             // 
-            this.CmdEdit.Location = new System.Drawing.Point(98, 499);
+            this.CmdEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CmdEdit.Image = ((System.Drawing.Image)(resources.GetObject("CmdEdit.Image")));
+            this.CmdEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CmdEdit.Name = "CmdEdit";
-            this.CmdEdit.Size = new System.Drawing.Size(80, 50);
-            this.CmdEdit.TabIndex = 2;
+            this.CmdEdit.Size = new System.Drawing.Size(36, 36);
             this.CmdEdit.Text = "Modificar";
-            this.CmdEdit.UseVisualStyleBackColor = false;
             this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
-            // 
-            // CmdExit
-            // 
-            this.CmdExit.Location = new System.Drawing.Point(792, 499);
-            this.CmdExit.Name = "CmdExit";
-            this.CmdExit.Size = new System.Drawing.Size(80, 50);
-            this.CmdExit.TabIndex = 4;
-            this.CmdExit.Text = "Salir";
-            this.CmdExit.UseVisualStyleBackColor = false;
-            this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
             // CmdReset
             // 
-            this.CmdReset.Location = new System.Drawing.Point(184, 499);
+            this.CmdReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CmdReset.Image = ((System.Drawing.Image)(resources.GetObject("CmdReset.Image")));
+            this.CmdReset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CmdReset.Name = "CmdReset";
-            this.CmdReset.Size = new System.Drawing.Size(80, 50);
-            this.CmdReset.TabIndex = 3;
+            this.CmdReset.Size = new System.Drawing.Size(36, 36);
             this.CmdReset.Text = "Restablecer contraseña";
-            this.CmdReset.UseVisualStyleBackColor = false;
             this.CmdReset.Click += new System.EventHandler(this.CmdReset_Click);
+            // 
+            // CmdExit
+            // 
+            this.CmdExit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.CmdExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CmdExit.Image = ((System.Drawing.Image)(resources.GetObject("CmdExit.Image")));
+            this.CmdExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CmdExit.Name = "CmdExit";
+            this.CmdExit.Size = new System.Drawing.Size(36, 36);
+            this.CmdExit.Text = "Salir";
+            this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
+            // 
+            // PanPrincipal
+            // 
+            this.PanPrincipal.Controls.Add(this.GrdData);
+            this.PanPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanPrincipal.Location = new System.Drawing.Point(0, 39);
+            this.PanPrincipal.Name = "PanPrincipal";
+            this.PanPrincipal.Size = new System.Drawing.Size(884, 522);
+            this.PanPrincipal.TabIndex = 6;
             // 
             // FrmUser
             // 
@@ -109,11 +142,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.CmdReset);
-            this.Controls.Add(this.CmdExit);
-            this.Controls.Add(this.CmdEdit);
-            this.Controls.Add(this.CmdNew);
-            this.Controls.Add(this.GrdData);
+            this.Controls.Add(this.PanPrincipal);
+            this.Controls.Add(this.MnuToolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -124,16 +154,22 @@
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.FrmUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
+            this.MnuToolbar.ResumeLayout(false);
+            this.MnuToolbar.PerformLayout();
+            this.PanPrincipal.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView GrdData;
-        private System.Windows.Forms.Button CmdNew;
-        private System.Windows.Forms.Button CmdEdit;
-        private System.Windows.Forms.Button CmdExit;
-        private System.Windows.Forms.Button CmdReset;
+        private System.Windows.Forms.ToolStrip MnuToolbar;
+        private System.Windows.Forms.ToolStripButton CmdNew;
+        private System.Windows.Forms.ToolStripButton CmdEdit;
+        private System.Windows.Forms.ToolStripButton CmdReset;
+        private System.Windows.Forms.ToolStripButton CmdExit;
+        private System.Windows.Forms.Panel PanPrincipal;
     }
 }

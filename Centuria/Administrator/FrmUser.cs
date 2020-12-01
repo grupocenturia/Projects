@@ -75,9 +75,9 @@ namespace Administrator
 
                     GrdData.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                    GrdData.Columns[4].Visible = false;
+                    GrdData.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-                    GrdData.Enabled = true;
+                    GrdData.Columns[4].Visible = false;
 
                     GrdData.Enabled = true;
 

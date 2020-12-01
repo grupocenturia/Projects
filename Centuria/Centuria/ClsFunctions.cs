@@ -561,10 +561,8 @@ namespace Centuria
             }
         }
 
-        internal static string FxGetModuleLogo(long pModuleId)
+        internal static Bitmap FxGetModuleLogo(long pModuleId)
         {
-            string lFileLogo = "";
-
             Bitmap ObjLogo;
 
             try
@@ -576,67 +574,7 @@ namespace Centuria
                 ObjLogo = null;
             }
 
-            if (ObjLogo != null)
-            {
-                lFileLogo = ClsVariables.gPathTemp + "Img" + ClsFunctions.FxRandomNumber().ToString() + ".png";
-
-                if (File.Exists(lFileLogo))
-                {
-                    ClsFunctions.FxDeleteFile(lFileLogo);
-                }
-
-                ObjLogo.Save(lFileLogo);
-
-                ObjLogo.Dispose();
-            }
-
-            return lFileLogo;
+            return ObjLogo;
         }
-
-        internal static bool FxDeleteFile(string pFile)
-        {
-            bool lOk = true;
-
-            if (File.Exists(pFile))
-            {
-                try
-                {
-                    File.Delete(pFile);
-                }
-                catch
-                {
-                    lOk = false;
-
-                    FxMessage(1, "El archivo no puede ser eliminado");
-                }
-            }
-
-            return lOk;
-        }
-
-        internal static byte[] FxConvertFileByte(string pFileName)
-        {
-            byte[] ObjBuffer = null;
-
-            if (pFileName.Length > 0)
-            {
-                FileStream ObjStream = new FileStream(pFileName, FileMode.Open, FileAccess.Read);
-
-                BinaryReader ObjReader = new BinaryReader(ObjStream);
-
-                long lTotalBytes = new FileInfo(pFileName).Length;
-
-                ObjBuffer = ObjReader.ReadBytes((int)lTotalBytes);
-
-                ObjReader.Close();
-                ObjReader.Dispose();
-
-                ObjStream.Close();
-                ObjStream.Dispose();
-            }
-
-            return ObjBuffer;
-        }
-
     }
 }
