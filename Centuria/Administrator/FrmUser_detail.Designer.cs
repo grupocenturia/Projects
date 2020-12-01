@@ -31,10 +31,10 @@
             this.CmdExit = new System.Windows.Forms.Button();
             this.LblName = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
-            this.TxtUserName = new System.Windows.Forms.TextBox();
             this.LblUserName = new System.Windows.Forms.Label();
             this.CmdSave = new System.Windows.Forms.Button();
             this.ChkEnabled = new System.Windows.Forms.CheckBox();
+            this.TxtUserName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CmdExit
@@ -66,15 +66,6 @@
             this.TxtName.TabIndex = 0;
             this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
             // 
-            // TxtUserName
-            // 
-            this.TxtUserName.Location = new System.Drawing.Point(12, 64);
-            this.TxtUserName.MaxLength = 100;
-            this.TxtUserName.Name = "TxtUserName";
-            this.TxtUserName.Size = new System.Drawing.Size(560, 20);
-            this.TxtUserName.TabIndex = 1;
-            this.TxtUserName.Enter += new System.EventHandler(this.TxtUserName_Enter);
-            // 
             // LblUserName
             // 
             this.LblUserName.AutoSize = true;
@@ -104,12 +95,22 @@
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
             // 
+            // TxtUserName
+            // 
+            this.TxtUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtUserName.Location = new System.Drawing.Point(12, 64);
+            this.TxtUserName.MaxLength = 100;
+            this.TxtUserName.Name = "TxtUserName";
+            this.TxtUserName.Size = new System.Drawing.Size(560, 20);
+            this.TxtUserName.TabIndex = 8;
+            this.TxtUserName.Enter += new System.EventHandler(this.TxtUserName_Enter);
+            // 
             // FrmUser_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 181);
+            this.ClientSize = new System.Drawing.Size(584, 185);
             this.ControlBox = false;
             this.Controls.Add(this.ChkEnabled);
             this.Controls.Add(this.CmdSave);
@@ -137,9 +138,10 @@
         private System.Windows.Forms.Button CmdExit;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.TextBox TxtName;
-        private System.Windows.Forms.TextBox TxtUserName;
         private System.Windows.Forms.Label LblUserName;
+        private System.Windows.Forms.TextBox TxtUserName;
         private System.Windows.Forms.Button CmdSave;
         private System.Windows.Forms.CheckBox ChkEnabled;
+       
     }
 }

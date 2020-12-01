@@ -5,18 +5,18 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmUser_detail : Form
+    public partial class FrmAction_detail : Form
     {
-        readonly long lUserId;
+        readonly long lActionId;
 
-        public FrmUser_detail(long pUserId)
+        public FrmAction_detail(long pActionId)
         {
-            lUserId = pUserId;
+            lActionId = pActionId;
 
             InitializeComponent();
         }
 
-        private void FrmUser_detail_Load(object sender, EventArgs e)
+        private void FrmAction_detail_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -25,10 +25,8 @@ namespace Administrator
         {
             ClsFunctions.FxSelectAll(sender);
         }
-        private void TxtUserName_Enter(object sender, EventArgs e)
-        {
-            ClsFunctions.FxSelectAll(sender);
-        }
+
+
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
@@ -43,23 +41,23 @@ namespace Administrator
         private void FxCancel()
         {
             TxtName.Text = "";
-            TxtUserName.Text = "";
+
 
             ChkEnabled.Checked = false;
 
             TxtName.Enabled = false;
-            TxtUserName.Enabled = false;
+
 
             ChkEnabled.Enabled = false;
 
             CmdSave.Enabled = false;
 
-            if (lUserId == 0)
+            if (lActionId == 0)
             {
                 Text += " - Adicionar";
 
                 TxtName.Enabled = true;
-                TxtUserName.Enabled = true;
+
 
                 ChkEnabled.Checked = true;
 
@@ -71,19 +69,19 @@ namespace Administrator
             {
                 Text += " - Modificar";
 
-                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblUser_detail(lUserId);
+                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblAction_detail(lActionId);
 
                 if (ObjDt != null)
                 {
                     if (ObjDt.Rows.Count > 0)
                     {
                         TxtName.Text = ObjDt.Rows[0][0].ToString();
-                        TxtUserName.Text = ObjDt.Rows[0][1].ToString();
 
-                        ChkEnabled.Checked = ClsFunctions.FxConvertStringToBool(ObjDt.Rows[0][2].ToString());
+
+                        ChkEnabled.Checked = ClsFunctions.FxConvertStringToBool(ObjDt.Rows[0][1].ToString());
 
                         TxtName.Enabled = true;
-                        TxtUserName.Enabled = true;
+
 
                         ChkEnabled.Enabled = true;
 
@@ -98,7 +96,7 @@ namespace Administrator
         private void FxSave()
         {
             string lName = TxtName.Text.Trim();
-            string lUserName = TxtUserName.Text.Trim();
+
 
             bool lEnabled = ChkEnabled.Checked;
 
@@ -113,31 +111,22 @@ namespace Administrator
                 return;
             }
 
-            if (lUserName.Length < 3)
-            {
-                ClsFunctions.FxMessage(1, "Ingrese usuario");
 
-                TxtUserName.Text = "";
-
-                TxtUserName.Focus();
-
-                return;
-            }
 
             if (ClsFunctions.FxMessage(2, "¿Está seguro de guardar los cambios?") == true)
             {
-                long lUserId_new;
+                long lActionId_new;
 
-                if (lUserId == 0)
+                if (lActionId == 0)
                 {
-                    lUserId_new = ClsSqlAdministrator.Fx_ins_tblUser(lName, lUserName);
+                    lActionId_new = ClsSqlAdministrator.Fx_ins_tblAction(lName);
                 }
                 else
                 {
-                    lUserId_new = ClsSqlAdministrator.Fx_upt_tblUser(lUserId, lName, lUserName, lEnabled);
+                    lActionId_new = ClsSqlAdministrator.Fx_upt_tblAction(lActionId, lName, lEnabled);
                 }
 
-                if (lUserId_new > 0)
+                if (lActionId_new > 0)
                 {
                     FxExit();
                 }
@@ -149,7 +138,14 @@ namespace Administrator
             Close();
         }
 
+        private void ChkEnabled_CheckedChanged(object sender, EventArgs e)
+        {
 
-     
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

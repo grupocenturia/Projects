@@ -5,18 +5,18 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmUser_detail : Form
+    public partial class FrmStore_detail : Form
     {
-        readonly long lUserId;
+        readonly long lStoreId;
 
-        public FrmUser_detail(long pUserId)
+        public FrmStore_detail(long pStoreId)
         {
-            lUserId = pUserId;
+            lStoreId = pStoreId;
 
             InitializeComponent();
         }
 
-        private void FrmUser_detail_Load(object sender, EventArgs e)
+        private void FrmStore_detail_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -25,10 +25,8 @@ namespace Administrator
         {
             ClsFunctions.FxSelectAll(sender);
         }
-        private void TxtUserName_Enter(object sender, EventArgs e)
-        {
-            ClsFunctions.FxSelectAll(sender);
-        }
+
+
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
@@ -43,23 +41,23 @@ namespace Administrator
         private void FxCancel()
         {
             TxtName.Text = "";
-            TxtUserName.Text = "";
+
 
             ChkEnabled.Checked = false;
 
             TxtName.Enabled = false;
-            TxtUserName.Enabled = false;
+
 
             ChkEnabled.Enabled = false;
 
             CmdSave.Enabled = false;
 
-            if (lUserId == 0)
+            if (lStoreId == 0)
             {
                 Text += " - Adicionar";
 
                 TxtName.Enabled = true;
-                TxtUserName.Enabled = true;
+
 
                 ChkEnabled.Checked = true;
 
@@ -71,19 +69,19 @@ namespace Administrator
             {
                 Text += " - Modificar";
 
-                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblUser_detail(lUserId);
+                DataTable ObjDt = ClsSqlAdministrator.Fx_sel_tblStore_detail(lStoreId);
 
                 if (ObjDt != null)
                 {
                     if (ObjDt.Rows.Count > 0)
                     {
                         TxtName.Text = ObjDt.Rows[0][0].ToString();
-                        TxtUserName.Text = ObjDt.Rows[0][1].ToString();
 
-                        ChkEnabled.Checked = ClsFunctions.FxConvertStringToBool(ObjDt.Rows[0][2].ToString());
+
+                        ChkEnabled.Checked = ClsFunctions.FxConvertStringToBool(ObjDt.Rows[0][1].ToString());
 
                         TxtName.Enabled = true;
-                        TxtUserName.Enabled = true;
+
 
                         ChkEnabled.Enabled = true;
 
@@ -98,7 +96,7 @@ namespace Administrator
         private void FxSave()
         {
             string lName = TxtName.Text.Trim();
-            string lUserName = TxtUserName.Text.Trim();
+
 
             bool lEnabled = ChkEnabled.Checked;
 
@@ -113,31 +111,22 @@ namespace Administrator
                 return;
             }
 
-            if (lUserName.Length < 3)
-            {
-                ClsFunctions.FxMessage(1, "Ingrese usuario");
 
-                TxtUserName.Text = "";
-
-                TxtUserName.Focus();
-
-                return;
-            }
 
             if (ClsFunctions.FxMessage(2, "¿Está seguro de guardar los cambios?") == true)
             {
-                long lUserId_new;
+                long lStoreId_new;
 
-                if (lUserId == 0)
+                if (lStoreId == 0)
                 {
-                    lUserId_new = ClsSqlAdministrator.Fx_ins_tblUser(lName, lUserName);
+                    lStoreId_new = ClsSqlAdministrator.Fx_ins_tblStore(lName);
                 }
                 else
                 {
-                    lUserId_new = ClsSqlAdministrator.Fx_upt_tblUser(lUserId, lName, lUserName, lEnabled);
+                    lStoreId_new = ClsSqlAdministrator.Fx_upt_tblStore(lStoreId, lName, lEnabled);
                 }
 
-                if (lUserId_new > 0)
+                if (lStoreId_new > 0)
                 {
                     FxExit();
                 }
@@ -148,8 +137,5 @@ namespace Administrator
         {
             Close();
         }
-
-
-     
     }
 }

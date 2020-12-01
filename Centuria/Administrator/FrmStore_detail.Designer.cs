@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmProfile_detail
+    partial class FrmStore_detail
     {
         /// <summary>
         /// Required designer variable.
@@ -38,22 +38,20 @@
             // ChkEnabled
             // 
             this.ChkEnabled.AutoSize = true;
-            this.ChkEnabled.Location = new System.Drawing.Point(13, 73);
-            this.ChkEnabled.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ChkEnabled.Location = new System.Drawing.Point(12, 51);
             this.ChkEnabled.Name = "ChkEnabled";
-            this.ChkEnabled.Size = new System.Drawing.Size(78, 24);
-            this.ChkEnabled.TabIndex = 1;
+            this.ChkEnabled.Size = new System.Drawing.Size(56, 17);
+            this.ChkEnabled.TabIndex = 10;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
-            this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
+     
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(604, 132);
-            this.CmdSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdSave.Location = new System.Drawing.Point(406, 119);
             this.CmdSave.Name = "CmdSave";
-            this.CmdSave.Size = new System.Drawing.Size(120, 77);
-            this.CmdSave.TabIndex = 2;
+            this.CmdSave.Size = new System.Drawing.Size(80, 50);
+            this.CmdSave.TabIndex = 11;
             this.CmdSave.Text = "Guardar";
             this.CmdSave.UseVisualStyleBackColor = false;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
@@ -61,42 +59,38 @@
             // TxtName
             // 
             this.TxtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtName.Location = new System.Drawing.Point(13, 33);
-            this.TxtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtName.Location = new System.Drawing.Point(12, 25);
             this.TxtName.MaxLength = 100;
             this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(838, 26);
-            this.TxtName.TabIndex = 0;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
-            this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
+            this.TxtName.Size = new System.Drawing.Size(560, 20);
+            this.TxtName.TabIndex = 8;
+           
             // 
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(13, 9);
-            this.LblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblName.Location = new System.Drawing.Point(12, 9);
             this.LblName.Name = "LblName";
-            this.LblName.Size = new System.Drawing.Size(69, 20);
+            this.LblName.Size = new System.Drawing.Size(47, 13);
             this.LblName.TabIndex = 13;
             this.LblName.Text = "Nombre:";
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(733, 132);
-            this.CmdExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdExit.Location = new System.Drawing.Point(492, 119);
             this.CmdExit.Name = "CmdExit";
-            this.CmdExit.Size = new System.Drawing.Size(120, 77);
-            this.CmdExit.TabIndex = 3;
+            this.CmdExit.Size = new System.Drawing.Size(80, 50);
+            this.CmdExit.TabIndex = 12;
             this.CmdExit.Text = "Salir";
             this.CmdExit.UseVisualStyleBackColor = false;
             this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
-            // FrmProfile_detail
+            // FrmStore_detail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(876, 232);
+            this.ClientSize = new System.Drawing.Size(584, 181);
             this.ControlBox = false;
             this.Controls.Add(this.ChkEnabled);
             this.Controls.Add(this.CmdSave);
@@ -104,16 +98,14 @@
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.CmdExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmProfile_detail";
+            this.Name = "FrmStore_detail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Perfil";
-            this.Load += new System.EventHandler(this.FrmProfile_detail_Load);
-            this.Enter += new System.EventHandler(this.TxtName_Enter);
+            this.Text = "Sucursal";
+            this.Load += new System.EventHandler(this.FrmStore_detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
