@@ -42,7 +42,7 @@
             // ChkEnabled
             // 
             this.ChkEnabled.AutoSize = true;
-            this.ChkEnabled.Location = new System.Drawing.Point(15, 138);
+            this.ChkEnabled.Location = new System.Drawing.Point(12, 91);
             this.ChkEnabled.Name = "ChkEnabled";
             this.ChkEnabled.Size = new System.Drawing.Size(56, 17);
             this.ChkEnabled.TabIndex = 17;
@@ -51,7 +51,7 @@
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(406, 171);
+            this.CmdSave.Location = new System.Drawing.Point(406, 119);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.Size = new System.Drawing.Size(80, 50);
             this.CmdSave.TabIndex = 18;
@@ -61,10 +61,11 @@
             // 
             // TxtIsoCode
             // 
+            this.TxtIsoCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtIsoCode.Location = new System.Drawing.Point(12, 65);
-            this.TxtIsoCode.MaxLength = 100;
+            this.TxtIsoCode.MaxLength = 3;
             this.TxtIsoCode.Name = "TxtIsoCode";
-            this.TxtIsoCode.Size = new System.Drawing.Size(560, 20);
+            this.TxtIsoCode.Size = new System.Drawing.Size(59, 20);
             this.TxtIsoCode.TabIndex = 16;
             // 
             // LblIsoCode
@@ -96,7 +97,7 @@
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(492, 171);
+            this.CmdExit.Location = new System.Drawing.Point(492, 119);
             this.CmdExit.Name = "CmdExit";
             this.CmdExit.Size = new System.Drawing.Size(80, 50);
             this.CmdExit.TabIndex = 19;
@@ -106,8 +107,8 @@
             // 
             // TxtSymbol
             // 
-            this.TxtSymbol.Location = new System.Drawing.Point(12, 104);
-            this.TxtSymbol.MaxLength = 100;
+            this.TxtSymbol.Location = new System.Drawing.Point(77, 65);
+            this.TxtSymbol.MaxLength = 10;
             this.TxtSymbol.Name = "TxtSymbol";
             this.TxtSymbol.Size = new System.Drawing.Size(115, 20);
             this.TxtSymbol.TabIndex = 22;
@@ -115,7 +116,7 @@
             // LblSymbol
             // 
             this.LblSymbol.AutoSize = true;
-            this.LblSymbol.Location = new System.Drawing.Point(12, 88);
+            this.LblSymbol.Location = new System.Drawing.Point(77, 49);
             this.LblSymbol.Name = "LblSymbol";
             this.LblSymbol.Size = new System.Drawing.Size(48, 17);
             this.LblSymbol.TabIndex = 23;
@@ -127,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 233);
+            this.ClientSize = new System.Drawing.Size(584, 181);
             this.ControlBox = false;
             this.Controls.Add(this.TxtSymbol);
             this.Controls.Add(this.LblSymbol);

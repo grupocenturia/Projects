@@ -125,14 +125,14 @@ namespace Administrator
                 return;
             }
 
-            if (lIsoCode.Length < 2)
+            if (lIsoCode.Length < 3)
             {
                 ClsFunctions.FxMessage(1, "Ingrese código");
 
                 TxtIsoCode.Text = "";
 
                 TxtIsoCode.Focus();
-
+                
                 return;
             }
 

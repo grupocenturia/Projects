@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAction.Designer.cs">
+      <DependentUpon>FrmAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAction_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAction_detail.Designer.cs">
+      <DependentUpon>FrmAction_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompany_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany_detail.Designer.cs">
+      <DependentUpon>FrmCompany_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCountry_detail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +136,18 @@
     <Compile Include="FrmModule_detail.Designer.cs">
       <DependentUpon>FrmModule_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOptionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOptionType.Designer.cs">
+      <DependentUpon>FrmOptionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOptionType_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOptionType_detail.Designer.cs">
+      <DependentUpon>FrmOptionType_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +166,18 @@
     <Compile Include="FrmCountry.Designer.cs">
       <DependentUpon>FrmCountry.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStore.Designer.cs">
+      <DependentUpon>FrmStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStore_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStore_detail.Designer.cs">
+      <DependentUpon>FrmStore_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +192,18 @@
       <DependentUpon>FrmUser_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAction.resx">
+      <DependentUpon>FrmAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAction_detail.resx">
+      <DependentUpon>FrmAction_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany_detail.resx">
+      <DependentUpon>FrmCompany_detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCountry_detail.resx">
       <DependentUpon>FrmCountry_detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +234,12 @@
     <EmbeddedResource Include="FrmModule_detail.resx">
       <DependentUpon>FrmModule_detail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmOptionType.resx">
+      <DependentUpon>FrmOptionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOptionType_detail.resx">
+      <DependentUpon>FrmOptionType_detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProfile.resx">
       <DependentUpon>FrmProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCountry.resx">
       <DependentUpon>FrmCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStore.resx">
+      <DependentUpon>FrmStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStore_detail.resx">
+      <DependentUpon>FrmStore_detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
