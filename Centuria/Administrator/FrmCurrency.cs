@@ -3,19 +3,18 @@ using System.Data;
 using System.Windows.Forms;
 using Core;
 
-
 namespace Administrator
 {
-    public partial class FrmLanguage : Form
+    public partial class FrmCurrency : Form
     {
         DataTable ObjDt;
 
-        public FrmLanguage()
+        public FrmCurrency()
         {
             InitializeComponent();
         }
 
-        private void FrmLanguage_Load(object sender, EventArgs e)
+        private void FrmCurrency_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -29,8 +28,6 @@ namespace Administrator
         {
             FxEdit();
         }
-
-
 
         private void CmdExit_Click(object sender, EventArgs e)
         {
@@ -48,7 +45,6 @@ namespace Administrator
             CmdNew.Enabled = true;
             CmdEdit.Enabled = false;
 
-
             FxData();
         }
 
@@ -62,8 +58,7 @@ namespace Administrator
 
             CmdEdit.Enabled = false;
 
-
-            ObjDt = ClsSqlCore.Fx_sel_tblLanguage(false);
+            ObjDt = ClsSqlCore.Fx_sel_tblCurrency(false);
 
             if (ObjDt != null)
             {
@@ -75,12 +70,11 @@ namespace Administrator
 
                     GrdData.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-                    GrdData.Columns[2].Visible = false;
+                    GrdData.Columns[4].Visible = false;
 
                     GrdData.Enabled = true;
 
                     CmdEdit.Enabled = true;
-
 
                     GrdData.Focus();
                 }
@@ -94,38 +88,37 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lLanguageId;
+            long lCurrencyId;
 
             try
             {
-                lLanguageId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
+                lCurrencyId = long.Parse(GrdData.SelectedRows[0].Cells[4].Value.ToString());
             }
             catch
             {
-                lLanguageId = 0;
+                lCurrencyId = 0;
             }
 
-            if (lLanguageId == 0)
+            if (lCurrencyId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione Lenguaje");
+                ClsFunctions.FxMessage(1, "Seleccione moneda");
 
                 GrdData.Focus();
 
                 return;
             }
 
-            FxFormDetail(lLanguageId);
+            FxFormDetail(lCurrencyId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmLanguage_detail ObjForm = new FrmLanguage_detail(pId);
+            FrmCurrency_detail ObjForm = new FrmCurrency_detail(pId);
 
             ObjForm.ShowDialog();
 
             FxCancel();
         }
-
 
 
         private void FxExit()
@@ -137,7 +130,5 @@ namespace Administrator
             Close();
         }
 
-    
     }
 }
-

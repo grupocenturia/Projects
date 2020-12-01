@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmLanguage
+    partial class FrmCountry
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLanguage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCountry));
             this.GrdData = new System.Windows.Forms.DataGridView();
             this.MenuToolbar = new System.Windows.Forms.ToolStrip();
             this.CmdNew = new System.Windows.Forms.ToolStripButton();
@@ -57,7 +57,6 @@
             this.GrdData.Name = "GrdData";
             this.GrdData.ReadOnly = true;
             this.GrdData.RowHeadersVisible = false;
-            this.GrdData.RowHeadersWidth = 62;
             this.GrdData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GrdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GrdData.ShowCellErrors = false;
@@ -71,7 +70,6 @@
             // MenuToolbar
             // 
             this.MenuToolbar.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.MenuToolbar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MenuToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CmdNew,
             this.CmdEdit,
@@ -120,7 +118,7 @@
             this.PanMain.Size = new System.Drawing.Size(884, 522);
             this.PanMain.TabIndex = 2;
             // 
-            // FrmLanguage
+            // FrmCountry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,15 +128,14 @@
             this.Controls.Add(this.PanMain);
             this.Controls.Add(this.MenuToolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmLanguage";
+            this.Name = "FrmCountry";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lenguaje";
-            this.Load += new System.EventHandler(this.FrmLanguage_Load);
+            this.Text = "País";
+            this.Load += new System.EventHandler(this.FrmCountry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
             this.MenuToolbar.ResumeLayout(false);
             this.MenuToolbar.PerformLayout();

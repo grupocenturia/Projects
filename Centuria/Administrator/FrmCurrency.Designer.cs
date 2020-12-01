@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmLanguage
+    partial class FrmCurrency
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLanguage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCurrency));
             this.GrdData = new System.Windows.Forms.DataGridView();
-            this.MenuToolbar = new System.Windows.Forms.ToolStrip();
+            this.MenuTolbar = new System.Windows.Forms.ToolStrip();
             this.CmdNew = new System.Windows.Forms.ToolStripButton();
             this.CmdEdit = new System.Windows.Forms.ToolStripButton();
             this.CmdExit = new System.Windows.Forms.ToolStripButton();
             this.PanMain = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).BeginInit();
-            this.MenuToolbar.SuspendLayout();
+            this.MenuTolbar.SuspendLayout();
             this.PanMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,6 @@
             this.GrdData.Name = "GrdData";
             this.GrdData.ReadOnly = true;
             this.GrdData.RowHeadersVisible = false;
-            this.GrdData.RowHeadersWidth = 62;
             this.GrdData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GrdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GrdData.ShowCellErrors = false;
@@ -68,18 +67,18 @@
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
             // 
-            // MenuToolbar
+            // MenuTolbar
             // 
-            this.MenuToolbar.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.MenuToolbar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.MenuToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuTolbar.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.MenuTolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CmdNew,
             this.CmdEdit,
             this.CmdExit});
-            this.MenuToolbar.Location = new System.Drawing.Point(0, 0);
-            this.MenuToolbar.Name = "MenuToolbar";
-            this.MenuToolbar.Size = new System.Drawing.Size(884, 39);
-            this.MenuToolbar.TabIndex = 1;
+            this.MenuTolbar.Location = new System.Drawing.Point(0, 0);
+            this.MenuTolbar.Name = "MenuTolbar";
+            this.MenuTolbar.Size = new System.Drawing.Size(884, 39);
+            this.MenuTolbar.TabIndex = 0;
+//            this.MenuTolbar.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.MenuTolbar_ItemClicked);
             // 
             // CmdNew
             // 
@@ -118,9 +117,9 @@
             this.PanMain.Location = new System.Drawing.Point(0, 39);
             this.PanMain.Name = "PanMain";
             this.PanMain.Size = new System.Drawing.Size(884, 522);
-            this.PanMain.TabIndex = 2;
+            this.PanMain.TabIndex = 6;
             // 
-            // FrmLanguage
+            // FrmCurrency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,20 +127,19 @@
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.ControlBox = false;
             this.Controls.Add(this.PanMain);
-            this.Controls.Add(this.MenuToolbar);
+            this.Controls.Add(this.MenuTolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmLanguage";
+            this.Name = "FrmCurrency";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lenguaje";
-            this.Load += new System.EventHandler(this.FrmLanguage_Load);
+            this.Text = "Moneda";
+            this.Load += new System.EventHandler(this.FrmCurrency_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
-            this.MenuToolbar.ResumeLayout(false);
-            this.MenuToolbar.PerformLayout();
+            this.MenuTolbar.ResumeLayout(false);
+            this.MenuTolbar.PerformLayout();
             this.PanMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,7 +148,7 @@
 
         #endregion
         private System.Windows.Forms.DataGridView GrdData;
-        private System.Windows.Forms.ToolStrip MenuToolbar;
+        private System.Windows.Forms.ToolStrip MenuTolbar;
         private System.Windows.Forms.ToolStripButton CmdNew;
         private System.Windows.Forms.ToolStripButton CmdEdit;
         private System.Windows.Forms.ToolStripButton CmdExit;

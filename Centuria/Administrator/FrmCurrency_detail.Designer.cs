@@ -1,6 +1,6 @@
 ﻿namespace Administrator
 {
-    partial class FrmLanguage_detail
+    partial class FrmCurrency_detail
     {
         /// <summary>
         /// Required designer variable.
@@ -30,31 +30,51 @@
         {
             this.ChkEnabled = new System.Windows.Forms.CheckBox();
             this.CmdSave = new System.Windows.Forms.Button();
+            this.TxtIsoCode = new System.Windows.Forms.TextBox();
+            this.LblIsoCode = new System.Windows.Forms.Label();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.LblName = new System.Windows.Forms.Label();
             this.CmdExit = new System.Windows.Forms.Button();
+            this.TxtSymbol = new System.Windows.Forms.TextBox();
+            this.LblSymbol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ChkEnabled
             // 
             this.ChkEnabled.AutoSize = true;
-            this.ChkEnabled.Location = new System.Drawing.Point(12, 52);
+            this.ChkEnabled.Location = new System.Drawing.Point(15, 138);
             this.ChkEnabled.Name = "ChkEnabled";
             this.ChkEnabled.Size = new System.Drawing.Size(56, 17);
-            this.ChkEnabled.TabIndex = 1;
+            this.ChkEnabled.TabIndex = 17;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
-            this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(406, 90);
+            this.CmdSave.Location = new System.Drawing.Point(406, 171);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.Size = new System.Drawing.Size(80, 50);
-            this.CmdSave.TabIndex = 2;
+            this.CmdSave.TabIndex = 18;
             this.CmdSave.Text = "Guardar";
             this.CmdSave.UseVisualStyleBackColor = false;
             this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
+            // 
+            // TxtIsoCode
+            // 
+            this.TxtIsoCode.Location = new System.Drawing.Point(12, 65);
+            this.TxtIsoCode.MaxLength = 100;
+            this.TxtIsoCode.Name = "TxtIsoCode";
+            this.TxtIsoCode.Size = new System.Drawing.Size(560, 20);
+            this.TxtIsoCode.TabIndex = 16;
+            // 
+            // LblIsoCode
+            // 
+            this.LblIsoCode.AutoSize = true;
+            this.LblIsoCode.Location = new System.Drawing.Point(12, 49);
+            this.LblIsoCode.Name = "LblIsoCode";
+            this.LblIsoCode.Size = new System.Drawing.Size(43, 13);
+            this.LblIsoCode.TabIndex = 21;
+            this.LblIsoCode.Text = "Codigo:";
             // 
             // TxtName
             // 
@@ -63,8 +83,7 @@
             this.TxtName.MaxLength = 100;
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(560, 20);
-            this.TxtName.TabIndex = 0;
-            this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
+            this.TxtName.TabIndex = 15;
             // 
             // LblName
             // 
@@ -72,41 +91,62 @@
             this.LblName.Location = new System.Drawing.Point(12, 10);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(47, 13);
-            this.LblName.TabIndex = 18;
+            this.LblName.TabIndex = 20;
             this.LblName.Text = "Nombre:";
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(492, 90);
+            this.CmdExit.Location = new System.Drawing.Point(492, 171);
             this.CmdExit.Name = "CmdExit";
             this.CmdExit.Size = new System.Drawing.Size(80, 50);
-            this.CmdExit.TabIndex = 3;
+            this.CmdExit.TabIndex = 19;
             this.CmdExit.Text = "Salir";
             this.CmdExit.UseVisualStyleBackColor = false;
             this.CmdExit.Click += new System.EventHandler(this.CmdExit_Click);
             // 
-            // FrmLanguage_detail
+            // TxtSymbol
+            // 
+            this.TxtSymbol.Location = new System.Drawing.Point(12, 104);
+            this.TxtSymbol.MaxLength = 100;
+            this.TxtSymbol.Name = "TxtSymbol";
+            this.TxtSymbol.Size = new System.Drawing.Size(115, 20);
+            this.TxtSymbol.TabIndex = 22;
+            // 
+            // LblSymbol
+            // 
+            this.LblSymbol.AutoSize = true;
+            this.LblSymbol.Location = new System.Drawing.Point(12, 88);
+            this.LblSymbol.Name = "LblSymbol";
+            this.LblSymbol.Size = new System.Drawing.Size(48, 17);
+            this.LblSymbol.TabIndex = 23;
+            this.LblSymbol.Text = "Símbolo:";
+            this.LblSymbol.UseCompatibleTextRendering = true;
+            // 
+            // FrmCurrency_detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 151);
+            this.ClientSize = new System.Drawing.Size(584, 233);
             this.ControlBox = false;
+            this.Controls.Add(this.TxtSymbol);
+            this.Controls.Add(this.LblSymbol);
             this.Controls.Add(this.ChkEnabled);
             this.Controls.Add(this.CmdSave);
+            this.Controls.Add(this.TxtIsoCode);
+            this.Controls.Add(this.LblIsoCode);
             this.Controls.Add(this.TxtName);
             this.Controls.Add(this.LblName);
             this.Controls.Add(this.CmdExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmLanguage_detail";
+            this.Name = "FrmCurrency_detail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lenguaje";
-            this.Load += new System.EventHandler(this.FrmLanguage_detail_Load);
+            this.Text = "Moneda";
+            this.Load += new System.EventHandler(this.FrmCurrency_detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,8 +156,12 @@
 
         private System.Windows.Forms.CheckBox ChkEnabled;
         private System.Windows.Forms.Button CmdSave;
+        private System.Windows.Forms.TextBox TxtIsoCode;
+        private System.Windows.Forms.Label LblIsoCode;
         private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label LblName;
         private System.Windows.Forms.Button CmdExit;
+        private System.Windows.Forms.TextBox TxtSymbol;
+        private System.Windows.Forms.Label LblSymbol;
     }
 }

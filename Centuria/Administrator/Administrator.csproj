@@ -52,6 +52,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCountry_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCountry_detail.Designer.cs">
+      <DependentUpon>FrmCountry_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurrency.Designer.cs">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCurrency_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCurrency_detail.Designer.cs">
+      <DependentUpon>FrmCurrency_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataType.Designer.cs">
+      <DependentUpon>FrmDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataType_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataType_detail.Designer.cs">
+      <DependentUpon>FrmDataType_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLanguage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +124,12 @@
     <Compile Include="FrmProfile_detail.Designer.cs">
       <DependentUpon>FrmProfile_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCountry.Designer.cs">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +144,21 @@
       <DependentUpon>FrmUser_detail.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCountry_detail.resx">
+      <DependentUpon>FrmCountry_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCurrency.resx">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCurrency_detail.resx">
+      <DependentUpon>FrmCurrency_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataType.resx">
+      <DependentUpon>FrmDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataType_detail.resx">
+      <DependentUpon>FrmDataType_detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLanguage.resx">
       <DependentUpon>FrmLanguage.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfile_detail.resx">
       <DependentUpon>FrmProfile_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCountry.resx">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>

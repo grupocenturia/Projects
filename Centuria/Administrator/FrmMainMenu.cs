@@ -101,5 +101,26 @@ namespace Administrator
 
             ObjForm.ShowDialog();
         }
+
+        private void OptDataType_Click(object sender, EventArgs e)
+        {
+            FrmDataType ObjForm = new FrmDataType();
+
+            ObjForm.ShowDialog();
+        }
+
+        private void OptCountry_Click(object sender, EventArgs e)
+        {
+            FrmCountry ObjForm = new FrmCountry();
+
+            ObjForm.ShowDialog();
+        }
+
+        private void OptCurrency_Click(object sender, EventArgs e)
+        {
+            FrmCurrency ObjForm = new FrmCurrency();
+
+            ObjForm.ShowDialog();
+        }
     }
 }

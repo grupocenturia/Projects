@@ -6,16 +6,16 @@ using Core;
 
 namespace Administrator
 {
-    public partial class FrmLanguage : Form
+    public partial class FrmDataType : Form
     {
         DataTable ObjDt;
 
-        public FrmLanguage()
+        public FrmDataType()
         {
             InitializeComponent();
         }
 
-        private void FrmLanguage_Load(object sender, EventArgs e)
+        private void FrmDataType_Load(object sender, EventArgs e)
         {
             FxCancel();
         }
@@ -63,7 +63,7 @@ namespace Administrator
             CmdEdit.Enabled = false;
 
 
-            ObjDt = ClsSqlCore.Fx_sel_tblLanguage(false);
+            ObjDt = ClsSqlCore.Fx_sel_tblDataType(false);
 
             if (ObjDt != null)
             {
@@ -94,32 +94,32 @@ namespace Administrator
 
         private void FxEdit()
         {
-            long lLanguageId;
+            long lDataTypeId;
 
             try
             {
-                lLanguageId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
+                lDataTypeId = long.Parse(GrdData.SelectedRows[0].Cells[2].Value.ToString());
             }
             catch
             {
-                lLanguageId = 0;
+                lDataTypeId = 0;
             }
 
-            if (lLanguageId == 0)
+            if (lDataTypeId == 0)
             {
-                ClsFunctions.FxMessage(1, "Seleccione Lenguaje");
+                ClsFunctions.FxMessage(1, "Seleccione Tipo de dato");
 
                 GrdData.Focus();
 
                 return;
             }
 
-            FxFormDetail(lLanguageId);
+            FxFormDetail(lDataTypeId);
         }
 
         private void FxFormDetail(long pId)
         {
-            FrmLanguage_detail ObjForm = new FrmLanguage_detail(pId);
+            FrmDataType_detail ObjForm = new FrmDataType_detail(pId);
 
             ObjForm.ShowDialog();
 
@@ -137,7 +137,7 @@ namespace Administrator
             Close();
         }
 
-    
+
     }
 }
 
