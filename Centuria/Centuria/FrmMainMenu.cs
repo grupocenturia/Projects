@@ -141,7 +141,8 @@ namespace Centuria
                     IsSplitterFixed = true,
                     Width = 300,
                     Height = 80,
-                    SplitterDistance = 80
+                    SplitterDistance = 80,
+                    TabStop = false
                 };
 
                 ObjImage[lCounter] = new PictureBox
@@ -166,11 +167,11 @@ namespace Centuria
 
                 if (lModuleId > 0)
                 {
-                    string lImageFileName = ClsFunctions.FxGetModuleLogo(lModuleId);
+                    Bitmap ObjLogo = ClsFunctions.FxGetModuleLogo(lModuleId);
 
-                    if (lImageFileName.Length > 0)
+                    if (ObjImage != null)
                     {
-                        ObjImage[lCounter].Image = Bitmap.FromFile(lImageFileName);
+                        ObjImage[lCounter].Image = ObjLogo;
                     }
                 }
 
