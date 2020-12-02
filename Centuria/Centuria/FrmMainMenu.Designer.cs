@@ -65,7 +65,7 @@
             // 
             this.PanLogo.Panel1.Controls.Add(this.LnkChangePassword);
             this.PanLogo.Panel1.Controls.Add(this.ImgLogo);
-            this.PanLogo.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanLogo.Panel1.Padding = new System.Windows.Forms.Padding(15);
             this.PanLogo.Panel1MinSize = 90;
             // 
             // PanLogo.Panel2
@@ -117,13 +117,13 @@
             // 
             this.PanCompany.Panel1.Controls.Add(this.CmbCompany);
             this.PanCompany.Panel1.Controls.Add(this.LblCompany);
-            this.PanCompany.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanCompany.Panel1.Padding = new System.Windows.Forms.Padding(15);
             this.PanCompany.Panel1MinSize = 80;
             // 
             // PanCompany.Panel2
             // 
             this.PanCompany.Panel2.Controls.Add(this.PanModule);
-            this.PanCompany.Panel2.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanCompany.Panel2.Padding = new System.Windows.Forms.Padding(15);
             this.PanCompany.Size = new System.Drawing.Size(1326, 767);
             this.PanCompany.SplitterDistance = 80;
             this.PanCompany.SplitterWidth = 6;
@@ -162,7 +162,7 @@
             this.PanModule.Location = new System.Drawing.Point(15, 15);
             this.PanModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanModule.Name = "PanModule";
-            this.PanModule.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.PanModule.Padding = new System.Windows.Forms.Padding(15);
             this.PanModule.Size = new System.Drawing.Size(1296, 651);
             this.PanModule.TabIndex = 0;
             // 
