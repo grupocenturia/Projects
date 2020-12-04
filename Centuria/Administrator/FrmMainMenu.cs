@@ -55,7 +55,7 @@ namespace Administrator
         private void button2_Click(object sender, EventArgs e)
         {
             //Para hacer pruebas
-            openChildFormInPanel(new FrmLanguage());
+            openChildFormInPanel(new FrmOptionType());
         }
 
         private void openChildFormInPanel(Form childForm)
