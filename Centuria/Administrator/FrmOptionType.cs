@@ -132,12 +132,7 @@ namespace Administrator
             GrdData.DataSource = null;
 
             Close();
-        }
-
-        private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        }       
     }
 }
 

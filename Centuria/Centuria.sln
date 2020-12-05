@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administrator", "Administra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{88B29FFC-20D9-480B-BC4D-83713CD88181}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenturiaWeb", "CenturiaWeb\CenturiaWeb.csproj", "{CC2DAF5D-C7E6-4B24-A85F-E3F5EE3E9D08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88B29FFC-20D9-480B-BC4D-83713CD88181}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2DAF5D-C7E6-4B24-A85F-E3F5EE3E9D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2DAF5D-C7E6-4B24-A85F-E3F5EE3E9D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2DAF5D-C7E6-4B24-A85F-E3F5EE3E9D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2DAF5D-C7E6-4B24-A85F-E3F5EE3E9D08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

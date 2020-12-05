@@ -37,10 +37,9 @@
             // 
             // CmdExit
             // 
-            this.CmdExit.Location = new System.Drawing.Point(1188, 768);
-            this.CmdExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdExit.Location = new System.Drawing.Point(792, 499);
             this.CmdExit.Name = "CmdExit";
-            this.CmdExit.Size = new System.Drawing.Size(120, 77);
+            this.CmdExit.Size = new System.Drawing.Size(80, 50);
             this.CmdExit.TabIndex = 3;
             this.CmdExit.Text = "Salir";
             this.CmdExit.UseVisualStyleBackColor = false;
@@ -48,10 +47,9 @@
             // 
             // CmdEdit
             // 
-            this.CmdEdit.Location = new System.Drawing.Point(147, 768);
-            this.CmdEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdEdit.Location = new System.Drawing.Point(98, 499);
             this.CmdEdit.Name = "CmdEdit";
-            this.CmdEdit.Size = new System.Drawing.Size(120, 77);
+            this.CmdEdit.Size = new System.Drawing.Size(80, 50);
             this.CmdEdit.TabIndex = 2;
             this.CmdEdit.Text = "Modificar";
             this.CmdEdit.UseVisualStyleBackColor = false;
@@ -59,10 +57,9 @@
             // 
             // CmdNew
             // 
-            this.CmdNew.Location = new System.Drawing.Point(18, 768);
-            this.CmdNew.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CmdNew.Location = new System.Drawing.Point(12, 499);
             this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(120, 77);
+            this.CmdNew.Size = new System.Drawing.Size(80, 50);
             this.CmdNew.TabIndex = 1;
             this.CmdNew.Text = "Adicionar";
             this.CmdNew.UseVisualStyleBackColor = false;
@@ -79,8 +76,7 @@
             this.GrdData.BackgroundColor = System.Drawing.Color.White;
             this.GrdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrdData.GridColor = System.Drawing.Color.Gray;
-            this.GrdData.Location = new System.Drawing.Point(18, 18);
-            this.GrdData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GrdData.Location = new System.Drawing.Point(12, 12);
             this.GrdData.MultiSelect = false;
             this.GrdData.Name = "GrdData";
             this.GrdData.ReadOnly = true;
@@ -92,24 +88,23 @@
             this.GrdData.ShowCellToolTips = false;
             this.GrdData.ShowEditingIcon = false;
             this.GrdData.ShowRowErrors = false;
-            this.GrdData.Size = new System.Drawing.Size(1290, 740);
+            this.GrdData.Size = new System.Drawing.Size(860, 481);
             this.GrdData.StandardTab = true;
             this.GrdData.TabIndex = 0;
             this.GrdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdData_CellContentClick);
             // 
             // FrmProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1326, 863);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.ControlBox = false;
             this.Controls.Add(this.CmdExit);
             this.Controls.Add(this.CmdEdit);
             this.Controls.Add(this.CmdNew);
             this.Controls.Add(this.GrdData);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProfile";

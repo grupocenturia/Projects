@@ -102,7 +102,7 @@ namespace Administrator
 
             if (lName.Length < 3)
             {
-                ClsFunctions.FxMessage(1, "Ingrese nombre");
+                ClsFunctions.FxMessage(1, "Ingrese acción");
 
                 TxtName.Text = "";
 
@@ -143,9 +143,6 @@ namespace Administrator
 
         }
 
-        private void TxtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
