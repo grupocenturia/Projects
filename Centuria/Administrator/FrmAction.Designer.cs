@@ -81,6 +81,7 @@
             this.GrdData.Name = "GrdData";
             this.GrdData.ReadOnly = true;
             this.GrdData.RowHeadersVisible = false;
+            this.GrdData.RowHeadersWidth = 62;
             this.GrdData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GrdData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GrdData.ShowCellErrors = false;
@@ -111,6 +112,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acción ";
+            this.Load += new System.EventHandler(this.FrmAction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdData)).EndInit();
             this.ResumeLayout(false);
 

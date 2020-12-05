@@ -38,13 +38,12 @@
             // ChkEnabled
             // 
             this.ChkEnabled.AutoSize = true;
-            this.ChkEnabled.Location = new System.Drawing.Point(12, 51);
+            this.ChkEnabled.Location = new System.Drawing.Point(9, 47);
             this.ChkEnabled.Name = "ChkEnabled";
             this.ChkEnabled.Size = new System.Drawing.Size(56, 17);
             this.ChkEnabled.TabIndex = 1;
             this.ChkEnabled.Text = "Activo";
             this.ChkEnabled.UseVisualStyleBackColor = true;
-            this.ChkEnabled.CheckedChanged += new System.EventHandler(this.ChkEnabled_CheckedChanged);
             // 
             // CmdSave
             // 
@@ -59,18 +58,17 @@
             // TxtName
             // 
             this.TxtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtName.Location = new System.Drawing.Point(12, 25);
+            this.TxtName.Location = new System.Drawing.Point(9, 21);
             this.TxtName.MaxLength = 100;
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(560, 20);
             this.TxtName.TabIndex = 0;
-            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             this.TxtName.Enter += new System.EventHandler(this.TxtName_Enter);
             // 
             // LblName
             // 
             this.LblName.AutoSize = true;
-            this.LblName.Location = new System.Drawing.Point(12, 9);
+            this.LblName.Location = new System.Drawing.Point(9, 6);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(47, 13);
             this.LblName.TabIndex = 18;
@@ -106,6 +104,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acción de LOG";
+            this.Load += new System.EventHandler(this.FrmAction_detail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
