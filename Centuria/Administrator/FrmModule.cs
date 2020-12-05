@@ -130,5 +130,10 @@ namespace Administrator
 
             Close();
         }
+
+        private void GrdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
