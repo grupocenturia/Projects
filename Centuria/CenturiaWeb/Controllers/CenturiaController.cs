@@ -9,14 +9,21 @@ namespace CenturiaWeb.Controllers
     public class CenturiaController : Controller
     {
         // GET: Centuria
-        public ActionResult Login()
+        public ActionResult Login(string User)
         {
-            return View();
+            if (User == "Ruben")
+            {
+                return View("Menu");
+            }
+
+            else
+            {
+                return View();
+            }
         }
 
         public ActionResult Menu()
         {
-
             return View();
         }
     }

@@ -1,6 +1,10 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
 
 <!doctype html>
 <html lang="en">
@@ -31,13 +35,20 @@
     <link href="signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
-    <form class="form-signin pt-5" action="/Centuria/Menu" method="post">
+
+
+
+    <form action="/Centuria/Login" method="post">
         <img class="mb-4" src="~/Images/Logo-200x100.png" alt="" width="200" height="100">
         <label for="inputUser" class="sr-only">Usuario</label>
-        <input type="text" id="User" class="form-control w-25 mx-auto" placeholder="Usuario" required autofocus><br>
+        <input type="text" name="User" class="form-control w-25 mx-auto" placeholder="Usuario" required autofocus><br>
         <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="Password" class="form-control  w-25 mx-auto" placeholder="Contraseña" required><br>
-        <input class="btn btn-lg btn-primary btn-block w-25 mx-auto" type="submit" value="Ingresar" />
+        <input type="password" name="Password" class="form-control  w-25 mx-auto" placeholder="Contraseña" required><br>
+        <input type="submit" class="btn btn-lg btn-primary btn-block w-25 mx-auto" value="Ingresar" />
     </form>
+
 </body>
 </html>
+
+
+
