@@ -38,14 +38,15 @@
 
 
 
-    <form action="/Centuria/Login" method="post">
-        <img class="mb-4" src="~/Images/Logo-200x100.png" alt="" width="200" height="100">
-        <label for="inputUser" class="sr-only">Usuario</label>
-        <input type="text" name="User" class="form-control w-25 mx-auto" placeholder="Usuario" required autofocus><br>
-        <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" name="Password" class="form-control  w-25 mx-auto" placeholder="Contraseña" required><br>
-        <input type="submit" class="btn btn-lg btn-primary btn-block w-25 mx-auto" value="Ingresar" />
-    </form>
+    @using (Html.BeginForm("Login", "Centuria"))
+    {
+    <img class="mb-4" src="~/Images/Logo-200x100.png" alt="" width="200" height="100">
+    <label for="inputUser" class="sr-only">Usuario</label>
+    <input type="text" name="User" class="form-control w-25 mx-auto" placeholder="Usuario" required autofocus><br>
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" name="Password" class="form-control  w-25 mx-auto" placeholder="Contraseña" required><br>
+    <input type="submit" class="btn btn-lg btn-primary btn-block w-25 mx-auto" value="Ingresar" />
+    }
 
 </body>
 </html>

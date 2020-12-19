@@ -9,6 +9,8 @@ namespace CenturiaWeb.Controllers
     public class CenturiaController : Controller
     {
         // GET: Centuria
+
+
         public ActionResult Login(string User)
         {
             if (User == "Ruben")
@@ -21,7 +23,7 @@ namespace CenturiaWeb.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         public ActionResult Menu()
         {
             return View();
